@@ -1,0 +1,189 @@
+"""Main scanner. Run once per GitHub Actions invocation.
+
+Outputs (written to ../data/):
+  - latest.json       : current tile prices + active signals (dashboard reads this)
+  - signal_log.json   : appended history of all signals (forward returns added later)
+  - alert_state.json  : dedup state across runs
+
+Flow:
+  1. Fetch USD/CAD rate.
+  2. Fetch tile prices (indexes + curated stocks) — always, market open or not.
+  3. If market is open: scan recommender universe for signals.
+  4. Write latest.json. Discord pushes fire inline.
+  5. GitHub Action commits data/ back to the repo.
+"""
+
+import json
+import logging
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+import yfinance as yf
+
+import alerts
+import detectors
+import state
+from universe import (
+    TILE_INDEXES,
+    TILE_STOCKS,
+    all_recommender_tickers,
+)
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%H:%M:%S",
+)
+log = logging.getLogger(__name__)
+
+ET = ZoneInfo("America/New_York")
+DATA_DIR = Path("../data")
+LATEST_FILE = DATA_DIR / "latest.json"
+SIGNAL_LOG_FILE = DATA_DIR / "signal_log.json"
+
+
+def is_market_open() -> bool:
+    """Naive market hours check. Doesn't account for US market holidays —
+    fine for now, signal scanner will just find nothing on those days."""
+    now = datetime.now(ET)
+    if now.weekday() >= 5:
+        return False
+    open_t = now.replace(hour=9, minute=30, second=0, microsecond=0)
+    close_t = now.replace(hour=16, minute=0, second=0, microsecond=0)
+    return open_t <= now <= close_t
+
+
+def fetch_usdcad() -> float:
+    """Current USD/CAD exchange rate. Fallback to a reasonable default."""
+    try:
+        fx = yf.Ticker("CAD=X")  # Yahoo's symbol for USD->CAD
+        hist = fx.history(period="2d", interval="1d")
+        if not hist.empty:
+            return round(float(hist.iloc[-1]["Close"]), 4)
+    except Exception as e:
+        log.warning(f"FX fetch failed: {e}")
+    return 1.36
+
+
+def fetch_tile_data(tile_list: list) -> list:
+    """Fetch current price + day change for each entry in a tile list."""
+    results = []
+    for entry in tile_list:
+        try:
+            t = yf.Ticker(entry["ticker"])
+            hist = t.history(period="2d", interval="1d")
+            if hist.empty:
+                continue
+            today = hist.iloc[-1]
+            prev_close = hist.iloc[-2]["Close"] if len(hist) > 1 else today["Open"]
+            change_pct = (today["Close"] - prev_close) / prev_close * 100 if prev_close > 0 else 0.0
+            results.append({
+                "ticker": entry["ticker"],
+                "name": entry["name"],
+                "currency": entry["currency"],
+                "price": round(float(today["Close"]), 2),
+                "change_pct": round(change_pct, 2),
+                "volume": int(today["Volume"]) if today["Volume"] > 0 else None,
+            })
+        except Exception as e:
+            log.warning(f"Tile fetch failed for {entry['ticker']}: {e}")
+        time.sleep(0.3)
+    return results
+
+
+def append_to_signal_log(signal: dict) -> None:
+    """Append signal to signal_log.json. Forward returns populated later by a separate Action."""
+    SIGNAL_LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
+    if SIGNAL_LOG_FILE.exists():
+        try:
+            data = json.loads(SIGNAL_LOG_FILE.read_text())
+        except json.JSONDecodeError:
+            data = {"signals": []}
+    else:
+        data = {"signals": []}
+
+    fired_at = datetime.now(timezone.utc).isoformat()
+    # Compact ID for cross-referencing — ticker_type_YYYYMMDDHHMMSS
+    ts = fired_at.replace("-", "").replace(":", "").replace("T", "")[:14]
+    signal_id = f"{signal['ticker']}_{signal['signal_type']}_{ts}"
+
+    data["signals"].append({
+        "id": signal_id,
+        "ticker": signal["ticker"],
+        "signal_type": signal["signal_type"],
+        "fired_at": fired_at,
+        "entry_price": signal["price"],
+        "details": signal,
+        "forward_returns": {"1d": None, "3d": None, "7d": None, "30d": None},
+    })
+    SIGNAL_LOG_FILE.write_text(json.dumps(data, indent=2))
+
+
+def scan_signals() -> list:
+    """Scan the full recommender universe for signals. Push alerts + log."""
+    tickers = all_recommender_tickers()
+    log.info(f"Scanning {len(tickers)} tickers for signals...")
+    alert_state = state.load_state()
+    today = datetime.now(ET).date().isoformat()
+    active = []
+
+    for ticker in tickers:
+        signal = detectors.check_volume_spike(ticker)
+        if signal:
+            key = f"vol:{ticker}:{today}"
+            if state.should_alert(key, alert_state):
+                log.info(
+                    f"  ✓ {ticker}: {signal['multiplier']:.1f}x vol "
+                    f"({signal['price_change_pct']:+.2f}%)"
+                )
+                alerts.volume_spike_alert(signal)
+                state.mark_alerted(key, alert_state)
+                append_to_signal_log(signal)
+            active.append(signal)
+        time.sleep(0.5)  # be polite to Yahoo
+
+    state.save_state(alert_state)
+    return active
+
+
+def write_latest(usdcad: float, tiles_idx: list, tiles_stk: list, signals: list) -> None:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "scanned_at": datetime.now(timezone.utc).isoformat(),
+        "market_open": is_market_open(),
+        "usdcad_rate": usdcad,
+        "tiles": {"indexes": tiles_idx, "stocks": tiles_stk},
+        "active_signals": signals,
+    }
+    LATEST_FILE.write_text(json.dumps(payload, indent=2))
+    log.info(f"Wrote {LATEST_FILE} — {len(signals)} active signals")
+
+
+def main() -> int:
+    log.info("Market Activity Monitor — scan starting")
+
+    log.info("Fetching FX rate...")
+    usdcad = fetch_usdcad()
+    log.info(f"  USD/CAD = {usdcad}")
+
+    log.info("Fetching tile data...")
+    tiles_idx = fetch_tile_data(TILE_INDEXES)
+    tiles_stk = fetch_tile_data(TILE_STOCKS)
+    log.info(f"  Got {len(tiles_idx)} indexes, {len(tiles_stk)} stocks")
+
+    if is_market_open():
+        signals = scan_signals()
+    else:
+        log.info("Market closed — skipping signal scan (tile data still refreshed)")
+        signals = []
+
+    write_latest(usdcad, tiles_idx, tiles_stk, signals)
+    log.info("Scan complete.")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
