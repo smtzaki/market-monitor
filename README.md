@@ -94,12 +94,39 @@ python scan.py
 
 ---
 
+## Dashboard (Phase 2 — ✅ included)
+
+Static dashboard at the repo root: `index.html`, `style.css`, `app.js`. It uses:
+
+- **TradingView embeds** for the indexes ticker tape + 8 stock tiles (live prices, free, no API key)
+- **Custom signals feed** reading directly from `data/latest.json`
+
+### Enable GitHub Pages
+
+In your repo: **Settings → Pages**
+- **Source**: Deploy from a branch
+- **Branch**: `main` / `(root)`
+- Click Save
+
+After ~1 minute your dashboard is live at `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`.
+
+Note: every time the scanner Action commits new data, GitHub Pages re-deploys. There's typically a ~30-90s delay between commit and the dashboard reflecting the update. The page itself refreshes signals every 5 min in the browser.
+
+### Customizing the dashboard
+
+**Watchlist** (the 8 mini-chart tiles): edit `WATCHLIST` in `app.js`. TradingView symbol format: `EXCHANGE:TICKER` (e.g. `NASDAQ:NVDA`, `TSX:SHOP`, `NYSE:BAC`).
+
+**Index ticker tape**: edit the `symbols` array inside `index.html`.
+
+**Aesthetics**: all colors and fonts are CSS variables in `:root` at the top of `style.css`. Change `--bull`, `--bear`, `--accent`, or swap `--serif`/`--mono` to other Google Fonts.
+
+---
+
 ## What's coming (next phases)
 
-- **Phase 2**: Static dashboard on GitHub Pages — at-a-glance tile section first.
-- **Phase 3**: Forward-return tracking (second Action runs end-of-day, populates `forward_returns` on past signals at 1d/3d/7d/30d intervals). This is the "feeder stage" that lets the recommender learn what actually works.
+- **Phase 3**: Forward-return tracking — second Action runs end-of-day, populates `forward_returns` on past signals at 1d/3d/7d/30d intervals. This is the "feeder stage" that lets the recommender learn what actually works.
 - **Phase 4**: Recommender tab — uses signal track record to suggest fractional-share allocations of $150 CAD with USD conversion, expected returns, confidence intervals, and the Invested/Sold workflow.
-- **Phase 5**: Stocks tab — raw current signals view.
+- **Phase 5**: Stocks tab — raw current signals view (more detail than the dashboard's headline feed).
 
 ---
 

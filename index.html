@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="title">
+        <h1>Market <em>Monitor</em></h1>
+        <p class="subtitle">A signal tracker · not financial advice</p>
+      </div>
+      <div class="freshness">
+        <span class="label">Last scan</span>
+        <span class="value" id="last-scan">—</span>
+      </div>
+    </header>
+
+    <!-- TradingView ticker tape — 3 indexes -->
+    <section class="ticker-section">
+      <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+        {
+          "symbols": [
+            {"description": "TSX Composite", "proName": "TSX:TSX"},
+            {"description": "S&P 500", "proName": "SP:SPX"},
+            {"description": "Nasdaq 100", "proName": "NASDAQ:NDX"}
+          ],
+          "showSymbolLogo": false,
+          "isTransparent": true,
+          "displayMode": "regular",
+          "colorTheme": "dark",
+          "locale": "en"
+        }
+        </script>
+      </div>
+    </section>
+
+    <!-- Watchlist — 8 mini TradingView widgets -->
+    <section class="watchlist">
+      <h2 class="section-title"><span>Watchlist</span></h2>
+      <div class="grid" id="watchlist-grid"></div>
+    </section>
+
+    <!-- Active signals — custom, from latest.json -->
+    <section class="signals">
+      <h2 class="section-title"><span>Active Signals</span></h2>
+      <div id="signals-list">
+        <p class="empty">Loading…</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Phase 2 of 5 · Recommender activates in Phase 4<br>
+        <span class="fx-line">USD/CAD <span id="fx-rate">—</span></span>
+      </p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
