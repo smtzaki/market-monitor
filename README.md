@@ -122,10 +122,43 @@ Note: every time the scanner Action commits new data, GitHub Pages re-deploys. T
 
 ---
 
+## Forward-return tracking (Phase 3 — ✅ included)
+
+A second cron Action (`.github/workflows/forward-returns.yml`) runs **once per weekday at 21:45 UTC** (~5:45 PM EDT / 4:45 PM EST, safely after market close).
+
+It walks every signal in `signal_log.json` and fills in the realized return at 1, 3, 7, and 30 calendar days after fire. Returns are computed against the *first trading day's close on or after* the target date — so a Friday signal's "1d" return is Monday's close, holidays handled the same way.
+
+It also writes `data/signal_stats.json` — aggregate stats per signal type:
+
+```json
+{
+  "by_signal_type": {
+    "volume_spike": {
+      "bullish": {
+        "1d":  { "n": 23, "hit_rate": 0.609, "avg_return_pct": 1.42, "std_pct": 2.81, ... },
+        "3d":  { "n": 21, "hit_rate": 0.571, "avg_return_pct": 2.10, ... },
+        ...
+      },
+      "bearish": { ... }
+    }
+  }
+}
+```
+
+**Hit rate** = % of signals where the move went the direction the signal predicted.
+For bullish signals, that's % with positive return; for bearish, % with negative return.
+
+**Sample size matters.** These numbers are meaningless until ~20–30 fires per bucket. Expect 3–4 weeks of running before the stats start telling a real story. The recommender (Phase 4) will display sample size and warn when confidence is low.
+
+**This phase is silent** — no dashboard changes yet, no Discord pings. It just quietly accumulates the empirical evidence the recommender needs.
+
+To verify it's working: after the first 21:45 UTC run on a weekday, check that `data/signal_stats.json` exists and that any signals older than 1 day in `signal_log.json` have at least their `"1d"` slot filled.
+
+---
+
 ## What's coming (next phases)
 
-- **Phase 3**: Forward-return tracking — second Action runs end-of-day, populates `forward_returns` on past signals at 1d/3d/7d/30d intervals. This is the "feeder stage" that lets the recommender learn what actually works.
-- **Phase 4**: Recommender tab — uses signal track record to suggest fractional-share allocations of $150 CAD with USD conversion, expected returns, confidence intervals, and the Invested/Sold workflow.
+- **Phase 4**: Recommender tab — uses `signal_stats.json` to suggest fractional-share allocations of $150 CAD across active signals, with USD/CAD conversion, expected returns, confidence intervals, recommended hold periods, and the Invested/Sold workflow.
 - **Phase 5**: Stocks tab — raw current signals view (more detail than the dashboard's headline feed).
 
 ---
