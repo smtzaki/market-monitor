@@ -2,7 +2,7 @@
 
 A free, self-hosted (well, GitHub-hosted) market signal scanner with Discord alerts.
 
-**Status: Phase 1 of 5.** The scanner runs on GitHub Actions every 15 minutes during US market hours, writes results to `data/latest.json`, and pushes alerts to Discord. Dashboard, signal-tracking, and recommender come in later phases.
+**Status: Phase 3.5 of 5.** Scanner, dashboard, forward-return tracking, and live track-record display are all deployed. Recommender (Phase 4) and Stocks tab (Phase 5) come next once the system accumulates enough signal history.
 
 ---
 
@@ -57,17 +57,25 @@ After this first manual run, the cron schedule takes over and it runs every 15 m
 
 ```
 market-monitor/
-├── .github/workflows/scan.yml    # cron-triggered Action
+├── .github/workflows/
+│   ├── scan.yml                  # 15-min cron: scan + alert + write data
+│   └── forward-returns.yml       # daily cron: realize returns + compute stats
 ├── scanner/
-│   ├── scan.py                   # orchestrator (entrypoint)
-│   ├── universe.py               # ticker lists — edit to customize
+│   ├── scan.py                   # scanner orchestrator
+│   ├── universe.py               # ticker lists
 │   ├── detectors.py              # signal logic (volume spike)
 │   ├── alerts.py                 # Discord webhook
-│   └── state.py                  # dedup state across runs
-├── data/                         # scanner outputs (committed back)
-│   ├── latest.json               # current snapshot — dashboard reads this
-│   ├── signal_log.json           # historical signals (for Phase 3 forward returns)
-│   └── alert_state.json          # dedup cache
+│   ├── state.py                  # alert dedup
+│   └── update_returns.py         # forward-return + stats updater
+├── data/
+│   ├── latest.json               # current snapshot (dashboard reads this)
+│   ├── signal_log.json           # historical signals + realized returns
+│   ├── signal_stats.json         # aggregate hit rates per signal type
+│   └── alert_state.json          # alert dedup cache
+├── index.html                    # dashboard
+├── style.css                     # dashboard styles
+├── app.js                        # dashboard JS
+├── .nojekyll                     # disable Jekyll on GitHub Pages
 ├── requirements.txt
 └── README.md
 ```

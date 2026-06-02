@@ -12,6 +12,7 @@ const WATCHLIST = [
 ];
 
 const DATA_URL = "./data/latest.json";
+const STATS_URL = "./data/signal_stats.json";
 
 // ============================================================
 // Build TradingView mini widgets
@@ -133,9 +134,113 @@ function formatVol(n) {
 }
 
 // ============================================================
+// Track Record — reads signal_stats.json (Phase 3.5)
+// ============================================================
+async function loadStats() {
+  try {
+    const resp = await fetch(`${STATS_URL}?t=${Date.now()}`);
+    if (!resp.ok) throw new Error();
+    const data = await resp.json();
+    renderTrackRecord(data);
+  } catch {
+    document.getElementById("track-record-body").innerHTML =
+      '<p class="empty">No stats yet. The forward-return Action runs nightly at 21:45 UTC on weekdays.</p>';
+  }
+}
+
+function renderTrackRecord(data) {
+  const meta = document.getElementById("track-meta");
+  const body = document.getElementById("track-record-body");
+
+  const logged = data.total_signals_logged || 0;
+  const withReturns = data.total_signals_with_any_return || 0;
+  meta.innerHTML = `
+    <span>${logged} signal${logged !== 1 ? "s" : ""} logged</span> ·
+    <span>${withReturns} with realized returns</span> ·
+    <span>Updated ${formatRelTime(data.computed_at)}</span>
+  `;
+
+  const types = Object.keys(data.by_signal_type || {});
+  if (!types.length || withReturns === 0) {
+    body.innerHTML = `
+      <p class="empty">
+        Collecting evidence. First realized returns land after the next forward-return run (21:45 UTC weekdays).
+      </p>
+    `;
+    return;
+  }
+
+  body.innerHTML = types.flatMap(st =>
+    Object.entries(data.by_signal_type[st]).map(([dir, intervals]) =>
+      renderBucket(st, dir, intervals)
+    )
+  ).join("");
+}
+
+function renderBucket(signalType, direction, intervals) {
+  const labels = ["1d", "3d", "7d", "30d"];
+  const rows = labels.map(label => {
+    const d = intervals[label];
+    if (!d) {
+      return `<tr class="empty-row"><td>${label}</td><td colspan="5">—</td></tr>`;
+    }
+    const conf = confidenceLabel(d.n);
+    const avgCls = d.avg_return_pct > 0 ? "bull" : (d.avg_return_pct < 0 ? "bear" : "");
+    const avgSign = d.avg_return_pct >= 0 ? "+" : "";
+    return `
+      <tr>
+        <td>${label}</td>
+        <td>${d.n}</td>
+        <td>${(d.hit_rate * 100).toFixed(1)}%</td>
+        <td class="${avgCls}">${avgSign}${d.avg_return_pct.toFixed(2)}%</td>
+        <td>${d.std_pct.toFixed(2)}</td>
+        <td><span class="conf ${conf.cls}">${conf.label}</span></td>
+      </tr>
+    `;
+  }).join("");
+
+  return `
+    <div class="track-bucket">
+      <h3>${prettyName(signalType)} <em>· ${direction}</em></h3>
+      <table class="track-table">
+        <thead>
+          <tr>
+            <th>Interval</th><th>N</th><th>Hit %</th><th>Avg %</th><th>σ</th><th>Confidence</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+function confidenceLabel(n) {
+  // Same thresholds the recommender (Phase 4) will use to decide whether to act on a signal.
+  if (n < 5)  return { label: "noise",       cls: "noise"       };
+  if (n < 20) return { label: "weak",        cls: "weak"        };
+  if (n < 50) return { label: "emerging",    cls: "emerging"    };
+  return       { label: "established", cls: "established" };
+}
+
+function prettyName(s) {
+  return s.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
+function formatRelTime(iso) {
+  if (!iso) return "—";
+  const dt = new Date(iso);
+  const mins = Math.floor((Date.now() - dt.getTime()) / 60000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  if (mins < 1440) return `${Math.floor(mins/60)}h ago`;
+  return dt.toLocaleDateString();
+}
+
+// ============================================================
 // Init
 // ============================================================
 renderWatchlist();
 loadData();
-// Refresh signals every 5 min (the data file updates every 15 min via Action)
-setInterval(loadData, 5 * 60 * 1000);
+loadStats();
+// Refresh both every 5 min (data files update via Actions)
+setInterval(() => { loadData(); loadStats(); }, 5 * 60 * 1000);

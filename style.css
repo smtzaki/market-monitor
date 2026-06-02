@@ -241,6 +241,96 @@ footer #fx-rate {
   margin-left: 6px;
 }
 
+/* === TRACK RECORD === */
+.track-record { margin-bottom: 64px; }
+
+.track-meta {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.track-meta span { margin-right: 4px; }
+
+.track-bucket { margin-bottom: 40px; }
+.track-bucket:last-child { margin-bottom: 0; }
+
+.track-bucket h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.track-bucket h3 em {
+  font-style: italic;
+  color: var(--text-dim);
+  font-weight: 400;
+}
+
+.track-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+
+.track-table thead th {
+  font-size: 9px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-align: left;
+  font-weight: 400;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.track-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.track-table tbody tr:last-child td { border-bottom: none; }
+
+.track-table td:first-child {
+  color: var(--text-dim);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.track-table td.bull { color: var(--bull); }
+.track-table td.bear { color: var(--bear); }
+
+.track-table tr.empty-row td:not(:first-child) { color: var(--text-faint); }
+
+.conf {
+  display: inline-block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding: 3px 10px;
+  border: 1px solid;
+}
+
+.conf.noise       { color: var(--text-faint); border-color: var(--text-faint); }
+.conf.weak        { color: var(--text-dim);   border-color: var(--text-dim);   }
+.conf.emerging    { color: var(--accent);     border-color: var(--accent);     }
+.conf.established { color: var(--bull);       border-color: var(--bull);       }
+
+@media (max-width: 600px) {
+  .track-table { font-size: 11px; }
+  .track-table thead th { padding: 6px 4px; }
+  .track-table td { padding: 8px 4px; }
+  .track-table th:nth-child(5),
+  .track-table td:nth-child(5) { display: none; } /* hide σ column on mobile */
+  .conf { font-size: 8px; padding: 2px 6px; letter-spacing: 0.1em; }
+}
+
 /* TradingView widget container fixes — keep their layouts contained */
 .tradingview-widget-container { height: 100%; }
 .tradingview-widget-copyright {
