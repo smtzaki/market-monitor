@@ -70,12 +70,34 @@ RECOMMENDER_SMALLCAP: list[str] = [
     # e.g. "BB.TO", "OPEN", "RKLB" — add freely
 ]
 
+# ETFs — particularly relevant for Canadian TFSA building. ETFs tend to have
+# lower volatility than individual stocks, so the volume detector fires LESS
+# often but signals are arguably cleaner (institutional flow into a diversified
+# basket is a stronger statement than a single-stock spike).
+RECOMMENDER_ETFS = [
+    # Canadian all-in-one (the popular TFSA workhorses)
+    "XEQT.TO",   # iShares Core Equity ETF — 100% equity, globally diversified
+    "VEQT.TO",   # Vanguard equivalent
+    "VGRO.TO",   # 80/20 equity/bond — slightly more conservative
+    # Canadian US-exposure
+    "VFV.TO",    # Vanguard S&P 500 (CAD-traded, unhedged)
+    "XUS.TO",    # iShares S&P 500 (CAD)
+    # Canadian sector
+    "ZEB.TO",    # BMO Canadian banks
+    "XIT.TO",    # iShares Canadian tech
+    # US mega-ETFs — useful for macro signals
+    "SPY",       # S&P 500
+    "QQQ",       # Nasdaq 100
+    "VTI",       # Total US market
+    "IWM",       # Russell 2000 (small caps)
+]
+
 
 def all_recommender_tickers() -> list[str]:
     """Return deduped list of all tickers to scan for signals."""
     seen = set()
     out = []
-    for t in RECOMMENDER_US + RECOMMENDER_TSX + RECOMMENDER_SMALLCAP:
+    for t in RECOMMENDER_US + RECOMMENDER_TSX + RECOMMENDER_SMALLCAP + RECOMMENDER_ETFS:
         if t not in seen:
             seen.add(t)
             out.append(t)
