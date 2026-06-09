@@ -25,6 +25,7 @@ import yfinance as yf
 
 import alerts
 import detectors
+import regime
 import state
 from universe import (
     TILE_INDEXES,
@@ -94,8 +95,13 @@ def fetch_tile_data(tile_list: list) -> list:
     return results
 
 
-def append_to_signal_log(signal: dict) -> None:
-    """Append signal to signal_log.json. Forward returns populated later by a separate Action."""
+def append_to_signal_log(signal: dict, current_regime: dict) -> None:
+    """Append signal to signal_log.json with regime tag.
+
+    Forward returns populated later by a separate Action.
+    Regime is captured at fire-time so we can analyze how the same signal
+    type performs in different market environments.
+    """
     SIGNAL_LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
     if SIGNAL_LOG_FILE.exists():
         try:
@@ -116,14 +122,19 @@ def append_to_signal_log(signal: dict) -> None:
         "signal_type": signal["signal_type"],
         "fired_at": fired_at,
         "entry_price": signal["price"],
+        "regime": current_regime,
         "details": signal,
         "forward_returns": {"1d": None, "3d": None, "7d": None, "30d": None},
     })
     SIGNAL_LOG_FILE.write_text(json.dumps(data, indent=2))
 
 
-def scan_signals() -> list:
-    """Scan the full recommender universe for signals. Push alerts + log."""
+def scan_signals(current_regime: dict) -> list:
+    """Scan the full recommender universe for signals. Push alerts + log.
+
+    current_regime is passed in (computed once per scan, not per signal)
+    and attached to each signal for later per-regime analysis.
+    """
     tickers = all_recommender_tickers()
     log.info(f"Scanning {len(tickers)} tickers for signals...")
     alert_state = state.load_state()
@@ -141,7 +152,7 @@ def scan_signals() -> list:
                 )
                 alerts.volume_spike_alert(signal)
                 state.mark_alerted(key, alert_state)
-                append_to_signal_log(signal)
+                append_to_signal_log(signal, current_regime)
             active.append(signal)
         time.sleep(0.5)  # be polite to Yahoo
 
@@ -149,12 +160,13 @@ def scan_signals() -> list:
     return active
 
 
-def write_latest(usdcad: float, tiles_idx: list, tiles_stk: list, signals: list) -> None:
+def write_latest(usdcad: float, tiles_idx: list, tiles_stk: list, signals: list, current_regime: dict) -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     payload = {
         "scanned_at": datetime.now(timezone.utc).isoformat(),
         "market_open": is_market_open(),
         "usdcad_rate": usdcad,
+        "regime": current_regime,
         "tiles": {"indexes": tiles_idx, "stocks": tiles_stk},
         "active_signals": signals,
     }
@@ -169,18 +181,26 @@ def main() -> int:
     usdcad = fetch_usdcad()
     log.info(f"  USD/CAD = {usdcad}")
 
+    log.info("Classifying market regime...")
+    current_regime = regime.classify_current_regime()
+    log.info(
+        f"  Regime: {current_regime.get('classification', 'unknown')} "
+        f"(VIX {current_regime.get('vix', '?')}, "
+        f"SPY 5d {current_regime.get('spy_5d_pct', '?')}%)"
+    )
+
     log.info("Fetching tile data...")
     tiles_idx = fetch_tile_data(TILE_INDEXES)
     tiles_stk = fetch_tile_data(TILE_STOCKS)
     log.info(f"  Got {len(tiles_idx)} indexes, {len(tiles_stk)} stocks")
 
     if is_market_open():
-        signals = scan_signals()
+        signals = scan_signals(current_regime)
     else:
         log.info("Market closed — skipping signal scan (tile data still refreshed)")
         signals = []
 
-    write_latest(usdcad, tiles_idx, tiles_stk, signals)
+    write_latest(usdcad, tiles_idx, tiles_stk, signals, current_regime)
     log.info("Scan complete.")
     return 0
 

@@ -37,6 +37,8 @@ log = logging.getLogger(__name__)
 DATA_DIR = Path("../data")
 SIGNAL_LOG_FILE = DATA_DIR / "signal_log.json"
 STATS_FILE = DATA_DIR / "signal_stats.json"
+STATS_BY_TICKER_FILE = DATA_DIR / "signal_stats_by_ticker.json"
+STATS_BY_REGIME_FILE = DATA_DIR / "signal_stats_by_regime.json"
 
 INTERVALS_DAYS = {"1d": 1, "3d": 3, "7d": 7, "30d": 30}
 
@@ -61,6 +63,14 @@ def save_log(data: dict) -> None:
 
 def save_stats(stats: dict) -> None:
     STATS_FILE.write_text(json.dumps(stats, indent=2))
+
+
+def save_per_ticker_stats(stats: dict) -> None:
+    STATS_BY_TICKER_FILE.write_text(json.dumps(stats, indent=2))
+
+
+def save_per_regime_stats(stats: dict) -> None:
+    STATS_BY_REGIME_FILE.write_text(json.dumps(stats, indent=2))
 
 
 # ============================================================
@@ -183,6 +193,101 @@ def compute_stats(signals: list) -> dict:
     return out
 
 
+def compute_per_ticker_stats(signals: list, min_n: int = 3) -> dict:
+    """Per-ticker breakdown of realized returns.
+
+    Reveals which tickers actually have signal value vs which are noise.
+    Tickers with <min_n samples are excluded (insufficient data).
+    """
+    buckets = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+
+    for sig in signals:
+        ticker = sig.get("ticker")
+        direction = sig.get("details", {}).get("direction", "unknown")
+        if not ticker:
+            continue
+        for label, val in sig.get("forward_returns", {}).items():
+            if val is not None:
+                buckets[ticker][direction][label].append(val)
+
+    out = {
+        "computed_at": datetime.now(timezone.utc).isoformat(),
+        "min_sample_size": min_n,
+        "tickers": {},
+    }
+
+    for ticker, dirs in buckets.items():
+        ticker_data = {}
+        for direction, intervals in dirs.items():
+            dir_data = {}
+            for label, vals in intervals.items():
+                if len(vals) < min_n:
+                    continue
+                hits = sum(
+                    1 for v in vals
+                    if (direction == "bullish" and v > 0)
+                    or (direction == "bearish" and v < 0)
+                )
+                dir_data[label] = {
+                    "n": len(vals),
+                    "hit_rate": round(hits / len(vals), 3),
+                    "avg_return_pct": round(sum(vals) / len(vals), 3),
+                    "std_pct": round(stdev(vals), 3) if len(vals) > 1 else 0.0,
+                }
+            if dir_data:
+                ticker_data[direction] = dir_data
+        if ticker_data:
+            out["tickers"][ticker] = ticker_data
+
+    return out
+
+
+def compute_per_regime_stats(signals: list) -> dict:
+    """Bucket stats by market regime (bull/correction/bear/neutral/crisis).
+
+    Reveals whether signals work differently in different market environments.
+    Critical for the recommender — same signal type may have very different
+    edge in correction vs bull market.
+    """
+    buckets = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
+
+    for sig in signals:
+        regime = sig.get("regime", {}).get("classification", "unknown")
+        st = sig.get("signal_type")
+        direction = sig.get("details", {}).get("direction", "unknown")
+        for label, val in sig.get("forward_returns", {}).items():
+            if val is not None:
+                buckets[regime][st][direction][label].append(val)
+
+    out = {
+        "computed_at": datetime.now(timezone.utc).isoformat(),
+        "by_regime": {},
+    }
+
+    for regime, types in buckets.items():
+        out["by_regime"][regime] = {}
+        for st, dirs in types.items():
+            out["by_regime"][regime][st] = {}
+            for direction, intervals in dirs.items():
+                out["by_regime"][regime][st][direction] = {}
+                for label, vals in intervals.items():
+                    if not vals:
+                        continue
+                    hits = sum(
+                        1 for v in vals
+                        if (direction == "bullish" and v > 0)
+                        or (direction == "bearish" and v < 0)
+                    )
+                    out["by_regime"][regime][st][direction][label] = {
+                        "n": len(vals),
+                        "hit_rate": round(hits / len(vals), 3),
+                        "avg_return_pct": round(sum(vals) / len(vals), 3),
+                        "std_pct": round(stdev(vals), 3) if len(vals) > 1 else 0.0,
+                    }
+
+    return out
+
+
 # ============================================================
 # Main
 # ============================================================
@@ -213,6 +318,17 @@ def main() -> int:
         f"Stats written: {stats['total_signals_with_any_return']}/"
         f"{stats['total_signals_logged']} signals have realized returns"
     )
+
+    # Per-ticker stats — reveals which tickers actually have edge vs which are noise
+    ticker_stats = compute_per_ticker_stats(signals)
+    save_per_ticker_stats(ticker_stats)
+    log.info(f"Per-ticker stats: {len(ticker_stats['tickers'])} tickers with sufficient data")
+
+    # Per-regime stats — reveals whether signals work in different market environments
+    regime_stats = compute_per_regime_stats(signals)
+    save_per_regime_stats(regime_stats)
+    n_regimes = len(regime_stats["by_regime"])
+    log.info(f"Per-regime stats: {n_regimes} regimes represented in signal log")
 
     return 0
 

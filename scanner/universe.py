@@ -29,11 +29,24 @@ TILE_STOCKS = [
 # Curated starter list (~85 tickers). Expand to full S&P 500 + TSX Composite
 # once Phase 1 is stable. (TODO: dynamic fetch from Wikipedia / TMX listings)
 
+# Recommender universe — pruned for signal quality + ethical principles.
+#
+# Excluded from RECOMMENDER (still appear in TILE_STOCKS for context):
+#   - Mega-caps (structural retail-edge problem): NVDA, AAPL, MSFT, GOOGL,
+#     META, AMZN, TSLA, AVGO. These are too efficient — any edge a retail
+#     scanner detects has been arbitraged away by institutional algos.
+#   - Defense / weapons manufacturers: LMT, RTX, BA, GE (aerospace+defense).
+#   - Mass surveillance infrastructure: PLTR (ICE deportation tooling,
+#     predictive policing, IDF battlefield AI, NSA contracts).
+#
+# CRWD and PANW retained — corporate cybersecurity (defensive, not offensive
+# state surveillance). Reasonable people can disagree on this line; the
+# distinction here is "selling protection to enterprises" vs "selling
+# population-scale surveillance to governments."
+
 RECOMMENDER_US = [
-    # Mega-cap tech
-    "NVDA", "AAPL", "MSFT", "GOOGL", "META", "AMZN", "TSLA", "AVGO",
     # Tech / semis / cloud / cyber
-    "AMD", "INTC", "ORCL", "CRM", "ADBE", "NFLX", "PLTR", "SMCI",
+    "AMD", "INTC", "ORCL", "CRM", "ADBE", "NFLX", "SMCI",
     "CRWD", "PANW", "SNOW", "DDOG", "NET", "MDB", "COIN", "ARM",
     "ASML", "TSM", "QCOM", "MU", "MRVL",
     # Financials
@@ -44,8 +57,8 @@ RECOMMENDER_US = [
     "UNH", "JNJ", "LLY", "PFE", "MRK", "ABBV", "TMO",
     # Energy
     "XOM", "CVX", "COP",
-    # Industrials / defense
-    "BA", "CAT", "GE", "LMT", "RTX",
+    # Industrials (non-defense)
+    "CAT",
 ]
 
 RECOMMENDER_TSX = [
