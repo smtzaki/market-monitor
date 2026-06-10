@@ -1,15 +1,15 @@
 {
-  "scanned_at": "2026-06-10T19:46:49.330435+00:00",
-  "market_open": true,
-  "usdcad_rate": 1.3941,
+  "scanned_at": "2026-06-10T20:00:43.621509+00:00",
+  "market_open": false,
+  "usdcad_rate": 1.3956,
   "regime": {
-    "classification": "correction",
-    "vix": 22.2,
-    "spy_5d_pct": -3.58,
-    "spy_20d_pct": -1.59,
+    "classification": "neutral",
+    "vix": 21.79,
+    "spy_5d_pct": -3.79,
+    "spy_20d_pct": -1.8,
     "spy_above_200d": true,
-    "spy_200d_ma": 6872.47,
-    "computed_at": "2026-06-10T19:45:30.037072+00:00"
+    "spy_200d_ma": 6872.4,
+    "computed_at": "2026-06-10T20:00:39.005000+00:00"
   },
   "tiles": {
     "indexes": [
@@ -17,25 +17,25 @@
         "ticker": "^GSPTSE",
         "name": "TSX Composite",
         "currency": "CAD",
-        "price": 34174.17,
-        "change_pct": -0.69,
-        "volume": 151449966
+        "price": 34151.32,
+        "change_pct": -0.76,
+        "volume": 273485285
       },
       {
         "ticker": "^GSPC",
         "name": "S&P 500",
         "currency": "USD",
-        "price": 7283.27,
-        "change_pct": -1.4,
-        "volume": 2303673000
+        "price": 7267.58,
+        "change_pct": -1.61,
+        "volume": 3115944000
       },
       {
         "ticker": "^NDX",
         "name": "Nasdaq 100",
         "currency": "USD",
-        "price": 28573.65,
-        "change_pct": -1.76,
-        "volume": 940899771
+        "price": 28508.03,
+        "change_pct": -1.98,
+        "volume": 1012961000
       }
     ],
     "stocks": [
@@ -43,79 +43,67 @@
         "ticker": "NVDA",
         "name": "NVIDIA",
         "currency": "USD",
-        "price": 201.13,
-        "change_pct": -3.39,
-        "volume": 125572552
+        "price": 200.42,
+        "change_pct": -3.73,
+        "volume": 150398224
       },
       {
         "ticker": "AAPL",
         "name": "Apple",
         "currency": "USD",
-        "price": 292.16,
-        "change_pct": 0.55,
-        "volume": 39005184
+        "price": 291.58,
+        "change_pct": 0.35,
+        "volume": 49237715
       },
       {
         "ticker": "MSFT",
         "name": "Microsoft",
         "currency": "USD",
-        "price": 398.78,
-        "change_pct": -1.15,
-        "volume": 20150023
+        "price": 397.36,
+        "change_pct": -1.5,
+        "volume": 28477975
       },
       {
         "ticker": "GOOGL",
         "name": "Alphabet",
         "currency": "USD",
-        "price": 357.01,
-        "change_pct": -1.99,
-        "volume": 23799739
+        "price": 356.38,
+        "change_pct": -2.16,
+        "volume": 30683028
       },
       {
         "ticker": "TSLA",
         "name": "Tesla",
         "currency": "USD",
-        "price": 382.38,
-        "change_pct": -3.61,
-        "volume": 41606860
+        "price": 381.59,
+        "change_pct": -3.8,
+        "volume": 47173605
       },
       {
         "ticker": "AMD",
         "name": "AMD",
         "currency": "USD",
-        "price": 453.62,
-        "change_pct": -4.6,
-        "volume": 21756308
+        "price": 452.4,
+        "change_pct": -4.86,
+        "volume": 26639492
       },
       {
         "ticker": "SHOP.TO",
         "name": "Shopify",
         "currency": "CAD",
-        "price": 151.9,
-        "change_pct": -1.45,
-        "volume": 820787
+        "price": 150.93,
+        "change_pct": -2.08,
+        "volume": 1579943
       },
       {
         "ticker": "RY.TO",
         "name": "Royal Bank of Canada",
         "currency": "CAD",
-        "price": 276.34,
-        "change_pct": 0.12,
-        "volume": 1638986
+        "price": 275.76,
+        "change_pct": -0.09,
+        "volume": 2306398
       }
     ]
   },
-  "active_signals": [
-    {
-      "signal_type": "volume_spike",
-      "ticker": "SMCI",
-      "multiplier": 3.43,
-      "today_volume": 139214947,
-      "projected_volume": 144526798,
-      "avg_volume_20d": 42134650,
-      "price_change_pct": -16.39,
-      "price": 29.76,
-      "direction": "bearish"
-    }
-  ]
+  "active_signals": []
 }
