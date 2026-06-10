@@ -1,14 +1,14 @@
 {
-  "computed_at": "2026-06-10T01:46:34.828308+00:00",
+  "computed_at": "2026-06-10T23:17:29.605137+00:00",
   "min_sample_size": 3,
   "tickers": {
     "MRVL": {
       "bearish": {
         "1d": {
-          "n": 4,
-          "hit_rate": 0.5,
-          "avg_return_pct": 0.078,
-          "std_pct": 5.34
+          "n": 5,
+          "hit_rate": 0.6,
+          "avg_return_pct": -2.467,
+          "std_pct": 7.332
         },
         "3d": {
           "n": 3,
@@ -37,26 +37,36 @@
     "ORCL": {
       "bearish": {
         "1d": {
-          "n": 3,
+          "n": 4,
           "hit_rate": 1.0,
-          "avg_return_pct": -4.037,
-          "std_pct": 2.774
+          "avg_return_pct": -4.477,
+          "std_pct": 2.429
         }
       }
     },
     "CRM": {
       "bearish": {
         "1d": {
-          "n": 4,
+          "n": 5,
           "hit_rate": 1.0,
-          "avg_return_pct": -4.63,
-          "std_pct": 0.507
+          "avg_return_pct": -4.565,
+          "std_pct": 0.462
         },
         "3d": {
           "n": 3,
           "hit_rate": 1.0,
           "avg_return_pct": -6.069,
           "std_pct": 1.111
+        }
+      }
+    },
+    "TSM": {
+      "bullish": {
+        "1d": {
+          "n": 3,
+          "hit_rate": 0.0,
+          "avg_return_pct": -2.333,
+          "std_pct": 3.245
         }
       }
     },
@@ -131,10 +141,10 @@
     "ARM": {
       "bearish": {
         "1d": {
-          "n": 4,
-          "hit_rate": 0.75,
-          "avg_return_pct": -3.699,
-          "std_pct": 5.123
+          "n": 5,
+          "hit_rate": 0.8,
+          "avg_return_pct": -5.542,
+          "std_pct": 6.055
         },
         "3d": {
           "n": 3,
@@ -163,16 +173,26 @@
     "UNH": {
       "bullish": {
         "1d": {
-          "n": 3,
-          "hit_rate": 1.0,
-          "avg_return_pct": 1.802,
-          "std_pct": 0.846
+          "n": 4,
+          "hit_rate": 0.75,
+          "avg_return_pct": 1.238,
+          "std_pct": 1.323
         },
         "3d": {
           "n": 3,
           "hit_rate": 1.0,
           "avg_return_pct": 3.274,
           "std_pct": 1.925
+        }
+      }
+    },
+    "ASML": {
+      "bullish": {
+        "1d": {
+          "n": 3,
+          "hit_rate": 0.333,
+          "avg_return_pct": -2.238,
+          "std_pct": 3.416
         }
       }
     },
