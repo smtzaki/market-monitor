@@ -1,15 +1,15 @@
 {
-  "scanned_at": "2026-06-11T14:02:05.647281+00:00",
+  "scanned_at": "2026-06-11T14:16:44.509762+00:00",
   "market_open": true,
-  "usdcad_rate": 1.3954,
+  "usdcad_rate": 1.4011,
   "regime": {
     "classification": "neutral",
-    "vix": 21.51,
-    "spy_5d_pct": -3.56,
-    "spy_20d_pct": -1.75,
+    "vix": 21.1,
+    "spy_5d_pct": -3.82,
+    "spy_20d_pct": -2.01,
     "spy_above_200d": true,
-    "spy_200d_ma": 6876.77,
-    "computed_at": "2026-06-11T14:00:46.104429+00:00"
+    "spy_200d_ma": 6876.67,
+    "computed_at": "2026-06-11T14:15:31.984334+00:00"
   },
   "tiles": {
     "indexes": [
@@ -17,25 +17,25 @@
         "ticker": "^GSPTSE",
         "name": "TSX Composite",
         "currency": "CAD",
-        "price": 34510.47,
-        "change_pct": 1.05,
-        "volume": 26700935
+        "price": 34410.29,
+        "change_pct": 0.76,
+        "volume": 33228360
       },
       {
         "ticker": "^GSPC",
         "name": "S&P 500",
         "currency": "USD",
-        "price": 7314.68,
-        "change_pct": 0.66,
-        "volume": 442791605
+        "price": 7294.56,
+        "change_pct": 0.38,
+        "volume": 569479138
       },
       {
         "ticker": "^NDX",
         "name": "Nasdaq 100",
         "currency": "USD",
-        "price": 28909.9,
-        "change_pct": 1.41,
-        "volume": 191190952
+        "price": 28820.83,
+        "change_pct": 1.1,
+        "volume": 243989717
       }
     ],
     "stocks": [
@@ -43,65 +43,65 @@
         "ticker": "NVDA",
         "name": "NVIDIA",
         "currency": "USD",
-        "price": 203.07,
-        "change_pct": 1.32,
-        "volume": 22057003
+        "price": 202.15,
+        "change_pct": 0.86,
+        "volume": 27310197
       },
       {
         "ticker": "AAPL",
         "name": "Apple",
         "currency": "USD",
-        "price": 291.35,
-        "change_pct": -0.08,
-        "volume": 4451404
+        "price": 290.27,
+        "change_pct": -0.45,
+        "volume": 5873973
       },
       {
         "ticker": "MSFT",
         "name": "Microsoft",
         "currency": "USD",
-        "price": 392.11,
-        "change_pct": -1.32,
-        "volume": 5998542
+        "price": 389.54,
+        "change_pct": -1.97,
+        "volume": 7492131
       },
       {
         "ticker": "GOOGL",
         "name": "Alphabet",
         "currency": "USD",
-        "price": 348.83,
-        "change_pct": -2.12,
-        "volume": 7382933
+        "price": 348.71,
+        "change_pct": -2.15,
+        "volume": 8747615
       },
       {
         "ticker": "TSLA",
         "name": "Tesla",
         "currency": "USD",
-        "price": 388.4,
-        "change_pct": 1.78,
-        "volume": 7765112
+        "price": 387.7,
+        "change_pct": 1.6,
+        "volume": 10022063
       },
       {
         "ticker": "AMD",
         "name": "AMD",
         "currency": "USD",
-        "price": 477.83,
-        "change_pct": 5.62,
-        "volume": 4748791
+        "price": 469.56,
+        "change_pct": 3.79,
+        "volume": 6275815
       },
       {
         "ticker": "SHOP.TO",
         "name": "Shopify",
         "currency": "CAD",
-        "price": 151.35,
-        "change_pct": 0.28,
-        "volume": 202985
+        "price": 148.48,
+        "change_pct": -1.62,
+        "volume": 265656
       },
       {
         "ticker": "RY.TO",
         "name": "Royal Bank of Canada",
         "currency": "CAD",
-        "price": 278.25,
-        "change_pct": 0.9,
-        "volume": 201993
+        "price": 277.14,
+        "change_pct": 0.5,
+        "volume": 255003
       }
     ]
   },
@@ -109,56 +109,78 @@
     {
       "signal_type": "volume_spike",
       "ticker": "INTC",
-      "multiplier": 3.89,
-      "today_volume": 38465392,
-      "projected_volume": 485961669,
+      "multiplier": 3.35,
+      "today_volume": 48878691,
+      "projected_volume": 417835883,
       "avg_volume_20d": 124846750,
-      "price_change_pct": 3.9,
-      "price": 117.88,
+      "price_change_pct": 2.83,
+      "price": 116.67,
       "direction": "bullish"
     },
     {
       "signal_type": "volume_spike",
-      "ticker": "SNOW",
-      "multiplier": 2.97,
-      "today_volume": 2695335,
-      "projected_volume": 33950112,
-      "avg_volume_20d": 11413680,
-      "price_change_pct": 1.39,
-      "price": 241.09,
-      "direction": "bullish"
+      "ticker": "ORCL",
+      "multiplier": 7.5,
+      "today_volume": 20137279,
+      "projected_volume": 172100496,
+      "avg_volume_20d": 22954430,
+      "price_change_pct": -1.37,
+      "price": 177.2,
+      "direction": "bearish"
+    },
+    {
+      "signal_type": "volume_spike",
+      "ticker": "ADBE",
+      "multiplier": 2.73,
+      "today_volume": 1693721,
+      "projected_volume": 14468681,
+      "avg_volume_20d": 5308500,
+      "price_change_pct": -2.34,
+      "price": 224.51,
+      "direction": "bearish"
+    },
+    {
+      "signal_type": "volume_spike",
+      "ticker": "SMCI",
+      "multiplier": 17.6,
+      "today_volume": 102999852,
+      "projected_volume": 879483240,
+      "avg_volume_20d": 49961380,
+      "price_change_pct": -1.51,
+      "price": 28.78,
+      "direction": "bearish"
     },
     {
       "signal_type": "volume_spike",
       "ticker": "ASML",
-      "multiplier": 3.38,
-      "today_volume": 470134,
-      "projected_volume": 5908771,
+      "multiplier": 3.08,
+      "today_volume": 631622,
+      "projected_volume": 5381685,
       "avg_volume_20d": 1747530,
-      "price_change_pct": 1.93,
-      "price": 1814.21,
+      "price_change_pct": 1.7,
+      "price": 1810.22,
       "direction": "bullish"
     },
     {
       "signal_type": "volume_spike",
       "ticker": "PFE",
-      "multiplier": 2.51,
-      "today_volume": 6717641,
-      "projected_volume": 83542291,
+      "multiplier": 2.7,
+      "today_volume": 10589140,
+      "projected_volume": 89635343,
       "avg_volume_20d": 33239830,
-      "price_change_pct": 1.61,
-      "price": 26.2,
+      "price_change_pct": 2.47,
+      "price": 26.43,
       "direction": "bullish"
     },
     {
       "signal_type": "volume_spike",
       "ticker": "DOL.TO",
-      "multiplier": 4.63,
-      "today_volume": 266214,
-      "projected_volume": 3251706,
+      "multiplier": 4.02,
+      "today_volume": 337651,
+      "projected_volume": 2826688,
       "avg_volume_20d": 702895,
-      "price_change_pct": 4.35,
-      "price": 193.05,
+      "price_change_pct": 3.86,
+      "price": 192.15,
       "direction": "bullish"
     }
   ]
