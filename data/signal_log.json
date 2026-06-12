@@ -7100,6 +7100,72 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "SMCI_volume_spike_20260612134539",
+      "ticker": "SMCI",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-12T13:45:39.370586+00:00",
+      "entry_price": 29.67,
+      "regime": {
+        "classification": "neutral",
+        "vix": 19.26,
+        "spy_5d_pct": -0.1,
+        "spy_20d_pct": -1.66,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6881.72,
+        "computed_at": "2026-06-12T13:45:29.511553+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "SMCI",
+        "multiplier": 5.52,
+        "today_volume": 13579907,
+        "projected_volume": 338456603,
+        "avg_volume_20d": 61283145,
+        "price_change_pct": -3.73,
+        "price": 29.67,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MRVL_volume_spike_20260612134549",
+      "ticker": "MRVL",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-12T13:45:49.167147+00:00",
+      "entry_price": 275.01,
+      "regime": {
+        "classification": "neutral",
+        "vix": 19.26,
+        "spy_5d_pct": -0.1,
+        "spy_20d_pct": -1.66,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6881.72,
+        "computed_at": "2026-06-12T13:45:29.511553+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "MRVL",
+        "multiplier": 2.86,
+        "today_volume": 6350582,
+        "projected_volume": 156595924,
+        "avg_volume_20d": 54689180,
+        "price_change_pct": 1.9,
+        "price": 275.01,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
