@@ -206,7 +206,11 @@ def compute_baselines(conn: sqlite3.Connection) -> dict:
 # ============================================================
 
 def universe_to_backfill() -> list[str]:
-    """All tickers we want historical data for. Deduped."""
+    """All tickers we want historical data for. Deduped.
+
+    Includes ^VIX explicitly (it's not in TILE/RECOMMENDER) because regime
+    classification needs historical VIX data.
+    """
     seen = set()
     out = []
     for t in all_recommender_tickers():
@@ -218,6 +222,9 @@ def universe_to_backfill() -> list[str]:
         if t not in seen:
             seen.add(t)
             out.append(t)
+    # VIX needed for regime classification but not in any list
+    if "^VIX" not in seen:
+        out.append("^VIX")
     return out
 
 

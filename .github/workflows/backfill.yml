@@ -33,18 +33,23 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run backfill
+      - name: Run price backfill
         run: |
           cd scanner
           python backfill.py
+
+      - name: Run regime backfill on signal log
+        run: |
+          cd scanner
+          python backfill_regimes.py
 
       - name: Commit historical data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/historical_prices.db data/historical_baselines.json
+          git add data/historical_prices.db data/historical_baselines.json data/signal_log.json
           if ! git diff --staged --quiet; then
-            git commit -m "backfill: historical data refresh $(date -u +'%Y-%m-%d')"
+            git commit -m "backfill: historical data + regime tags $(date -u +'%Y-%m-%d')"
             git push
           else
             echo "No changes to commit."

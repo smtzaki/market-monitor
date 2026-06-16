@@ -22,43 +22,58 @@
       </div>
     </header>
 
-    <!-- TradingView ticker tape — 3 indexes -->
-    <section class="ticker-section">
-      <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-        {
-          "symbols": [
-            {"description": "TSX Composite", "proName": "TSX:TSX"},
-            {"description": "S&P 500", "proName": "OANDA:SPX500USD"},
-            {"description": "Nasdaq 100", "proName": "OANDA:NAS100USD"}
-          ],
-          "showSymbolLogo": false,
-          "isTransparent": true,
-          "displayMode": "regular",
-          "colorTheme": "dark",
-          "locale": "en"
-        }
-        </script>
+    <!-- Regime banner — always visible, shows current market state -->
+    <section class="regime-banner" id="regime-banner">
+      <div class="regime-cell">
+        <div class="regime-label">Regime</div>
+        <div class="regime-value" id="regime-value">—</div>
+      </div>
+      <div class="regime-cell">
+        <div class="regime-label">VIX</div>
+        <div class="regime-num" id="regime-vix">—</div>
+      </div>
+      <div class="regime-cell">
+        <div class="regime-label">SPY 5d</div>
+        <div class="regime-num" id="regime-spy5d">—</div>
+      </div>
+      <div class="regime-cell">
+        <div class="regime-label">SPY 20d</div>
+        <div class="regime-num" id="regime-spy20d">—</div>
       </div>
     </section>
 
-    <!-- Watchlist — 8 mini TradingView widgets -->
-    <section class="watchlist">
+    <!-- Tab navigation -->
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-tab="overview" role="tab">Overview</button>
+      <button class="tab" data-tab="active" role="tab">Active Signals</button>
+      <button class="tab" data-tab="by-ticker" role="tab">By Ticker</button>
+      <button class="tab" data-tab="by-regime" role="tab">By Regime</button>
+      <button class="tab" data-tab="signal-log" role="tab">Signal Log</button>
+    </nav>
+
+    <section class="tab-panel active" id="panel-overview">
       <h2 class="section-title"><span>Watchlist</span></h2>
-      <div class="grid" id="watchlist-grid"></div>
-    </section>
-
-    <!-- Active signals — custom, from latest.json -->
-    <section class="signals">
-      <h2 class="section-title"><span>Active Signals</span></h2>
-      <div id="signals-list">
-        <p class="empty">Loading…</p>
+      <div class="ticker-section">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+          {
+            "symbols": [
+              {"description": "TSX Composite", "proName": "TSX:TSX"},
+              {"description": "S&P 500", "proName": "OANDA:SPX500USD"},
+              {"description": "Nasdaq 100", "proName": "OANDA:NAS100USD"}
+            ],
+            "showSymbolLogo": false,
+            "isTransparent": true,
+            "displayMode": "regular",
+            "colorTheme": "dark",
+            "locale": "en"
+          }
+          </script>
+        </div>
       </div>
-    </section>
+      <div class="grid" id="watchlist-grid"></div>
 
-    <!-- Track Record — Phase 3.5: live system performance -->
-    <section class="track-record">
       <h2 class="section-title"><span>Track Record</span></h2>
       <div id="track-meta" class="track-meta"></div>
       <div id="track-record-body">
@@ -66,9 +81,98 @@
       </div>
     </section>
 
+    <section class="tab-panel" id="panel-active">
+      <h2 class="section-title"><span>Active Signals</span></h2>
+      <div class="panel-meta" id="active-meta">Signals firing right now</div>
+      <div id="active-signals-body">
+        <p class="empty">Loading…</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-by-ticker">
+      <h2 class="section-title"><span>Per-Ticker Performance</span></h2>
+      <div class="filter-bar">
+        <label>
+          <span>Min sample size</span>
+          <input type="range" id="ticker-min-n" min="2" max="20" value="3" step="1">
+          <span class="filter-value" id="ticker-min-n-value">3</span>
+        </label>
+        <label>
+          <span>Direction</span>
+          <select id="ticker-direction">
+            <option value="all">All</option>
+            <option value="bullish">Bullish only</option>
+            <option value="bearish">Bearish only</option>
+          </select>
+        </label>
+        <label>
+          <span>Sort by</span>
+          <select id="ticker-sort">
+            <option value="edge">Edge (hit × avg)</option>
+            <option value="hit_rate">Hit rate</option>
+            <option value="avg_return">Avg return</option>
+            <option value="n">Sample size</option>
+          </select>
+        </label>
+      </div>
+      <div id="by-ticker-body">
+        <p class="empty">Loading…</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-by-regime">
+      <h2 class="section-title"><span>Performance by Market Regime</span></h2>
+      <div class="panel-meta">How signals behave in different market environments</div>
+      <div id="by-regime-body">
+        <p class="empty">Loading…</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-signal-log">
+      <h2 class="section-title"><span>Signal Log</span></h2>
+      <div class="filter-bar">
+        <label>
+          <span>Search ticker</span>
+          <input type="text" id="log-search" placeholder="e.g. MRVL">
+        </label>
+        <label>
+          <span>Direction</span>
+          <select id="log-direction">
+            <option value="all">All</option>
+            <option value="bullish">Bullish</option>
+            <option value="bearish">Bearish</option>
+          </select>
+        </label>
+        <label>
+          <span>Regime</span>
+          <select id="log-regime">
+            <option value="all">All</option>
+            <option value="bull">Bull</option>
+            <option value="neutral">Neutral</option>
+            <option value="correction">Correction</option>
+            <option value="bear">Bear</option>
+            <option value="crisis">Crisis</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </label>
+        <label>
+          <span>Limit</span>
+          <select id="log-limit">
+            <option value="25">25</option>
+            <option value="50" selected>50</option>
+            <option value="100">100</option>
+            <option value="500">500</option>
+          </select>
+        </label>
+      </div>
+      <div id="signal-log-body">
+        <p class="empty">Loading…</p>
+      </div>
+    </section>
+
     <footer>
       <p>
-        Phase 3.5 of 5 · Recommender activates in Phase 4<br>
+        Phase 3.8 of 5 · Recommender activates in Phase 4<br>
         <span class="fx-line">USD/CAD <span id="fx-rate">—</span></span>
       </p>
     </footer>

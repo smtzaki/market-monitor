@@ -6,9 +6,17 @@ Options detection was removed (too noisy on liquid names).
 Each detector returns a dict on hit, None otherwise.
 Detectors must never throw — failures are silent so one bad ticker
 doesn't kill the whole scan.
+
+σ-aware detection (added Phase 3.8):
+  If data/historical_baselines.json exists, detectors use per-ticker σ
+  to set thresholds. A 1% move on RY.TO (σ=0.96%) is a 1σ event = real.
+  A 1% move on COIN (σ=4.5%) is sub-1σ = noise. Without baselines,
+  detectors fall back to the universal thresholds.
 """
 
+import json
 from datetime import datetime
+from pathlib import Path
 from typing import Optional
 from zoneinfo import ZoneInfo
 
@@ -16,9 +24,33 @@ import yfinance as yf
 
 ET = ZoneInfo("America/New_York")
 
-# Tunable thresholds
+# Universal tunable thresholds (fallback when no baseline data)
 VOLUME_SPIKE_MULTIPLIER = 2.5      # projected volume must be >= 2.5x 20-day avg
 VOLUME_MIN_PRICE_MOVE_PCT = 1.0    # ignore spikes with <1% price action
+
+# σ-aware thresholds (used when baseline data available)
+SIGMA_PRICE_THRESHOLD = 1.5        # price must move >= 1.5x ticker's 60-day daily σ
+SIGMA_MIN_ABSOLUTE_PCT = 0.5       # but absolute floor of 0.5% to avoid tiny noise
+
+# Baseline cache loaded once per scanner process
+_BASELINES_CACHE: Optional[dict] = None
+_BASELINES_PATH = Path("../data/historical_baselines.json")
+
+
+def _load_baselines() -> dict:
+    """Load baselines once, cache for the rest of the process."""
+    global _BASELINES_CACHE
+    if _BASELINES_CACHE is not None:
+        return _BASELINES_CACHE
+    if _BASELINES_PATH.exists():
+        try:
+            data = json.loads(_BASELINES_PATH.read_text())
+            _BASELINES_CACHE = data.get("tickers", {})
+        except (json.JSONDecodeError, KeyError):
+            _BASELINES_CACHE = {}
+    else:
+        _BASELINES_CACHE = {}
+    return _BASELINES_CACHE
 
 
 def _minutes_into_session() -> float:
@@ -29,6 +61,22 @@ def _minutes_into_session() -> float:
     return max(1.0, min(elapsed, 390.0))
 
 
+def _price_threshold_for_ticker(ticker: str) -> float:
+    """Return the price-change threshold (in %) for this specific ticker.
+
+    Uses 1.5× the ticker's historical 60-day daily σ, with a 0.5% floor.
+    Falls back to universal threshold if no baseline available.
+    """
+    baselines = _load_baselines()
+    b = baselines.get(ticker)
+    if not b or b.get("sigma_60d_pct") is None:
+        return VOLUME_MIN_PRICE_MOVE_PCT
+    sigma = b["sigma_60d_pct"]
+    if sigma <= 0:
+        return VOLUME_MIN_PRICE_MOVE_PCT
+    return max(SIGMA_MIN_ABSOLUTE_PCT, sigma * SIGMA_PRICE_THRESHOLD)
+
+
 def check_volume_spike(ticker: str) -> Optional[dict]:
     """Detect unusual daily volume with corroborating price action.
 
@@ -36,10 +84,11 @@ def check_volume_spike(ticker: str) -> Optional[dict]:
       - Pull 22 days of daily bars.
       - Compute 20-day average volume (excluding today).
       - Project today's full-day volume by linear extrapolation from elapsed time.
-      - Fire if projected >= 2.5x average AND |price change| >= 1%.
+      - Compute per-ticker σ-aware price threshold (or fall back to 1%).
+      - Fire if projected >= 2.5x avg volume AND |price change| >= per-ticker threshold.
 
-    The price filter is critical — volume spikes without price action are
-    usually portfolio rebalancing or low-conviction flow.
+    The σ-aware threshold means a 1% move on a sleepy bank is meaningful while
+    the same 1% move on a hyper-volatile semi gets correctly classified as noise.
     """
     try:
         t = yf.Ticker(ticker)
@@ -57,10 +106,11 @@ def check_volume_spike(ticker: str) -> Optional[dict]:
         multiplier = projected / avg_volume
 
         price_change_pct = (today["Close"] - today["Open"]) / today["Open"] * 100
+        price_threshold = _price_threshold_for_ticker(ticker)
 
         if (
             multiplier >= VOLUME_SPIKE_MULTIPLIER
-            and abs(price_change_pct) >= VOLUME_MIN_PRICE_MOVE_PCT
+            and abs(price_change_pct) >= price_threshold
         ):
             return {
                 "signal_type": "volume_spike",
@@ -70,11 +120,11 @@ def check_volume_spike(ticker: str) -> Optional[dict]:
                 "projected_volume": int(projected),
                 "avg_volume_20d": int(avg_volume),
                 "price_change_pct": round(price_change_pct, 2),
+                "price_threshold_used": round(price_threshold, 2),
                 "price": round(float(today["Close"]), 2),
                 "direction": "bullish" if price_change_pct > 0 else "bearish",
             }
     except Exception:
         # Silent — one bad ticker mustn't kill the scan.
-        # Scanner logs the ticker that returned None vs raised; this is fine.
         return None
     return None

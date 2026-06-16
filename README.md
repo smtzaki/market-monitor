@@ -2,7 +2,7 @@
 
 A free, self-hosted (well, GitHub-hosted) market signal scanner with Discord alerts.
 
-**Status: Phase 3.7 of 5.** Scanner, dashboard, forward-return tracking, regime tagging, per-ticker stats, and historical backfill are all deployed. Recommender (Phase 4) comes next once we have sufficient regime-tagged and per-ticker validated data.
+**Status: Phase 3.8 of 5.** Scanner, dashboard, forward-return tracking, regime tagging, per-ticker stats, σ-aware thresholds, historical regime backfill, and tabbed dashboard UI all deployed. Recommender (Phase 4) is the next major build once we have sufficient regime-tagged signals across multiple market environments.
 
 ---
 
