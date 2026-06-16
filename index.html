@@ -46,6 +46,8 @@
     <nav class="tabs" role="tablist">
       <button class="tab active" data-tab="overview" role="tab">Overview</button>
       <button class="tab" data-tab="active" role="tab">Active Signals</button>
+      <button class="tab" data-tab="recommendations" role="tab">Recommendations</button>
+      <button class="tab" data-tab="positions" role="tab">Positions</button>
       <button class="tab" data-tab="by-ticker" role="tab">By Ticker</button>
       <button class="tab" data-tab="by-regime" role="tab">By Regime</button>
       <button class="tab" data-tab="signal-log" role="tab">Signal Log</button>
@@ -86,6 +88,53 @@
       <div class="panel-meta" id="active-meta">Signals firing right now</div>
       <div id="active-signals-body">
         <p class="empty">Loading…</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-recommendations">
+      <h2 class="section-title"><span>Recommendations</span></h2>
+      <div class="panel-meta" id="rec-meta">Candidates scored by edge × regime × confidence</div>
+      <div id="rec-budget-banner" class="budget-banner"></div>
+      <div id="recommendations-body">
+        <p class="empty">Loading…</p>
+      </div>
+      <div id="action-clipboard" class="action-clipboard" style="display:none;">
+        <h3>Action queued — copy this and append to <code>data/positions.json</code></h3>
+        <p class="action-help">Paste into the <code>pending_actions</code> array. Commit + push, and the next scan will process it.</p>
+        <pre id="action-payload"></pre>
+        <div class="action-buttons">
+          <button id="copy-action-btn">Copy to clipboard</button>
+          <button id="close-action-btn">Close</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="panel-positions">
+      <h2 class="section-title"><span>Positions</span></h2>
+      <div class="panel-meta">Real money + shadow trades, tracked the same way</div>
+      <div class="positions-summary" id="positions-summary">
+        <p class="empty">Loading…</p>
+      </div>
+      <div class="filter-bar">
+        <label>
+          <span>Type</span>
+          <select id="pos-type">
+            <option value="all">All</option>
+            <option value="real">Real only</option>
+            <option value="shadow">Shadow only</option>
+          </select>
+        </label>
+        <label>
+          <span>Status</span>
+          <select id="pos-status">
+            <option value="all">All</option>
+            <option value="open" selected>Open</option>
+            <option value="closed">Closed</option>
+          </select>
+        </label>
+      </div>
+      <div id="positions-body">
+        <p class="empty">No positions yet.</p>
       </div>
     </section>
 

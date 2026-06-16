@@ -134,27 +134,51 @@ def scan_signals(current_regime: dict) -> list:
 
     current_regime is passed in (computed once per scan, not per signal)
     and attached to each signal for later per-regime analysis.
+
+    Runs all detectors in priority order, with dedup so a single ticker
+    that fires multiple detectors only generates one alert per detector per day.
     """
     tickers = all_recommender_tickers()
-    log.info(f"Scanning {len(tickers)} tickers for signals...")
+    log.info(f"Scanning {len(tickers)} tickers across {4} detectors...")
     alert_state = state.load_state()
     today = datetime.now(ET).date().isoformat()
     active = []
 
+    # Detector registry — each returns dict or None
+    detector_fns = [
+        ("vol",       detectors.check_volume_spike),
+        ("momentum",  detectors.check_momentum),
+        ("newhigh",   detectors.check_new_high),
+        ("breakout",  detectors.check_breakout),
+    ]
+
     for ticker in tickers:
-        signal = detectors.check_volume_spike(ticker)
-        if signal:
-            key = f"vol:{ticker}:{today}"
+        for prefix, fn in detector_fns:
+            try:
+                signal = fn(ticker)
+            except Exception as e:
+                log.debug(f"  {prefix} failed on {ticker}: {e}")
+                signal = None
+            if not signal:
+                continue
+            key = f"{prefix}:{ticker}:{today}"
             if state.should_alert(key, alert_state):
+                price_chg = signal.get("price_change_pct", 0)
+                detail = signal.get("multiplier") or signal.get("pct_5d") or signal.get("breakout_pct") or 0
                 log.info(
-                    f"  ✓ {ticker}: {signal['multiplier']:.1f}x vol "
-                    f"({signal['price_change_pct']:+.2f}%)"
+                    f"  ✓ {ticker} [{signal['signal_type']}]: "
+                    f"signal={detail:.2f} ({price_chg:+.2f}%)"
                 )
-                alerts.volume_spike_alert(signal)
+                # All detectors push to Discord via the volume_spike alert format for now
+                # (could specialize per detector type later)
+                if signal["signal_type"] == "volume_spike":
+                    alerts.volume_spike_alert(signal)
+                else:
+                    alerts.generic_signal_alert(signal)
                 state.mark_alerted(key, alert_state)
                 append_to_signal_log(signal, current_regime)
             active.append(signal)
-        time.sleep(0.5)  # be polite to Yahoo
+        time.sleep(0.4)  # politeness; 4 detectors but most short-circuit early
 
     state.save_state(alert_state)
     return active

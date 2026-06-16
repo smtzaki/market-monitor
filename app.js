@@ -17,11 +17,15 @@ const STATS_URL         = "./data/signal_stats.json";
 const STATS_TICKER_URL  = "./data/signal_stats_by_ticker.json";
 const STATS_REGIME_URL  = "./data/signal_stats_by_regime.json";
 const SIGNAL_LOG_URL    = "./data/signal_log.json";
+const RECOMMENDATIONS_URL = "./data/recommendations.json";
+const POSITIONS_URL       = "./data/positions.json";
 
 // State held in memory for filter interactions
 const state = {
   signalLog: null,
   byTicker: null,
+  positions: null,
+  recommendations: null,
 };
 
 // ============================================================
@@ -528,6 +532,307 @@ function setupSignalLogFilters() {
 }
 
 // ============================================================
+// Recommendations
+// ============================================================
+async function loadRecommendations() {
+  try {
+    const resp = await fetch(`${RECOMMENDATIONS_URL}?t=${Date.now()}`);
+    if (!resp.ok) throw new Error();
+    state.recommendations = await resp.json();
+    renderRecommendations();
+  } catch {
+    document.getElementById("recommendations-body").innerHTML =
+      '<p class="empty">No recommendations yet — runs alongside each scan.</p>';
+  }
+}
+
+function renderRecommendations() {
+  if (!state.recommendations) return;
+  const data = state.recommendations;
+  const body = document.getElementById("recommendations-body");
+  const meta = document.getElementById("rec-meta");
+  const banner = document.getElementById("rec-budget-banner");
+
+  const recs = data.recommendations || [];
+  meta.textContent = `${recs.length} candidate${recs.length !== 1 ? "s" : ""} — updated ${formatRelTime(data.computed_at)}`;
+
+  const deployed = data.budget_deployed_cad || 0;
+  const remaining = data.budget_remaining_cad || data.budget_total_cad || 0;
+  const total = data.budget_total_cad || 0;
+  banner.innerHTML = `
+    <div class="budget-cell">
+      <div class="budget-label">Budget</div>
+      <div class="budget-value">$${total.toFixed(2)} CAD</div>
+    </div>
+    <div class="budget-cell">
+      <div class="budget-label">Deployed</div>
+      <div class="budget-value bull">$${deployed.toFixed(2)}</div>
+    </div>
+    <div class="budget-cell">
+      <div class="budget-label">Remaining</div>
+      <div class="budget-value">$${remaining.toFixed(2)}</div>
+    </div>
+    <div class="budget-cell">
+      <div class="budget-label">Locked tickers</div>
+      <div class="budget-value">${(data.locked_tickers || []).length}</div>
+    </div>
+  `;
+
+  if (!recs.length) {
+    body.innerHTML = '<p class="empty">No actionable candidates right now. The recommender is watching.</p>';
+    return;
+  }
+
+  body.innerHTML = recs.map(r => renderRecommendationCard(r)).join("");
+
+  // Wire up action buttons
+  document.querySelectorAll(".rec-action-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const op = btn.dataset.op;
+      const ticker = btn.dataset.ticker;
+      const rec = recs.find(x => x.ticker === ticker);
+      if (!rec) return;
+      showActionPayload(op, rec);
+    });
+  });
+}
+
+function renderRecommendationCard(r) {
+  const cls = r.direction === "bullish" ? "bull" : "bear";
+  const allocText = r.allocation
+    ? `$${r.allocation.allocation_cad.toFixed(2)} CAD (${(r.allocation.allocation_pct*100).toFixed(0)}%)`
+    : "—";
+  const scorePct = (r.score * 100).toFixed(0);
+  const actionable = r.actionable;
+  const buttonsHtml = actionable
+    ? `
+      <button class="rec-action-btn buy-btn"    data-op="buy"     data-ticker="${r.ticker}">I bought it</button>
+      <button class="rec-action-btn shadow-btn" data-op="shadow"  data-ticker="${r.ticker}">Shadow trade</button>
+      <button class="rec-action-btn dismiss-btn" data-op="dismiss" data-ticker="${r.ticker}">Dismiss</button>
+    `
+    : `<div class="rec-info-only">Info only — bearish signal can't be acted on long</div>`;
+
+  return `
+    <div class="rec-card">
+      <div class="rec-header">
+        <div class="rec-ticker ${cls}">$${r.ticker}</div>
+        <div class="rec-score">
+          <div class="rec-score-label">Score</div>
+          <div class="rec-score-value">${scorePct}</div>
+        </div>
+      </div>
+      <div class="rec-body">
+        <div class="rec-row">
+          <span class="rec-key">Direction</span>
+          <span class="rec-val ${cls}">${r.direction.toUpperCase()}</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Current price</span>
+          <span class="rec-val">$${r.current_price?.toFixed(2) || '—'}</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Today</span>
+          <span class="rec-val ${r.price_change_pct >= 0 ? 'bull' : 'bear'}">${r.price_change_pct >= 0 ? '+' : ''}${r.price_change_pct?.toFixed(2) || 0}%</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Volume mult</span>
+          <span class="rec-val">${r.multiplier?.toFixed(2) || '—'}x</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Edge source</span>
+          <span class="rec-val dim">${r.edge_source} · n=${r.n}</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Hit rate</span>
+          <span class="rec-val">${(r.hit_rate*100).toFixed(0)}%</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Avg return</span>
+          <span class="rec-val ${r.avg_return_pct >= 0 ? 'bull' : 'bear'}">${r.avg_return_pct >= 0 ? '+' : ''}${r.avg_return_pct.toFixed(2)}%</span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Confidence</span>
+          <span class="rec-val"><span class="conf ${r.confidence}">${r.confidence}</span></span>
+        </div>
+        <div class="rec-row">
+          <span class="rec-key">Suggested allocation</span>
+          <span class="rec-val ${actionable ? 'bull' : 'dim'}">${allocText}</span>
+        </div>
+        <div class="rec-rationale">${r.rationale}</div>
+      </div>
+      <div class="rec-actions">${buttonsHtml}</div>
+    </div>
+  `;
+}
+
+function showActionPayload(op, rec) {
+  const action = {
+    op: op === "buy" ? "open" : (op === "shadow" ? "open" : "dismiss"),
+    type: op === "buy" ? "real" : "shadow",
+    ticker: rec.ticker,
+    entry_price: rec.current_price,
+    allocation_cad: rec.allocation?.allocation_cad,
+    recommendation: rec,
+    queued_at: new Date().toISOString(),
+  };
+  if (op === "dismiss") {
+    action.type = undefined;
+    action.entry_price = undefined;
+    action.allocation_cad = undefined;
+  }
+  const payload = JSON.stringify(action, null, 2);
+
+  document.getElementById("action-payload").textContent = payload;
+  document.getElementById("action-clipboard").style.display = "block";
+  document.getElementById("action-clipboard").scrollIntoView({ behavior: "smooth", block: "center" });
+
+  document.getElementById("copy-action-btn").onclick = () => {
+    navigator.clipboard.writeText(payload).then(
+      () => { document.getElementById("copy-action-btn").textContent = "Copied!"; },
+      () => { document.getElementById("copy-action-btn").textContent = "Copy failed — select manually"; }
+    );
+  };
+  document.getElementById("close-action-btn").onclick = () => {
+    document.getElementById("action-clipboard").style.display = "none";
+    document.getElementById("copy-action-btn").textContent = "Copy to clipboard";
+  };
+}
+
+// ============================================================
+// Positions
+// ============================================================
+async function loadPositions() {
+  try {
+    const resp = await fetch(`${POSITIONS_URL}?t=${Date.now()}`);
+    if (!resp.ok) throw new Error();
+    state.positions = await resp.json();
+    renderPositions();
+  } catch {
+    document.getElementById("positions-body").innerHTML =
+      '<p class="empty">No positions yet — open one from the Recommendations tab.</p>';
+  }
+}
+
+function renderPositions() {
+  if (!state.positions) return;
+  const summaryEl = document.getElementById("positions-summary");
+  const body = document.getElementById("positions-body");
+  const data = state.positions;
+  const summary = data.summary || {};
+  const typeFilter = document.getElementById("pos-type").value;
+  const statusFilter = document.getElementById("pos-status").value;
+
+  // Summary
+  const renderSummaryCard = (label, s, cls) => {
+    if (!s) return "";
+    const pnl = s.total_pnl_cad || 0;
+    const pnlCls = pnl > 0 ? "bull" : pnl < 0 ? "bear" : "";
+    const winRate = s.win_rate !== null && s.win_rate !== undefined ? `${(s.win_rate*100).toFixed(0)}%` : "—";
+    return `
+      <div class="summary-card ${cls}">
+        <div class="summary-label">${label}</div>
+        <div class="summary-pnl ${pnlCls}">${pnl >= 0 ? '+' : ''}$${pnl.toFixed(2)}</div>
+        <div class="summary-meta">
+          <span>${s.open} open</span> · <span>${s.closed} closed</span> · <span>${winRate} wins</span>
+        </div>
+      </div>
+    `;
+  };
+  summaryEl.innerHTML = `
+    ${renderSummaryCard("Real positions", summary.real, "real")}
+    ${renderSummaryCard("Shadow positions", summary.shadow, "shadow")}
+  `;
+
+  // Position list
+  let positions = data.positions || [];
+  if (typeFilter !== "all") positions = positions.filter(p => p.type === typeFilter);
+  if (statusFilter !== "all") positions = positions.filter(p => p.status === statusFilter);
+  positions.sort((a, b) => new Date(b.opened_at) - new Date(a.opened_at));
+
+  if (!positions.length) {
+    body.innerHTML = '<p class="empty">No positions match the filters.</p>';
+    return;
+  }
+
+  body.innerHTML = `
+    <table class="dtable">
+      <thead>
+        <tr>
+          <th>Type</th><th>Ticker</th><th>Opened</th>
+          <th class="right">Entry</th><th class="right">Current</th>
+          <th class="right">Alloc</th><th class="right">P&L</th><th class="right">P&L %</th>
+          <th>Status</th><th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${positions.map(p => renderPositionRow(p)).join("")}
+      </tbody>
+    </table>
+  `;
+  document.querySelectorAll(".close-pos-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const pid = btn.dataset.id;
+      const action = {
+        op: "close",
+        position_id: pid,
+        reason: "manual",
+        queued_at: new Date().toISOString(),
+      };
+      const payload = JSON.stringify(action, null, 2);
+      document.getElementById("action-payload").textContent = payload;
+      document.getElementById("action-clipboard").style.display = "block";
+      document.getElementById("action-clipboard").scrollIntoView({ behavior: "smooth", block: "center" });
+      document.getElementById("copy-action-btn").onclick = () => {
+        navigator.clipboard.writeText(payload).then(
+          () => { document.getElementById("copy-action-btn").textContent = "Copied!"; },
+          () => { document.getElementById("copy-action-btn").textContent = "Copy failed"; }
+        );
+      };
+      document.getElementById("close-action-btn").onclick = () => {
+        document.getElementById("action-clipboard").style.display = "none";
+        document.getElementById("copy-action-btn").textContent = "Copy to clipboard";
+      };
+    });
+  });
+}
+
+function renderPositionRow(p) {
+  const pnl = p.pnl_cad || 0;
+  const pnlPct = p.pnl_pct || 0;
+  const pnlCls = pnl > 0 ? "bull" : pnl < 0 ? "bear" : "";
+  const typeBadge = p.type === "real"
+    ? '<span class="pos-type-badge real">REAL</span>'
+    : '<span class="pos-type-badge shadow">SHADOW</span>';
+  const statusBadge = p.status === "open"
+    ? '<span class="conf established">open</span>'
+    : `<span class="conf ${p.exit_reason === 'stop_loss' ? 'noise' : 'emerging'}">${p.exit_reason || 'closed'}</span>`;
+  const actionCell = p.status === "open"
+    ? `<button class="close-pos-btn" data-id="${p.id}">Close</button>`
+    : '<span class="dim">—</span>';
+
+  return `
+    <tr>
+      <td>${typeBadge}</td>
+      <td class="ticker-cell">${p.ticker}</td>
+      <td class="dim">${formatDateShort(p.opened_at)}</td>
+      <td class="right">$${p.entry_price?.toFixed(2) || '—'}</td>
+      <td class="right">$${p.current_price?.toFixed(2) || '—'}</td>
+      <td class="right">$${p.allocation_cad?.toFixed(2) || '—'}</td>
+      <td class="right ${pnlCls}">${pnl >= 0 ? '+' : ''}$${pnl.toFixed(2)}</td>
+      <td class="right ${pnlCls}">${pnlPct >= 0 ? '+' : ''}${pnlPct.toFixed(2)}%</td>
+      <td>${statusBadge}</td>
+      <td>${actionCell}</td>
+    </tr>
+  `;
+}
+
+function setupPositionFilters() {
+  ["pos-type", "pos-status"].forEach(id => {
+    document.getElementById(id).addEventListener("change", renderPositions);
+  });
+}
+
+// ============================================================
 // Utilities
 // ============================================================
 function confidenceLabel(n) {
@@ -572,12 +877,15 @@ function formatVol(n) {
 setupTabs();
 setupByTickerFilters();
 setupSignalLogFilters();
+setupPositionFilters();
 renderWatchlist();
 loadLatest();
 loadStats();
 loadByTicker();
 loadByRegime();
 loadSignalLog();
+loadRecommendations();
+loadPositions();
 
 // Refresh everything every 5 min
 setInterval(() => {
@@ -586,4 +894,6 @@ setInterval(() => {
   loadByTicker();
   loadByRegime();
   loadSignalLog();
+  loadRecommendations();
+  loadPositions();
 }, 5 * 60 * 1000);

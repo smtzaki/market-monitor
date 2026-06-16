@@ -62,3 +62,36 @@ def volume_spike_alert(signal: dict) -> None:
             {"name": "20-Day Avg",   "value": f"{signal['avg_volume_20d']:,}",     "inline": True},
         ],
     )
+
+
+def generic_signal_alert(signal: dict) -> None:
+    """Send a Discord alert for the new detector types (momentum, new_high, breakout)."""
+    bullish = signal.get("direction") == "bullish"
+    color = GREEN if bullish else RED
+    sig_type = signal.get("signal_type", "signal").replace("_", " ").upper()
+
+    fields = []
+    if signal["signal_type"] == "momentum":
+        fields = [
+            {"name": "5-day return", "value": f"{signal['pct_5d']:+.2f}%",              "inline": True},
+            {"name": "Above 200d MA","value": f"{signal['pct_above_200d']:+.2f}%",      "inline": True},
+        ]
+    elif signal["signal_type"] == "new_high":
+        fields = [
+            {"name": "52w high",     "value": f"${signal['high_52w']:.2f}",             "inline": True},
+            {"name": "From high",    "value": f"{signal['pct_from_high']:+.2f}%",       "inline": True},
+            {"name": "Volume ratio", "value": f"{signal['volume_ratio']:.2f}x",         "inline": True},
+        ]
+    elif signal["signal_type"] == "breakout":
+        fields = [
+            {"name": "Range high",   "value": f"${signal['prior_range_high']:.2f}",     "inline": True},
+            {"name": "Breakout",     "value": f"{signal['breakout_pct']:+.2f}%",        "inline": True},
+            {"name": "Volume ratio", "value": f"{signal['volume_ratio']:.2f}x",         "inline": True},
+        ]
+
+    _send(
+        title=f"📊 {sig_type}: ${signal['ticker']}",
+        description=f"Price: **${signal.get('price', 0):.2f}**",
+        color=color,
+        fields=fields,
+    )
