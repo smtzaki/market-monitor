@@ -8948,6 +8948,39 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NFLX_volume_spike_20260616144556",
+      "ticker": "NFLX",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-16T14:45:56.547985+00:00",
+      "entry_price": 78.52,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.16,
+        "spy_5d_pct": 1.84,
+        "spy_20d_pct": 1.8,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6887.3,
+        "computed_at": "2026-06-16T14:45:48.240042+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "NFLX",
+        "multiplier": 2.56,
+        "today_volume": 16774115,
+        "projected_volume": 86149714,
+        "avg_volume_20d": 33594280,
+        "price_change_pct": -4.1,
+        "price": 78.52,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
