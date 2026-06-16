@@ -10159,6 +10159,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NA.TO_momentum_20260616173130",
+      "ticker": "NA.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-06-16T17:31:30.355479+00:00",
+      "entry_price": 213.91,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.89,
+        "spy_5d_pct": 1.96,
+        "spy_20d_pct": 1.73,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6892.51,
+        "computed_at": "2026-06-16T17:30:39.020783+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "NA.TO",
+        "price": 213.91,
+        "pct_5d": 3.2,
+        "pct_above_200d": 23.88,
+        "today_pct": 1.13,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "QSR.TO_volume_spike_20260616173157",
+      "ticker": "QSR.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-16T17:31:57.120101+00:00",
+      "entry_price": 107.44,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.89,
+        "spy_5d_pct": 1.96,
+        "spy_20d_pct": 1.73,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6892.51,
+        "computed_at": "2026-06-16T17:30:39.020783+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "QSR.TO",
+        "multiplier": 6.26,
+        "today_volume": 4048803,
+        "projected_volume": 6526294,
+        "avg_volume_20d": 1042725,
+        "price_change_pct": 3.11,
+        "price_threshold_used": 2.36,
+        "price": 107.44,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
