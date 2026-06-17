@@ -1,15 +1,15 @@
 {
-  "computed_at": "2026-06-17T01:47:37.579100+00:00",
-  "total_signals_logged": 366,
-  "total_signals_with_any_return": 306,
+  "computed_at": "2026-06-17T23:12:28.161693+00:00",
+  "total_signals_logged": 496,
+  "total_signals_with_any_return": 366,
   "by_signal_type": {
     "volume_spike": {
       "bullish": {
         "1d": {
-          "n": 165,
-          "hit_rate": 0.515,
-          "avg_return_pct": 0.092,
-          "std_pct": 3.722,
+          "n": 177,
+          "hit_rate": 0.503,
+          "avg_return_pct": -0.019,
+          "std_pct": 3.688,
           "min_pct": -11.07,
           "max_pct": 12.719
         },
@@ -22,20 +22,20 @@
           "max_pct": 28.729
         },
         "7d": {
-          "n": 91,
-          "hit_rate": 0.538,
-          "avg_return_pct": -0.664,
-          "std_pct": 6.292,
+          "n": 109,
+          "hit_rate": 0.56,
+          "avg_return_pct": 0.194,
+          "std_pct": 6.89,
           "min_pct": -30.47,
-          "max_pct": 11.875
+          "max_pct": 30.704
         }
       },
       "bearish": {
         "1d": {
-          "n": 141,
-          "hit_rate": 0.624,
-          "avg_return_pct": -1.3,
-          "std_pct": 3.866,
+          "n": 145,
+          "hit_rate": 0.634,
+          "avg_return_pct": -1.312,
+          "std_pct": 3.821,
           "min_pct": -13.95,
           "max_pct": 8.31
         },
@@ -48,12 +48,36 @@
           "max_pct": 9.061
         },
         "7d": {
-          "n": 90,
-          "hit_rate": 0.578,
-          "avg_return_pct": -3.518,
-          "std_pct": 9.989,
+          "n": 105,
+          "hit_rate": 0.571,
+          "avg_return_pct": -3.406,
+          "std_pct": 9.668,
           "min_pct": -38.919,
           "max_pct": 18.503
+        }
+      }
+    },
+    "momentum": {
+      "bullish": {
+        "1d": {
+          "n": 34,
+          "hit_rate": 0.382,
+          "avg_return_pct": -0.411,
+          "std_pct": 1.778,
+          "min_pct": -4.62,
+          "max_pct": 3.514
+        }
+      }
+    },
+    "new_high": {
+      "bullish": {
+        "1d": {
+          "n": 10,
+          "hit_rate": 0.4,
+          "avg_return_pct": 0.328,
+          "std_pct": 1.112,
+          "min_pct": -0.597,
+          "max_pct": 2.501
         }
       }
     }

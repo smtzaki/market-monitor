@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-06-17T01:47:37.586371+00:00",
+  "computed_at": "2026-06-17T23:12:28.169784+00:00",
   "by_regime": {
     "unknown": {
       "volume_spike": {
@@ -61,10 +61,10 @@
             "std_pct": 4.475
           },
           "7d": {
-            "n": 2,
-            "hit_rate": 0.0,
-            "avg_return_pct": 3.439,
-            "std_pct": 0.452
+            "n": 17,
+            "hit_rate": 0.471,
+            "avg_return_pct": -2.008,
+            "std_pct": 7.499
           }
         },
         "bullish": {
@@ -79,6 +79,12 @@
             "hit_rate": 0.782,
             "avg_return_pct": 3.848,
             "std_pct": 6.287
+          },
+          "7d": {
+            "n": 18,
+            "hit_rate": 0.667,
+            "avg_return_pct": 4.535,
+            "std_pct": 8.255
           }
         }
       }
@@ -87,18 +93,38 @@
       "volume_spike": {
         "bullish": {
           "1d": {
-            "n": 19,
-            "hit_rate": 0.368,
-            "avg_return_pct": -1.432,
-            "std_pct": 3.447
+            "n": 31,
+            "hit_rate": 0.355,
+            "avg_return_pct": -1.479,
+            "std_pct": 3.189
           }
         },
         "bearish": {
           "1d": {
-            "n": 15,
-            "hit_rate": 0.6,
-            "avg_return_pct": -0.437,
-            "std_pct": 2.349
+            "n": 19,
+            "hit_rate": 0.684,
+            "avg_return_pct": -0.715,
+            "std_pct": 2.253
+          }
+        }
+      },
+      "momentum": {
+        "bullish": {
+          "1d": {
+            "n": 34,
+            "hit_rate": 0.382,
+            "avg_return_pct": -0.411,
+            "std_pct": 1.778
+          }
+        }
+      },
+      "new_high": {
+        "bullish": {
+          "1d": {
+            "n": 10,
+            "hit_rate": 0.4,
+            "avg_return_pct": 0.328,
+            "std_pct": 1.112
           }
         }
       }
