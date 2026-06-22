@@ -22362,6 +22362,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COIN_volume_spike_20260622140105",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-22T14:01:05.515156+00:00",
+      "entry_price": 176.3,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.79,
+        "spy_5d_pct": 1.26,
+        "spy_20d_pct": 1.07,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6908.02,
+        "computed_at": "2026-06-22T14:00:47.778948+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 3.16,
+        "today_volume": 2176223,
+        "projected_volume": 27300269,
+        "avg_volume_20d": 8640835,
+        "price_change_pct": 6.89,
+        "price_threshold_used": 6.39,
+        "price": 176.3,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "QQQ_momentum_20260622140226",
+      "ticker": "QQQ",
+      "signal_type": "momentum",
+      "fired_at": "2026-06-22T14:02:26.643429+00:00",
+      "entry_price": 744.71,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.79,
+        "spy_5d_pct": 1.26,
+        "spy_20d_pct": 1.07,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6908.02,
+        "computed_at": "2026-06-22T14:00:47.778948+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "QQQ",
+        "price": 744.71,
+        "pct_5d": 3.24,
+        "pct_above_200d": 19.66,
+        "today_pct": 0.36,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
