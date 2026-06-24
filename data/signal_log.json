@@ -26738,6 +26738,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "AMD_momentum_20260624143044",
+      "ticker": "AMD",
+      "signal_type": "momentum",
+      "fired_at": "2026-06-24T14:30:44.028453+00:00",
+      "entry_price": 522.89,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.99,
+        "spy_5d_pct": -1.5,
+        "spy_20d_pct": -1.6,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6916.66,
+        "computed_at": "2026-06-24T14:30:38.564297+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "AMD",
+        "price": 522.89,
+        "pct_5d": 3.08,
+        "pct_above_200d": 109.84,
+        "today_pct": 0.35,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XIT.TO_volume_spike_20260624143206",
+      "ticker": "XIT.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-24T14:32:06.546272+00:00",
+      "entry_price": 72.5,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.99,
+        "spy_5d_pct": -1.5,
+        "spy_20d_pct": -1.6,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6916.66,
+        "computed_at": "2026-06-24T14:30:38.564297+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "XIT.TO",
+        "multiplier": 2.67,
+        "today_volume": 8012,
+        "projected_volume": 50312,
+        "avg_volume_20d": 18810,
+        "price_change_pct": 3.94,
+        "price_threshold_used": 3.57,
+        "price": 72.5,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
