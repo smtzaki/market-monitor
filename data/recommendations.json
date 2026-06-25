@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-25T16:47:13.988747+00:00",
+  "computed_at": "2026-06-25T17:02:26.396766+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 19.02,
-    "spy_5d_pct": -1.0,
-    "spy_20d_pct": -2.32,
+    "vix": 19.36,
+    "spy_5d_pct": -0.85,
+    "spy_20d_pct": -2.17,
     "spy_above_200d": true,
-    "spy_200d_ma": 6920.71,
-    "computed_at": "2026-06-25T16:45:33.256342+00:00"
+    "spy_200d_ma": 6920.76,
+    "computed_at": "2026-06-25T17:00:40.348031+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -25,8 +25,8 @@
   "active_signals_seen": 25,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 42.0,
-  "budget_remaining_cad": 78.0,
+  "budget_deployed_cad": 69.3,
+  "budget_remaining_cad": 50.7,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,12 +42,38 @@
       "regime": "neutral",
       "regime_fit": 1.1,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
-      "current_price": 1198.66,
+      "current_price": 1215.38,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.35,
         "allocation_cad": 42.0,
+        "sigma_60d": 5.873
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    },
+    {
+      "ticker": "MU",
+      "direction": "bullish",
+      "score": 1.0,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 3,
+      "hit_rate": 1.0,
+      "avg_return_pct": 7.656,
+      "std_pct": 1.027,
+      "confidence": "noise",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
+      "current_price": 1215.38,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.35,
+        "allocation_cad": 27.3,
         "sigma_60d": 5.873
       },
       "target_exit_date_min": 3,
