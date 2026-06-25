@@ -29171,6 +29171,136 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "INTC_volume_spike_20260625140048",
+      "ticker": "INTC",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-25T14:00:48.104173+00:00",
+      "entry_price": 126.81,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.69,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6920.63,
+        "computed_at": "2026-06-25T14:00:42.260102+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "INTC",
+        "multiplier": 2.65,
+        "today_volume": 28235516,
+        "projected_volume": 357566666,
+        "avg_volume_20d": 134710615,
+        "price_change_pct": -9.21,
+        "price_threshold_used": 8.97,
+        "price": 126.81,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "BAC_momentum_20260625140104",
+      "ticker": "BAC",
+      "signal_type": "momentum",
+      "fired_at": "2026-06-25T14:01:04.792926+00:00",
+      "entry_price": 58.53,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.69,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6920.63,
+        "computed_at": "2026-06-25T14:00:42.260102+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "BAC",
+        "price": 58.53,
+        "pct_5d": 3.53,
+        "pct_above_200d": 13.73,
+        "today_pct": 1.17,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ENB.TO_momentum_20260625140141",
+      "ticker": "ENB.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-06-25T14:01:41.472814+00:00",
+      "entry_price": 79.44,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.69,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6920.63,
+        "computed_at": "2026-06-25T14:00:42.260102+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ENB.TO",
+        "price": 79.44,
+        "pct_5d": 3.02,
+        "pct_above_200d": 16.48,
+        "today_pct": 0.86,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "QQQ_volume_spike_20260625140216",
+      "ticker": "QQQ",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-25T14:02:16.396084+00:00",
+      "entry_price": 708.93,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.69,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6920.63,
+        "computed_at": "2026-06-25T14:00:42.260102+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "QQQ",
+        "multiplier": 2.96,
+        "today_volume": 12513304,
+        "projected_volume": 151243325,
+        "avg_volume_20d": 51036785,
+        "price_change_pct": -2.34,
+        "price_threshold_used": 2.01,
+        "price": 708.93,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
