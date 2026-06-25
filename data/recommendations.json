@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-25T19:02:08.774119+00:00",
+  "computed_at": "2026-06-25T19:17:00.759190+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 18.93,
-    "spy_5d_pct": -0.74,
-    "spy_20d_pct": -2.06,
+    "vix": 18.9,
+    "spy_5d_pct": -0.95,
+    "spy_20d_pct": -2.27,
     "spy_above_200d": true,
-    "spy_200d_ma": 6920.81,
-    "computed_at": "2026-06-25T19:00:36.737897+00:00"
+    "spy_200d_ma": 6920.73,
+    "computed_at": "2026-06-25T19:15:29.211513+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -25,8 +25,8 @@
   "active_signals_seen": 21,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 69.3,
-  "budget_remaining_cad": 50.7,
+  "budget_deployed_cad": 70.84,
+  "budget_remaining_cad": 49.16,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,7 +42,7 @@
       "regime": "neutral",
       "regime_fit": 1.1,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
-      "current_price": 1226.71,
+      "current_price": 1204.33,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
@@ -55,26 +55,26 @@
       "stop_loss_pct": -2.0
     },
     {
-      "ticker": "MU",
+      "ticker": "ZEB.TO",
       "direction": "bullish",
-      "score": 1.0,
+      "score": 0.566,
       "actionable": true,
       "edge_source": "per_ticker",
-      "n": 3,
+      "n": 10,
       "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
+      "avg_return_pct": 0.666,
+      "std_pct": 0.388,
+      "confidence": "weak",
       "regime": "neutral",
       "regime_fit": 1.1,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
-      "current_price": 1226.94,
+      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
+      "current_price": 75.42,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
-        "allocation_pct": 0.35,
-        "allocation_cad": 27.3,
-        "sigma_60d": 5.873
+        "allocation_pct": 0.37,
+        "allocation_cad": 28.84,
+        "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
       "target_exit_date_max": 7,
