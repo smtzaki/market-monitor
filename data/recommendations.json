@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-26T19:47:44.191394+00:00",
+  "computed_at": "2026-06-26T20:00:43.955658+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 18.88,
-    "spy_5d_pct": -1.88,
-    "spy_20d_pct": -2.7,
+    "vix": 18.52,
+    "spy_5d_pct": -1.97,
+    "spy_20d_pct": -2.79,
     "spy_above_200d": true,
-    "spy_200d_ma": 6925.0,
-    "computed_at": "2026-06-26T19:45:37.412306+00:00"
+    "spy_200d_ma": 6924.97,
+    "computed_at": "2026-06-26T20:00:38.028974+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,63 +22,10 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 22,
+  "active_signals_seen": 0,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 70.84,
-  "budget_remaining_cad": 49.16,
-  "recommendations": [
-    {
-      "ticker": "MU",
-      "direction": "bullish",
-      "score": 1.0,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 3,
-      "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
-      "current_price": 1152.1,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.35,
-        "allocation_cad": 42.0,
-        "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
-    {
-      "ticker": "ZEB.TO",
-      "direction": "bullish",
-      "score": 0.566,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 10,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 74.88,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.37,
-        "allocation_cad": 28.84,
-        "sigma_60d": 1.054
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    }
-  ]
+  "budget_deployed_cad": 0.0,
+  "budget_remaining_cad": 120.0,
+  "recommendations": []
 }
