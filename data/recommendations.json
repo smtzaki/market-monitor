@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-29T14:32:24.270059+00:00",
+  "computed_at": "2026-06-29T14:47:08.652594+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 19.45,
-    "spy_5d_pct": -1.07,
-    "spy_20d_pct": -2.47,
+    "vix": 18.6,
+    "spy_5d_pct": -1.02,
+    "spy_20d_pct": -2.42,
     "spy_above_200d": true,
-    "spy_200d_ma": 6929.28,
-    "computed_at": "2026-06-29T14:30:39.127423+00:00"
+    "spy_200d_ma": 6929.3,
+    "computed_at": "2026-06-29T14:45:31.326190+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,37 +22,10 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 34,
+  "active_signals_seen": 35,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 35.63,
-  "budget_remaining_cad": 84.37,
-  "recommendations": [
-    {
-      "ticker": "NA.TO",
-      "direction": "bullish",
-      "score": 0.323,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 8,
-      "hit_rate": 0.875,
-      "avg_return_pct": 1.325,
-      "std_pct": 1.014,
-      "confidence": "weak",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=8, hit=88%, avg=+1.32%, \u03c3=1.01 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 220.93,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.297,
-        "allocation_cad": 35.63,
-        "sigma_60d": 1.22
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    }
-  ]
+  "budget_deployed_cad": 0.0,
+  "budget_remaining_cad": 120.0,
+  "recommendations": []
 }
