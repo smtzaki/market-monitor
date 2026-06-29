@@ -35161,6 +35161,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CRWD_volume_spike_20260629140052",
+      "ticker": "CRWD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-06-29T14:00:52.618096+00:00",
+      "entry_price": 748.63,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.0,
+        "spy_5d_pct": -1.12,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6929.26,
+        "computed_at": "2026-06-29T14:00:41.115335+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CRWD",
+        "multiplier": 3.57,
+        "today_volume": 1032112,
+        "projected_volume": 13038495,
+        "avg_volume_20d": 3652035,
+        "price_change_pct": 5.52,
+        "price_threshold_used": 5.33,
+        "price": 748.63,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "JPM_new_high_20260629140104",
+      "ticker": "JPM",
+      "signal_type": "new_high",
+      "fired_at": "2026-06-29T14:01:04.405755+00:00",
+      "entry_price": 329.71,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.0,
+        "spy_5d_pct": -1.12,
+        "spy_20d_pct": -2.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6929.26,
+        "computed_at": "2026-06-29T14:00:41.115335+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "JPM",
+        "price": 329.71,
+        "high_52w": 332.91,
+        "pct_from_high": -0.96,
+        "volume_ratio": 1.24,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
