@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-29T15:02:17.153527+00:00",
+  "computed_at": "2026-06-29T15:17:02.902798+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 18.51,
-    "spy_5d_pct": -0.87,
-    "spy_20d_pct": -2.27,
+    "vix": 18.25,
+    "spy_5d_pct": -0.9,
+    "spy_20d_pct": -2.3,
     "spy_above_200d": true,
-    "spy_200d_ma": 6929.35,
-    "computed_at": "2026-06-29T15:00:44.169941+00:00"
+    "spy_200d_ma": 6929.34,
+    "computed_at": "2026-06-29T15:15:31.803506+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,10 +22,37 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 35,
+  "active_signals_seen": 33,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 0.0,
-  "budget_remaining_cad": 120.0,
-  "recommendations": []
+  "budget_deployed_cad": 42.0,
+  "budget_remaining_cad": 78.0,
+  "recommendations": [
+    {
+      "ticker": "MU",
+      "direction": "bullish",
+      "score": 1.0,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 3,
+      "hit_rate": 1.0,
+      "avg_return_pct": 7.656,
+      "std_pct": 1.027,
+      "confidence": "noise",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
+      "current_price": 1075.85,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.35,
+        "allocation_cad": 42.0,
+        "sigma_60d": 5.873
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    }
+  ]
 }
