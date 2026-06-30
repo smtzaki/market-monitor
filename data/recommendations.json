@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-06-30T16:47:34.057966+00:00",
+  "computed_at": "2026-06-30T17:02:44.179655+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 16.75,
-    "spy_5d_pct": 1.74,
-    "spy_20d_pct": -1.4,
+    "vix": 16.65,
+    "spy_5d_pct": 1.79,
+    "spy_20d_pct": -1.35,
     "spy_above_200d": true,
-    "spy_200d_ma": 6934.05,
-    "computed_at": "2026-06-30T16:45:31.889551+00:00"
+    "spy_200d_ma": 6934.06,
+    "computed_at": "2026-06-30T17:00:37.808437+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,11 +22,11 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 27,
+  "active_signals_seen": 25,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 57.95,
-  "budget_remaining_cad": 62.05,
+  "budget_deployed_cad": 33.71,
+  "budget_remaining_cad": 86.29,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,38 +42,12 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 1150.72,
+      "current_price": 1150.89,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.281,
         "allocation_cad": 33.71,
-        "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
-    {
-      "ticker": "MU",
-      "direction": "bullish",
-      "score": 0.671,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 3,
-      "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
-      "regime": "bull",
-      "regime_fit": 0.6,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 1150.72,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.281,
-        "allocation_cad": 24.24,
         "sigma_60d": 5.873
       },
       "target_exit_date_min": 3,
