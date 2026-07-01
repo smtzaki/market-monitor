@@ -40337,6 +40337,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "JPM_new_high_20260701141606",
+      "ticker": "JPM",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-01T14:16:06.472941+00:00",
+      "entry_price": 331.2,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.5,
+        "spy_5d_pct": 1.84,
+        "spy_20d_pct": -1.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6938.62,
+        "computed_at": "2026-07-01T14:15:38.691638+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "JPM",
+        "price": 331.2,
+        "high_52w": 332.91,
+        "pct_from_high": -0.51,
+        "volume_ratio": 0.89,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "HD_momentum_20260701141619",
+      "ticker": "HD",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-01T14:16:19.975764+00:00",
+      "entry_price": 356.78,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.5,
+        "spy_5d_pct": 1.84,
+        "spy_20d_pct": -1.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6938.62,
+        "computed_at": "2026-07-01T14:15:38.691638+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "HD",
+        "price": 356.78,
+        "pct_5d": 4.06,
+        "pct_above_200d": 0.18,
+        "today_pct": 0.79,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
