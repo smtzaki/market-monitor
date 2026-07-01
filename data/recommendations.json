@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-07-01T14:32:21.587505+00:00",
+  "computed_at": "2026-07-01T14:47:24.998343+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 16.32,
-    "spy_5d_pct": 1.85,
-    "spy_20d_pct": -1.51,
+    "vix": 16.31,
+    "spy_5d_pct": 1.78,
+    "spy_20d_pct": -1.58,
     "spy_above_200d": true,
-    "spy_200d_ma": 6938.63,
-    "computed_at": "2026-07-01T14:30:35.277425+00:00"
+    "spy_200d_ma": 6938.6,
+    "computed_at": "2026-07-01T14:45:32.281240+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,38 +22,12 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 48,
+  "active_signals_seen": 46,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 58.97,
-  "budget_remaining_cad": 61.03,
+  "budget_deployed_cad": 35.12,
+  "budget_remaining_cad": 84.88,
   "recommendations": [
-    {
-      "ticker": "MU",
-      "direction": "bullish",
-      "score": 0.671,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 3,
-      "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
-      "regime": "bull",
-      "regime_fit": 0.6,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 1072.51,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.281,
-        "allocation_cad": 33.71,
-        "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
     {
       "ticker": "ZEB.TO",
       "direction": "bullish",
@@ -73,7 +47,7 @@
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.293,
-        "allocation_cad": 25.26,
+        "allocation_cad": 35.12,
         "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
