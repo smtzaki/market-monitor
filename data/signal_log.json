@@ -52021,6 +52021,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "V_momentum_20260707194602",
+      "ticker": "V",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-07T19:46:02.044714+00:00",
+      "entry_price": 352.23,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.34,
+        "spy_5d_pct": 0.71,
+        "spy_20d_pct": 1.49,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6952.03,
+        "computed_at": "2026-07-07T19:45:37.565273+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "V",
+        "price": 352.23,
+        "pct_5d": 3.1,
+        "pct_above_200d": 7.15,
+        "today_pct": 1.1,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CAT_new_high_20260707194624",
+      "ticker": "CAT",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-07T19:46:24.284545+00:00",
+      "entry_price": 932.85,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.34,
+        "spy_5d_pct": 0.71,
+        "spy_20d_pct": 1.49,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6952.03,
+        "computed_at": "2026-07-07T19:45:37.565273+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "CAT",
+        "price": 932.85,
+        "high_52w": 940.48,
+        "pct_from_high": -0.81,
+        "volume_ratio": 1.16,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
