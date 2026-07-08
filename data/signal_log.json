@@ -53831,6 +53831,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COST_momentum_20260708144608",
+      "ticker": "COST",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-08T14:46:08.268156+00:00",
+      "entry_price": 964.39,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.63,
+        "spy_5d_pct": -0.71,
+        "spy_20d_pct": 0.54,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6956.15,
+        "computed_at": "2026-07-08T14:45:39.322247+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "COST",
+        "price": 964.39,
+        "pct_5d": 3.09,
+        "pct_above_200d": 1.01,
+        "today_pct": 0.67,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "LLY_momentum_20260708144616",
+      "ticker": "LLY",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-08T14:46:16.929912+00:00",
+      "entry_price": 1239.92,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.63,
+        "spy_5d_pct": -0.71,
+        "spy_20d_pct": 0.54,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6956.15,
+        "computed_at": "2026-07-08T14:45:39.322247+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "LLY",
+        "price": 1239.92,
+        "pct_5d": 3.38,
+        "pct_above_200d": 30.61,
+        "today_pct": 1.54,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "TD.TO_volume_spike_20260708144627",
+      "ticker": "TD.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-08T14:46:27.331906+00:00",
+      "entry_price": 167.86,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.63,
+        "spy_5d_pct": -0.71,
+        "spy_20d_pct": 0.54,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6956.15,
+        "computed_at": "2026-07-08T14:45:39.322247+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "TD.TO",
+        "multiplier": 3.06,
+        "today_volume": 2857419,
+        "projected_volume": 14576752,
+        "avg_volume_20d": 4763535,
+        "price_change_pct": -2.15,
+        "price_threshold_used": 1.67,
+        "price": 167.86,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
