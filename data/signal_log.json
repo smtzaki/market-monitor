@@ -56580,6 +56580,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COST_volume_spike_20260709140126",
+      "ticker": "COST",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-09T14:01:26.069172+00:00",
+      "entry_price": 915.08,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.57,
+        "spy_5d_pct": 0.42,
+        "spy_20d_pct": 1.73,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6960.58,
+        "computed_at": "2026-07-09T14:00:50.341509+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COST",
+        "multiplier": 3.58,
+        "today_volume": 733522,
+        "projected_volume": 9102281,
+        "avg_volume_20d": 2542085,
+        "price_change_pct": -2.12,
+        "price_threshold_used": 1.97,
+        "price": 915.08,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
