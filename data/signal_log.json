@@ -72818,6 +72818,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NFLX_volume_spike_20260717183053",
+      "ticker": "NFLX",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-17T18:30:53.070671+00:00",
+      "entry_price": 69.25,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.51,
+        "spy_5d_pct": -1.41,
+        "spy_20d_pct": 0.65,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6987.28,
+        "computed_at": "2026-07-17T18:30:39.170866+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "NFLX",
+        "multiplier": 2.68,
+        "today_volume": 103873959,
+        "projected_volume": 134641098,
+        "avg_volume_20d": 50314485,
+        "price_change_pct": 5.66,
+        "price_threshold_used": 3.03,
+        "price": 69.25,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MRK_momentum_20260717183143",
+      "ticker": "MRK",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-17T18:31:43.863919+00:00",
+      "entry_price": 127.33,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.51,
+        "spy_5d_pct": -1.41,
+        "spy_20d_pct": 0.65,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6987.28,
+        "computed_at": "2026-07-17T18:30:39.170866+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "MRK",
+        "price": 127.33,
+        "pct_5d": 3.07,
+        "pct_above_200d": 23.14,
+        "today_pct": -0.87,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
