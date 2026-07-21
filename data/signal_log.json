@@ -76218,6 +76218,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COIN_volume_spike_20260721143049",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-21T14:30:49.782970+00:00",
+      "entry_price": 180.28,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.64,
+        "spy_5d_pct": -0.65,
+        "spy_20d_pct": 0.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6994.92,
+        "computed_at": "2026-07-21T14:30:32.274668+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 4.13,
+        "today_volume": 4758831,
+        "projected_volume": 30512660,
+        "avg_volume_20d": 7394265,
+        "price_change_pct": 7.31,
+        "price_threshold_used": 6.39,
+        "price": 180.28,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MS_new_high_20260721143100",
+      "ticker": "MS",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-21T14:31:00.175969+00:00",
+      "entry_price": 216.12,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.64,
+        "spy_5d_pct": -0.65,
+        "spy_20d_pct": 0.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 6994.92,
+        "computed_at": "2026-07-21T14:30:32.274668+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "MS",
+        "price": 216.12,
+        "high_52w": 218.27,
+        "pct_from_high": -0.99,
+        "volume_ratio": 0.85,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
