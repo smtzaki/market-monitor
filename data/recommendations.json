@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-07-22T15:11:18.566938+00:00",
+  "computed_at": "2026-07-22T15:17:15.784738+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 17.18,
-    "spy_5d_pct": -0.81,
-    "spy_20d_pct": 1.98,
+    "vix": 17.04,
+    "spy_5d_pct": -0.75,
+    "spy_20d_pct": 2.03,
     "spy_above_200d": true,
-    "spy_200d_ma": 6998.97,
-    "computed_at": "2026-07-22T15:08:36.109233+00:00"
+    "spy_200d_ma": 6998.99,
+    "computed_at": "2026-07-22T15:15:26.486208+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,10 +22,37 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 23,
+  "active_signals_seen": 24,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 0.0,
-  "budget_remaining_cad": 120.0,
-  "recommendations": []
+  "budget_deployed_cad": 30.41,
+  "budget_remaining_cad": 89.59,
+  "recommendations": [
+    {
+      "ticker": "ARM",
+      "direction": "bullish",
+      "score": 0.54,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 8,
+      "hit_rate": 1.0,
+      "avg_return_pct": 5.558,
+      "std_pct": 3.399,
+      "confidence": "weak",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=8, hit=100%, avg=+5.56%, \u03c3=3.40 \u00b7 confidence=weak \u00b7 regime confirms",
+      "current_price": 285.9,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.253,
+        "allocation_cad": 30.41,
+        "sigma_60d": 6.641
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    }
+  ]
 }
