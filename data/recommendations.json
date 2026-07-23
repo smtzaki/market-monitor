@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-07-23T16:17:14.988499+00:00",
+  "computed_at": "2026-07-23T16:32:59.185209+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 19.55,
-    "spy_5d_pct": -1.63,
-    "spy_20d_pct": 0.71,
+    "vix": 19.24,
+    "spy_5d_pct": -1.55,
+    "spy_20d_pct": 0.8,
     "spy_above_200d": true,
-    "spy_200d_ma": 7002.39,
-    "computed_at": "2026-07-23T16:15:28.605400+00:00"
+    "spy_200d_ma": 7002.42,
+    "computed_at": "2026-07-23T16:30:34.101204+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,38 +22,12 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 22,
+  "active_signals_seen": 19,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 83.3,
-  "budget_remaining_cad": 36.7,
+  "budget_deployed_cad": 63.54,
+  "budget_remaining_cad": 56.46,
   "recommendations": [
-    {
-      "ticker": "MU",
-      "direction": "bullish",
-      "score": 1.0,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 3,
-      "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime confirms",
-      "current_price": 993.27,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.35,
-        "allocation_cad": 42.0,
-        "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
     {
       "ticker": "ZEB.TO",
       "direction": "bullish",
@@ -68,12 +42,12 @@
       "regime": "neutral",
       "regime_fit": 1.1,
       "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 75.62,
+      "current_price": 75.6,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.37,
-        "allocation_cad": 28.84,
+        "allocation_cad": 44.38,
         "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
@@ -94,12 +68,12 @@
       "regime": "neutral",
       "regime_fit": 1.1,
       "rationale": "per_ticker: n=8, hit=100%, avg=+5.56%, \u03c3=3.40 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 278.78,
+      "current_price": 281.27,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.253,
-        "allocation_cad": 12.46,
+        "allocation_cad": 19.16,
         "sigma_60d": 6.641
       },
       "target_exit_date_min": 3,
