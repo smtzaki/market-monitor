@@ -82736,6 +82736,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "JPM_momentum_20260724153053",
+      "ticker": "JPM",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-24T15:30:53.522548+00:00",
+      "entry_price": 352.54,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.56,
+        "spy_5d_pct": -0.1,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7005.92,
+        "computed_at": "2026-07-24T15:30:35.808856+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "JPM",
+        "price": 352.54,
+        "pct_5d": 3.35,
+        "pct_above_200d": 15.88,
+        "today_pct": 0.54,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "VGRO.TO_new_high_20260724153148",
+      "ticker": "VGRO.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-24T15:31:48.827751+00:00",
+      "entry_price": 47.05,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.56,
+        "spy_5d_pct": -0.1,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7005.92,
+        "computed_at": "2026-07-24T15:30:35.808856+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "VGRO.TO",
+        "price": 47.05,
+        "high_52w": 47.44,
+        "pct_from_high": -0.82,
+        "volume_ratio": 1.37,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
