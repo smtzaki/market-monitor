@@ -85073,6 +85073,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "ASML_volume_spike_20260727143054",
+      "ticker": "ASML",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-27T14:30:54.809261+00:00",
+      "entry_price": 1647.36,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.59,
+        "spy_5d_pct": -0.55,
+        "spy_20d_pct": 0.66,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.17,
+        "computed_at": "2026-07-27T14:30:37.950475+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "ASML",
+        "multiplier": 3.33,
+        "today_volume": 1047598,
+        "projected_volume": 6708156,
+        "avg_volume_20d": 2013665,
+        "price_change_pct": -5.28,
+        "price_threshold_used": 4.91,
+        "price": 1647.36,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ABBV_momentum_20260727143120",
+      "ticker": "ABBV",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-27T14:31:20.863622+00:00",
+      "entry_price": 261.29,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.59,
+        "spy_5d_pct": -0.55,
+        "spy_20d_pct": 0.66,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.17,
+        "computed_at": "2026-07-27T14:30:37.950475+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ABBV",
+        "price": 261.29,
+        "pct_5d": 3.12,
+        "pct_above_200d": 20.17,
+        "today_pct": 0.88,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
