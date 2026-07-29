@@ -90301,6 +90301,105 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "RY.TO_volume_spike_20260729150128",
+      "ticker": "RY.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-29T15:01:28.669148+00:00",
+      "entry_price": 293.43,
+      "regime": {
+        "classification": "neutral",
+        "vix": 19.97,
+        "spy_5d_pct": -1.69,
+        "spy_20d_pct": -1.69,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7015.79,
+        "computed_at": "2026-07-29T15:00:36.379141+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "RY.TO",
+        "multiplier": 3.01,
+        "today_volume": 2671080,
+        "projected_volume": 11388493,
+        "avg_volume_20d": 3785085,
+        "price_change_pct": -1.54,
+        "price_threshold_used": 1.44,
+        "price": 293.43,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "BMO.TO_volume_spike_20260729150132",
+      "ticker": "BMO.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-29T15:01:32.051562+00:00",
+      "entry_price": 248.29,
+      "regime": {
+        "classification": "neutral",
+        "vix": 19.97,
+        "spy_5d_pct": -1.69,
+        "spy_20d_pct": -1.69,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7015.79,
+        "computed_at": "2026-07-29T15:00:36.379141+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BMO.TO",
+        "multiplier": 6.19,
+        "today_volume": 2990185,
+        "projected_volume": 12741079,
+        "avg_volume_20d": 2059260,
+        "price_change_pct": -2.02,
+        "price_threshold_used": 1.83,
+        "price": 248.29,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "WCN.TO_momentum_20260729150158",
+      "ticker": "WCN.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-29T15:01:58.813114+00:00",
+      "entry_price": 244.01,
+      "regime": {
+        "classification": "neutral",
+        "vix": 19.97,
+        "spy_5d_pct": -1.69,
+        "spy_20d_pct": -1.69,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7015.79,
+        "computed_at": "2026-07-29T15:00:36.379141+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "WCN.TO",
+        "price": 244.01,
+        "pct_5d": 3.31,
+        "pct_above_200d": 5.56,
+        "today_pct": 1.98,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
