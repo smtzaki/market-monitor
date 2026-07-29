@@ -89768,6 +89768,133 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NET_new_high_20260729134544",
+      "ticker": "NET",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-29T13:45:44.093989+00:00",
+      "entry_price": 270.99,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.74,
+        "spy_5d_pct": -0.26,
+        "spy_20d_pct": 0.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.29,
+        "computed_at": "2026-07-29T13:45:32.689364+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "NET",
+        "price": 270.99,
+        "high_52w": 272.66,
+        "pct_from_high": -0.61,
+        "volume_ratio": 1.12,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "V_volume_spike_20260729134554",
+      "ticker": "V",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-29T13:45:54.602352+00:00",
+      "entry_price": 367.84,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.74,
+        "spy_5d_pct": -0.26,
+        "spy_20d_pct": 0.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.29,
+        "computed_at": "2026-07-29T13:45:32.689364+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "V",
+        "multiplier": 4.37,
+        "today_volume": 1410693,
+        "projected_volume": 34589260,
+        "avg_volume_20d": 7923710,
+        "price_change_pct": 3.04,
+        "price_threshold_used": 2.41,
+        "price": 367.84,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "V_new_high_20260729134555",
+      "ticker": "V",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-29T13:45:55.037544+00:00",
+      "entry_price": 367.84,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.74,
+        "spy_5d_pct": -0.26,
+        "spy_20d_pct": 0.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.29,
+        "computed_at": "2026-07-29T13:45:32.689364+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "V",
+        "price": 367.84,
+        "high_52w": 370.38,
+        "pct_from_high": -0.69,
+        "volume_ratio": 4.64,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XOM_momentum_20260729134611",
+      "ticker": "XOM",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-29T13:46:11.371899+00:00",
+      "entry_price": 158.34,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.74,
+        "spy_5d_pct": -0.26,
+        "spy_20d_pct": 0.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7009.29,
+        "computed_at": "2026-07-29T13:45:32.689364+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "XOM",
+        "price": 158.34,
+        "pct_5d": 4.37,
+        "pct_above_200d": 20.08,
+        "today_pct": 0.39,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
