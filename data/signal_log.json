@@ -92712,6 +92712,105 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "AMD_volume_spike_20260730143041",
+      "ticker": "AMD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-30T14:30:41.422059+00:00",
+      "entry_price": 495.35,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.29,
+        "spy_5d_pct": -0.02,
+        "spy_20d_pct": -1.02,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7019.78,
+        "computed_at": "2026-07-30T14:30:36.282099+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "AMD",
+        "multiplier": 2.75,
+        "today_volume": 11776653,
+        "projected_volume": 75681740,
+        "avg_volume_20d": 27539715,
+        "price_change_pct": 7.88,
+        "price_threshold_used": 7.31,
+        "price": 495.35,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MU_volume_spike_20260730143055",
+      "ticker": "MU",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-30T14:30:55.602241+00:00",
+      "entry_price": 864.22,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.29,
+        "spy_5d_pct": -0.02,
+        "spy_20d_pct": -1.02,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7019.78,
+        "computed_at": "2026-07-30T14:30:36.282099+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "MU",
+        "multiplier": 3.33,
+        "today_volume": 24057495,
+        "projected_volume": 154007473,
+        "avg_volume_20d": 46315760,
+        "price_change_pct": 8.96,
+        "price_threshold_used": 8.81,
+        "price": 864.22,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XEQT.TO_new_high_20260730143200",
+      "ticker": "XEQT.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-07-30T14:32:00.241274+00:00",
+      "entry_price": 44.61,
+      "regime": {
+        "classification": "neutral",
+        "vix": 18.29,
+        "spy_5d_pct": -0.02,
+        "spy_20d_pct": -1.02,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7019.78,
+        "computed_at": "2026-07-30T14:30:36.282099+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "XEQT.TO",
+        "price": 44.61,
+        "high_52w": 45.06,
+        "pct_from_high": -1.0,
+        "volume_ratio": 1.74,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
