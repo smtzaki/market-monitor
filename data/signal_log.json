@@ -94838,6 +94838,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NET_momentum_20260731140045",
+      "ticker": "NET",
+      "signal_type": "momentum",
+      "fired_at": "2026-07-31T14:00:45.191306+00:00",
+      "entry_price": 288.33,
+      "regime": {
+        "classification": "bull",
+        "vix": 17.41,
+        "spy_5d_pct": 0.39,
+        "spy_20d_pct": -0.57,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7023.86,
+        "computed_at": "2026-07-31T14:00:33.611668+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "NET",
+        "price": 288.33,
+        "pct_5d": 9.99,
+        "pct_above_200d": 39.52,
+        "today_pct": 1.2,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "COIN_volume_spike_20260731140046",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-07-31T14:00:46.687885+00:00",
+      "entry_price": 143.1,
+      "regime": {
+        "classification": "bull",
+        "vix": 17.41,
+        "spy_5d_pct": 0.39,
+        "spy_20d_pct": -0.57,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7023.86,
+        "computed_at": "2026-07-31T14:00:33.611668+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 8.13,
+        "today_volume": 4291287,
+        "projected_volume": 54385398,
+        "avg_volume_20d": 6685595,
+        "price_change_pct": -6.53,
+        "price_threshold_used": 6.39,
+        "price": 143.1,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
