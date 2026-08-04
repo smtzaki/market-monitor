@@ -101479,6 +101479,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "MS_new_high_20260804185831",
+      "ticker": "MS",
+      "signal_type": "new_high",
+      "fired_at": "2026-08-04T18:58:31.947432+00:00",
+      "entry_price": 218.43,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.41,
+        "spy_5d_pct": 4.26,
+        "spy_20d_pct": 3.21,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7034.26,
+        "computed_at": "2026-08-04T18:58:09.138661+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "MS",
+        "price": 218.43,
+        "high_52w": 218.27,
+        "pct_from_high": 0.07,
+        "volume_ratio": 0.96,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "COP_momentum_20260804185853",
+      "ticker": "COP",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-04T18:58:53.456931+00:00",
+      "entry_price": 118.05,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.41,
+        "spy_5d_pct": 4.26,
+        "spy_20d_pct": 3.21,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7034.26,
+        "computed_at": "2026-08-04T18:58:09.138661+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "COP",
+        "price": 118.05,
+        "pct_5d": 3.46,
+        "pct_above_200d": 14.38,
+        "today_pct": 0.35,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
