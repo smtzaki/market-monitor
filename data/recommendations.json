@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-08-04T14:47:02.891255+00:00",
+  "computed_at": "2026-08-04T15:02:15.252698+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 15.8,
-    "spy_5d_pct": 3.4,
-    "spy_20d_pct": 2.37,
+    "vix": 15.86,
+    "spy_5d_pct": 3.49,
+    "spy_20d_pct": 2.46,
     "spy_above_200d": true,
-    "spy_200d_ma": 7033.94,
-    "computed_at": "2026-08-04T14:45:32.135721+00:00"
+    "spy_200d_ma": 7033.97,
+    "computed_at": "2026-08-04T15:00:41.834887+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -25,35 +25,9 @@
   "active_signals_seen": 42,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 58.97,
-  "budget_remaining_cad": 61.03,
+  "budget_deployed_cad": 35.12,
+  "budget_remaining_cad": 84.88,
   "recommendations": [
-    {
-      "ticker": "MU",
-      "direction": "bullish",
-      "score": 0.671,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 3,
-      "hit_rate": 1.0,
-      "avg_return_pct": 7.656,
-      "std_pct": 1.027,
-      "confidence": "noise",
-      "regime": "bull",
-      "regime_fit": 0.6,
-      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 879.68,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.281,
-        "allocation_cad": 33.71,
-        "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
     {
       "ticker": "ZEB.TO",
       "direction": "bullish",
@@ -68,12 +42,12 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime disagrees",
-      "current_price": 76.95,
+      "current_price": 76.97,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.293,
-        "allocation_cad": 25.26,
+        "allocation_cad": 35.12,
         "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
