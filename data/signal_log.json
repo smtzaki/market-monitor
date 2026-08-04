@@ -101259,6 +101259,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TSM_momentum_20260804180048",
+      "ticker": "TSM",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-04T18:00:48.866535+00:00",
+      "entry_price": 417.75,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.58,
+        "spy_5d_pct": 4.17,
+        "spy_20d_pct": 3.13,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7034.23,
+        "computed_at": "2026-08-04T18:00:30.573598+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TSM",
+        "price": 417.75,
+        "pct_5d": 6.48,
+        "pct_above_200d": 27.62,
+        "today_pct": -0.06,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XIT.TO_volume_spike_20260804180157",
+      "ticker": "XIT.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-04T18:01:57.692323+00:00",
+      "entry_price": 77.2,
+      "regime": {
+        "classification": "bull",
+        "vix": 16.58,
+        "spy_5d_pct": 4.17,
+        "spy_20d_pct": 3.13,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7034.23,
+        "computed_at": "2026-08-04T18:00:30.573598+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "XIT.TO",
+        "multiplier": 3.29,
+        "today_volume": 28986,
+        "projected_volume": 41567,
+        "avg_volume_20d": 12625,
+        "price_change_pct": 11.88,
+        "price_threshold_used": 3.57,
+        "price": 77.2,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
