@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-08-11T17:47:01.681121+00:00",
+  "computed_at": "2026-08-11T18:02:00.598517+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 15.38,
-    "spy_5d_pct": -0.02,
-    "spy_20d_pct": 2.54,
+    "vix": 15.27,
+    "spy_5d_pct": -0.03,
+    "spy_20d_pct": 2.53,
     "spy_above_200d": true,
-    "spy_200d_ma": 7060.3,
-    "computed_at": "2026-08-11T17:45:31.794767+00:00"
+    "spy_200d_ma": 7060.29,
+    "computed_at": "2026-08-11T18:00:31.420288+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -25,34 +25,7 @@
   "active_signals_seen": 14,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 44.38,
-  "budget_remaining_cad": 75.62,
-  "recommendations": [
-    {
-      "ticker": "ZEB.TO",
-      "direction": "bullish",
-      "score": 0.566,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 10,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 76.47,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.37,
-        "allocation_cad": 44.38,
-        "sigma_60d": 1.054
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    }
-  ]
+  "budget_deployed_cad": 0.0,
+  "budget_remaining_cad": 120.0,
+  "recommendations": []
 }
