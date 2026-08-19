@@ -133286,6 +133286,105 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COIN_volume_spike_20260819150046",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-19T15:00:46.538851+00:00",
+      "entry_price": 160.43,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.21,
+        "spy_5d_pct": -0.09,
+        "spy_20d_pct": 3.23,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7087.77,
+        "computed_at": "2026-08-19T15:00:29.994488+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 2.69,
+        "today_volume": 4670872,
+        "projected_volume": 20068455,
+        "avg_volume_20d": 7450355,
+        "price_change_pct": 8.77,
+        "price_threshold_used": 6.39,
+        "price": 160.43,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "LLY_momentum_20260819150117",
+      "ticker": "LLY",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-19T15:01:17.961660+00:00",
+      "entry_price": 1266.28,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.21,
+        "spy_5d_pct": -0.09,
+        "spy_20d_pct": 3.23,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7087.77,
+        "computed_at": "2026-08-19T15:00:29.994488+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "LLY",
+        "price": 1266.28,
+        "pct_5d": 3.92,
+        "pct_above_200d": 33.39,
+        "today_pct": 1.64,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ZEB.TO_volume_spike_20260819150207",
+      "ticker": "ZEB.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-19T15:02:07.441542+00:00",
+      "entry_price": 75.21,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.21,
+        "spy_5d_pct": -0.09,
+        "spy_20d_pct": 3.23,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7087.77,
+        "computed_at": "2026-08-19T15:00:29.994488+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "ZEB.TO",
+        "multiplier": 2.55,
+        "today_volume": 754096,
+        "projected_volume": 3192541,
+        "avg_volume_20d": 1252735,
+        "price_change_pct": -2.72,
+        "price_threshold_used": 1.58,
+        "price": 75.21,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
