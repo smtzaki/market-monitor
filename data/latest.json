@@ -1,15 +1,15 @@
 {
-  "scanned_at": "2026-08-19T14:16:45.137765+00:00",
+  "scanned_at": "2026-08-19T14:32:16.616723+00:00",
   "market_open": true,
-  "usdcad_rate": 1.3809,
+  "usdcad_rate": 1.387,
   "regime": {
     "classification": "neutral",
-    "vix": 15.3,
-    "spy_5d_pct": -0.51,
-    "spy_20d_pct": 2.8,
+    "vix": 15.41,
+    "spy_5d_pct": -0.38,
+    "spy_20d_pct": 2.94,
     "spy_above_200d": true,
-    "spy_200d_ma": 7087.61,
-    "computed_at": "2026-08-19T14:15:28.576285+00:00"
+    "spy_200d_ma": 7087.66,
+    "computed_at": "2026-08-19T14:30:31.486494+00:00"
   },
   "tiles": {
     "indexes": [
@@ -17,25 +17,25 @@
         "ticker": "^GSPTSE",
         "name": "TSX Composite",
         "currency": "CAD",
-        "price": 36604.59,
-        "change_pct": 0.65,
-        "volume": 50860085
+        "price": 36651.57,
+        "change_pct": 0.78,
+        "volume": 59355083
       },
       {
         "ticker": "^GSPC",
         "name": "S&P 500",
         "currency": "USD",
-        "price": 7708.76,
-        "change_pct": 0.22,
-        "volume": 556448170
+        "price": 7720.3,
+        "change_pct": 0.37,
+        "volume": 676893742
       },
       {
         "ticker": "^NDX",
         "name": "Nasdaq 100",
         "currency": "USD",
-        "price": 29310.77,
-        "change_pct": -0.61,
-        "volume": 290124320
+        "price": 29399.29,
+        "change_pct": -0.31,
+        "volume": 346025034
       }
     ],
     "stocks": [
@@ -43,65 +43,65 @@
         "ticker": "NVDA",
         "name": "NVIDIA",
         "currency": "USD",
-        "price": 217.02,
-        "change_pct": -1.24,
-        "volume": 21914807
+        "price": 218.29,
+        "change_pct": -0.66,
+        "volume": 26058549
       },
       {
         "ticker": "AAPL",
         "name": "Apple",
         "currency": "USD",
-        "price": 317.31,
-        "change_pct": 2.35,
-        "volume": 10593725
+        "price": 316.38,
+        "change_pct": 2.05,
+        "volume": 12621249
       },
       {
         "ticker": "MSFT",
         "name": "Microsoft",
         "currency": "USD",
-        "price": 483.7,
-        "change_pct": 0.43,
-        "volume": 3764095
+        "price": 482.19,
+        "change_pct": 0.12,
+        "volume": 4415528
       },
       {
         "ticker": "GOOGL",
         "name": "Alphabet",
         "currency": "USD",
-        "price": 343.62,
-        "change_pct": -0.17,
-        "volume": 3679754
+        "price": 343.54,
+        "change_pct": -0.19,
+        "volume": 4339103
       },
       {
         "ticker": "TSLA",
         "name": "Tesla",
         "currency": "USD",
-        "price": 338.27,
-        "change_pct": 0.42,
-        "volume": 6712452
+        "price": 343.38,
+        "change_pct": 1.93,
+        "volume": 8609693
       },
       {
         "ticker": "AMD",
         "name": "AMD",
         "currency": "USD",
-        "price": 464.09,
-        "change_pct": -4.19,
-        "volume": 5206011
+        "price": 466.58,
+        "change_pct": -3.68,
+        "volume": 6344104
       },
       {
         "ticker": "SHOP.TO",
         "name": "Shopify",
         "currency": "CAD",
-        "price": 203.37,
-        "change_pct": -0.27,
-        "volume": 146530
+        "price": 204.9,
+        "change_pct": 0.48,
+        "volume": 175812
       },
       {
         "ticker": "RY.TO",
         "name": "Royal Bank of Canada",
         "currency": "CAD",
-        "price": 292.55,
-        "change_pct": -1.25,
-        "volume": 160146
+        "price": 292.13,
+        "change_pct": -1.39,
+        "volume": 251219
       }
     ]
   },
@@ -109,424 +109,370 @@
     {
       "signal_type": "volume_spike",
       "ticker": "CRWD",
-      "multiplier": 3.14,
-      "today_volume": 2688510,
-      "projected_volume": 22983423,
+      "multiplier": 2.72,
+      "today_volume": 3104765,
+      "projected_volume": 19928846,
       "avg_volume_20d": 7329205,
-      "price_change_pct": -6.95,
+      "price_change_pct": -6.89,
       "price_threshold_used": 5.33,
-      "price": 198.55,
+      "price": 198.67,
       "direction": "bearish"
     },
     {
       "signal_type": "new_high",
       "ticker": "PANW",
-      "price": 353.48,
+      "price": 353.77,
       "high_52w": 300.48,
-      "pct_from_high": 17.64,
-      "volume_ratio": 1.01,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "SNOW",
-      "price": 317.18,
-      "high_52w": 280.16,
-      "pct_from_high": 13.21,
-      "volume_ratio": 0.81,
+      "pct_from_high": 17.73,
+      "volume_ratio": 0.93,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "NET",
-      "price": 286.32,
+      "price": 287.98,
       "high_52w": 272.66,
-      "pct_from_high": 5.01,
-      "volume_ratio": 1.34,
+      "pct_from_high": 5.62,
+      "volume_ratio": 1.17,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "JPM",
-      "price": 360.21,
+      "price": 360.5,
       "high_52w": 332.91,
-      "pct_from_high": 8.2,
-      "volume_ratio": 1.14,
+      "pct_from_high": 8.29,
+      "volume_ratio": 0.96,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "BAC",
-      "price": 63.88,
+      "price": 63.79,
       "high_52w": 56.63,
-      "pct_from_high": 12.79,
-      "volume_ratio": 0.95,
+      "pct_from_high": 12.64,
+      "volume_ratio": 0.85,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "MA",
-      "price": 581.44,
-      "pct_5d": 3.88,
-      "pct_above_200d": 8.26,
-      "today_pct": 1.74,
+      "price": 580.08,
+      "pct_5d": 3.64,
+      "pct_above_200d": 8.01,
+      "today_pct": 1.5,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "SBUX",
-      "price": 107.32,
+      "price": 107.06,
       "high_52w": 106.82,
-      "pct_from_high": 0.47,
-      "volume_ratio": 1.11,
+      "pct_from_high": 0.22,
+      "volume_ratio": 1.05,
       "direction": "bullish"
     },
     {
       "signal_type": "volume_spike",
       "ticker": "TGT",
-      "multiplier": 7.29,
-      "today_volume": 3246657,
-      "projected_volume": 27541318,
+      "multiplier": 5.88,
+      "today_volume": 3489830,
+      "projected_volume": 22227223,
       "avg_volume_20d": 3778735,
-      "price_change_pct": 8.05,
+      "price_change_pct": 8.0,
       "price_threshold_used": 2.77,
-      "price": 159.7,
+      "price": 159.62,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "TGT",
-      "price": 159.7,
+      "price": 159.62,
       "high_52w": 130.86,
-      "pct_from_high": 22.04,
-      "volume_ratio": 5.13,
+      "pct_from_high": 21.97,
+      "volume_ratio": 4.14,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "JNJ",
-      "price": 275.71,
-      "pct_5d": 5.69,
-      "pct_above_200d": 30.39,
-      "today_pct": 0.99,
+      "price": 274.41,
+      "pct_5d": 5.19,
+      "pct_above_200d": 29.77,
+      "today_pct": 0.52,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "JNJ",
-      "price": 275.71,
+      "price": 274.43,
       "high_52w": 247.14,
-      "pct_from_high": 11.56,
-      "volume_ratio": 1.82,
+      "pct_from_high": 11.04,
+      "volume_ratio": 1.57,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "LLY",
-      "price": 1284.58,
+      "price": 1285.36,
       "high_52w": 1160.8,
-      "pct_from_high": 10.66,
-      "volume_ratio": 3.6,
+      "pct_from_high": 10.73,
+      "volume_ratio": 3.06,
       "direction": "bullish"
     },
     {
       "signal_type": "volume_spike",
       "ticker": "PFE",
-      "multiplier": 3.4,
-      "today_volume": 15793314,
-      "projected_volume": 133805851,
+      "multiplier": 3.06,
+      "today_volume": 18944433,
+      "projected_volume": 120511635,
       "avg_volume_20d": 39398225,
-      "price_change_pct": 2.5,
+      "price_change_pct": 2.77,
       "price_threshold_used": 1.83,
-      "price": 28.29,
+      "price": 28.36,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "PFE",
-      "price": 28.29,
+      "price": 28.36,
       "high_52w": 28.09,
-      "pct_from_high": 0.72,
-      "volume_ratio": 3.71,
+      "pct_from_high": 0.99,
+      "volume_ratio": 3.34,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "momentum",
+      "ticker": "MRK",
+      "price": 149.32,
+      "pct_5d": 12.34,
+      "pct_above_200d": 44.41,
+      "today_pct": 1.62,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "MRK",
-      "price": 150.77,
+      "price": 149.35,
       "high_52w": 123.18,
-      "pct_from_high": 22.4,
-      "volume_ratio": 8.94,
+      "pct_from_high": 21.25,
+      "volume_ratio": 7.85,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "ABBV",
-      "price": 265.11,
-      "pct_5d": 6.57,
-      "pct_above_200d": 21.93,
-      "today_pct": 1.38,
+      "price": 264.1,
+      "pct_5d": 6.16,
+      "pct_above_200d": 21.46,
+      "today_pct": 0.99,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "ABBV",
-      "price": 265.11,
+      "price": 264.1,
       "high_52w": 238.71,
-      "pct_from_high": 11.06,
-      "volume_ratio": 0.94,
+      "pct_from_high": 10.63,
+      "volume_ratio": 0.87,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "XOM",
-      "price": 168.1,
-      "pct_5d": 5.91,
-      "pct_above_200d": 27.48,
-      "today_pct": 1.23,
+      "price": 167.71,
+      "pct_5d": 5.67,
+      "pct_above_200d": 27.19,
+      "today_pct": 0.99,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "CVX",
-      "price": 207.47,
-      "pct_5d": 5.53,
-      "pct_above_200d": 23.4,
-      "today_pct": 1.18,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "CVX",
-      "price": 207.47,
-      "high_52w": 209.23,
-      "pct_from_high": -0.84,
-      "volume_ratio": 1.34,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "momentum",
-      "ticker": "COP",
-      "price": 131.65,
-      "pct_5d": 4.11,
-      "pct_above_200d": 27.57,
-      "today_pct": 1.11,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "COP",
-      "price": 131.65,
-      "high_52w": 132.81,
-      "pct_from_high": -0.87,
-      "volume_ratio": 0.82,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "BNS.TO",
-      "price": 123.93,
-      "high_52w": 113.65,
-      "pct_from_high": 9.05,
-      "volume_ratio": 0.92,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "BMO.TO",
-      "price": 249.01,
-      "high_52w": 230.91,
-      "pct_from_high": 7.84,
-      "volume_ratio": 1.02,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "NA.TO",
-      "price": 225.54,
-      "high_52w": 213.38,
-      "pct_from_high": 5.7,
-      "volume_ratio": 0.82,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "momentum",
-      "ticker": "CNQ.TO",
-      "price": 69.36,
-      "pct_5d": 4.49,
-      "pct_above_200d": 32.45,
-      "today_pct": 0.52,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "momentum",
-      "ticker": "SU.TO",
-      "price": 95.11,
-      "pct_5d": 6.72,
-      "pct_above_200d": 35.26,
+      "price": 206.91,
+      "pct_5d": 5.25,
+      "pct_above_200d": 23.06,
       "today_pct": 0.91,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
+      "ticker": "COP",
+      "price": 131.93,
+      "pct_5d": 4.33,
+      "pct_above_200d": 27.83,
+      "today_pct": 1.32,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "new_high",
+      "ticker": "BNS.TO",
+      "price": 123.67,
+      "high_52w": 113.65,
+      "pct_from_high": 8.82,
+      "volume_ratio": 0.81,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "new_high",
+      "ticker": "BMO.TO",
+      "price": 248.43,
+      "high_52w": 230.91,
+      "pct_from_high": 7.59,
+      "volume_ratio": 0.95,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "momentum",
+      "ticker": "CNQ.TO",
+      "price": 69.47,
+      "pct_5d": 4.66,
+      "pct_above_200d": 32.66,
+      "today_pct": 0.68,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "momentum",
+      "ticker": "SU.TO",
+      "price": 95.01,
+      "pct_5d": 6.61,
+      "pct_above_200d": 35.12,
+      "today_pct": 0.81,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "momentum",
       "ticker": "CVE.TO",
-      "price": 45.38,
-      "pct_5d": 7.77,
-      "pct_above_200d": 57.04,
-      "today_pct": 0.35,
+      "price": 45.53,
+      "pct_5d": 8.12,
+      "pct_above_200d": 57.56,
+      "today_pct": 0.69,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "IMO.TO",
-      "price": 190.12,
-      "pct_5d": 4.46,
-      "pct_above_200d": 30.67,
-      "today_pct": 0.45,
+      "price": 190.16,
+      "pct_5d": 4.48,
+      "pct_above_200d": 30.7,
+      "today_pct": 0.47,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "IMO.TO",
-      "price": 190.12,
+      "price": 190.16,
       "high_52w": 188.47,
-      "pct_from_high": 0.87,
-      "volume_ratio": 1.55,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "momentum",
-      "ticker": "ABX.TO",
-      "price": 62.15,
-      "pct_5d": 8.14,
-      "pct_above_200d": 13.27,
-      "today_pct": 1.67,
+      "pct_from_high": 0.9,
+      "volume_ratio": 1.34,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "NTR.TO",
-      "price": 98.35,
-      "pct_5d": 5.12,
-      "pct_above_200d": 9.69,
-      "today_pct": 1.67,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "CP.TO",
-      "price": 131.69,
-      "high_52w": 126.24,
-      "pct_from_high": 4.32,
-      "volume_ratio": 0.87,
+      "price": 98.61,
+      "pct_5d": 5.4,
+      "pct_above_200d": 9.98,
+      "today_pct": 1.94,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "MFC.TO",
-      "price": 60.34,
+      "price": 60.2,
       "high_52w": 54.33,
-      "pct_from_high": 11.06,
-      "volume_ratio": 14.23,
+      "pct_from_high": 10.8,
+      "volume_ratio": 10.79,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "ATD.TO",
-      "price": 89.08,
+      "price": 88.97,
       "high_52w": 85.03,
-      "pct_from_high": 4.77,
-      "volume_ratio": 1.04,
+      "pct_from_high": 4.64,
+      "volume_ratio": 0.92,
       "direction": "bullish"
     },
     {
       "signal_type": "momentum",
       "ticker": "QSR.TO",
-      "price": 108.23,
-      "pct_5d": 3.57,
-      "pct_above_200d": 12.31,
-      "today_pct": 1.59,
+      "price": 108.18,
+      "pct_5d": 3.52,
+      "pct_above_200d": 12.26,
+      "today_pct": 1.54,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "XEQT.TO",
-      "price": 45.66,
+      "price": 45.72,
       "high_52w": 45.06,
-      "pct_from_high": 1.33,
-      "volume_ratio": 3.0,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "VEQT.TO",
-      "price": 62.1,
-      "high_52w": 60.92,
-      "pct_from_high": 1.94,
+      "pct_from_high": 1.46,
       "volume_ratio": 2.4,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
+      "ticker": "VEQT.TO",
+      "price": 62.19,
+      "high_52w": 60.92,
+      "pct_from_high": 2.08,
+      "volume_ratio": 1.85,
+      "direction": "bullish"
+    },
+    {
+      "signal_type": "new_high",
       "ticker": "VGRO.TO",
-      "price": 47.87,
+      "price": 47.94,
       "high_52w": 47.44,
-      "pct_from_high": 0.91,
-      "volume_ratio": 2.09,
+      "pct_from_high": 1.05,
+      "volume_ratio": 1.76,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "VFV.TO",
-      "price": 188.96,
+      "price": 189.14,
       "high_52w": 187.31,
-      "pct_from_high": 0.88,
-      "volume_ratio": 2.67,
+      "pct_from_high": 0.98,
+      "volume_ratio": 2.06,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "XUS.TO",
-      "price": 65.81,
+      "price": 65.89,
       "high_52w": 65.36,
-      "pct_from_high": 0.69,
-      "volume_ratio": 1.03,
+      "pct_from_high": 0.81,
+      "volume_ratio": 0.91,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "ZEB.TO",
-      "price": 76.17,
+      "price": 75.98,
       "high_52w": 70.56,
-      "pct_from_high": 7.95,
-      "volume_ratio": 0.94,
-      "direction": "bullish"
-    },
-    {
-      "signal_type": "new_high",
-      "ticker": "SPY",
-      "price": 769.71,
-      "high_52w": 759.57,
-      "pct_from_high": 1.33,
-      "volume_ratio": 0.92,
+      "pct_from_high": 7.68,
+      "volume_ratio": 1.5,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "VTI",
-      "price": 380.2,
+      "price": 380.61,
       "high_52w": 374.36,
-      "pct_from_high": 1.56,
-      "volume_ratio": 1.06,
+      "pct_from_high": 1.67,
+      "volume_ratio": 1.0,
       "direction": "bullish"
     },
     {
       "signal_type": "new_high",
       "ticker": "IWM",
-      "price": 301.87,
+      "price": 302.74,
       "high_52w": 292.03,
-      "pct_from_high": 3.37,
-      "volume_ratio": 1.19,
+      "pct_from_high": 3.67,
+      "volume_ratio": 0.99,
       "direction": "bullish"
     }
   ]
