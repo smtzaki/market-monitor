@@ -136915,6 +136915,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COP_momentum_20260820180128",
+      "ticker": "COP",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-20T18:01:28.444235+00:00",
+      "entry_price": 134.32,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.9,
+        "spy_5d_pct": -1.75,
+        "spy_20d_pct": 2.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7082.0,
+        "computed_at": "2026-08-20T18:00:30.086423+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "COP",
+        "price": 134.32,
+        "pct_5d": 8.59,
+        "pct_above_200d": 30.15,
+        "today_pct": 1.37,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "BMO.TO_new_high_20260820180134",
+      "ticker": "BMO.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-08-20T18:01:34.759243+00:00",
+      "entry_price": 238.0,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.9,
+        "spy_5d_pct": -1.75,
+        "spy_20d_pct": 2.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7082.0,
+        "computed_at": "2026-08-20T18:00:30.086423+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "BMO.TO",
+        "price": 238.0,
+        "high_52w": 230.91,
+        "pct_from_high": 3.07,
+        "volume_ratio": 0.82,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
