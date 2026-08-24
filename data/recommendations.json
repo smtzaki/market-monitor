@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-08-24T13:15:33.216071+00:00",
+  "computed_at": "2026-08-24T13:32:33.200156+00:00",
   "regime": {
     "classification": "neutral",
-    "vix": 15.89,
-    "spy_5d_pct": -1.43,
-    "spy_20d_pct": 3.54,
+    "vix": 15.85,
+    "spy_5d_pct": -1.14,
+    "spy_20d_pct": 3.29,
     "spy_above_200d": true,
-    "spy_200d_ma": 7095.72,
-    "computed_at": "2026-08-24T13:15:26.861680+00:00"
+    "spy_200d_ma": 7100.15,
+    "computed_at": "2026-08-24T13:30:29.519309+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,10 +22,89 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 0,
+  "active_signals_seen": 60,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 0.0,
-  "budget_remaining_cad": 120.0,
-  "recommendations": []
+  "budget_deployed_cad": 83.14,
+  "budget_remaining_cad": 36.86,
+  "recommendations": [
+    {
+      "ticker": "ZEB.TO",
+      "direction": "bullish",
+      "score": 0.566,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 10,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.666,
+      "std_pct": 0.388,
+      "confidence": "weak",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
+      "current_price": 72.77,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.37,
+        "allocation_cad": 44.38,
+        "sigma_60d": 1.054
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    },
+    {
+      "ticker": "TD.TO",
+      "direction": "bullish",
+      "score": 0.356,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 7,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.708,
+      "std_pct": 0.656,
+      "confidence": "weak",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak \u00b7 regime confirms",
+      "current_price": 160.11,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.307,
+        "allocation_cad": 23.2,
+        "sigma_60d": 1.111
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    },
+    {
+      "ticker": "NA.TO",
+      "direction": "bullish",
+      "score": 0.323,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 8,
+      "hit_rate": 0.875,
+      "avg_return_pct": 1.325,
+      "std_pct": 1.014,
+      "confidence": "weak",
+      "regime": "neutral",
+      "regime_fit": 1.1,
+      "rationale": "per_ticker: n=8, hit=88%, avg=+1.32%, \u03c3=1.01 \u00b7 confidence=weak \u00b7 regime confirms",
+      "current_price": 218.19,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.297,
+        "allocation_cad": 15.56,
+        "sigma_60d": 1.22
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    }
+  ]
 }
