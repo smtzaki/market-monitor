@@ -144720,6 +144720,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "BNS.TO_volume_spike_20260825135535",
+      "ticker": "BNS.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-25T13:55:35.990287+00:00",
+      "entry_price": 125.23,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.13,
+        "spy_5d_pct": -0.16,
+        "spy_20d_pct": 3.37,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7104.54,
+        "computed_at": "2026-08-25T13:54:44.676670+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BNS.TO",
+        "multiplier": 3.92,
+        "today_volume": 780036,
+        "projected_volume": 11885352,
+        "avg_volume_20d": 3033285,
+        "price_change_pct": 2.39,
+        "price_threshold_used": 1.62,
+        "price": 125.23,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "SHOP.TO_momentum_20260825135545",
+      "ticker": "SHOP.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-25T13:55:45.519314+00:00",
+      "entry_price": 212.1,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.13,
+        "spy_5d_pct": -0.16,
+        "spy_20d_pct": 3.37,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7104.54,
+        "computed_at": "2026-08-25T13:54:44.676670+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "SHOP.TO",
+        "price": 212.1,
+        "pct_5d": 4.01,
+        "pct_above_200d": 10.6,
+        "today_pct": 1.97,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
