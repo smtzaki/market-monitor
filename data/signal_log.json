@@ -146961,6 +146961,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "UNH_momentum_20260826134606",
+      "ticker": "UNH",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-26T13:46:06.841033+00:00",
+      "entry_price": 403.28,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.71,
+        "spy_5d_pct": -0.31,
+        "spy_20d_pct": 5.03,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7109.35,
+        "computed_at": "2026-08-26T13:45:28.070829+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "UNH",
+        "price": 403.28,
+        "pct_5d": 3.77,
+        "pct_above_200d": 23.19,
+        "today_pct": 1.75,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "BNS.TO_volume_spike_20260826134619",
+      "ticker": "BNS.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-26T13:46:19.411041+00:00",
+      "entry_price": 130.83,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.71,
+        "spy_5d_pct": -0.31,
+        "spy_20d_pct": 5.03,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7109.35,
+        "computed_at": "2026-08-26T13:45:28.070829+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BNS.TO",
+        "multiplier": 4.3,
+        "today_volume": 576874,
+        "projected_volume": 13786274,
+        "avg_volume_20d": 3204750,
+        "price_change_pct": 1.63,
+        "price_threshold_used": 1.62,
+        "price": 130.83,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "NTR.TO_momentum_20260826134642",
+      "ticker": "NTR.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-26T13:46:42.941920+00:00",
+      "entry_price": 101.08,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.71,
+        "spy_5d_pct": -0.31,
+        "spy_20d_pct": 5.03,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7109.35,
+        "computed_at": "2026-08-26T13:45:28.070829+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "NTR.TO",
+        "price": 101.08,
+        "pct_5d": 3.87,
+        "pct_above_200d": 12.73,
+        "today_pct": 0.77,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
