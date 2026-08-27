@@ -150714,6 +150714,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CRWD_volume_spike_20260827180040",
+      "ticker": "CRWD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-27T18:00:40.649287+00:00",
+      "entry_price": 226.0,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.66,
+        "spy_5d_pct": 1.18,
+        "spy_20d_pct": 3.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7114.33,
+        "computed_at": "2026-08-27T18:00:28.733300+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CRWD",
+        "multiplier": 3.0,
+        "today_volume": 16649767,
+        "projected_volume": 23989799,
+        "avg_volume_20d": 7990610,
+        "price_change_pct": 8.52,
+        "price_threshold_used": 5.33,
+        "price": 226.0,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "GS_momentum_20260827180054",
+      "ticker": "GS",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-27T18:00:54.371788+00:00",
+      "entry_price": 1040.0,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.66,
+        "spy_5d_pct": 1.18,
+        "spy_20d_pct": 3.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7114.33,
+        "computed_at": "2026-08-27T18:00:28.733300+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "GS",
+        "price": 1040.0,
+        "pct_5d": 3.8,
+        "pct_above_200d": 21.29,
+        "today_pct": -0.16,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "TD.TO_momentum_20260827180121",
+      "ticker": "TD.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-27T18:01:21.056849+00:00",
+      "entry_price": 167.47,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.66,
+        "spy_5d_pct": 1.18,
+        "spy_20d_pct": 3.95,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7114.33,
+        "computed_at": "2026-08-27T18:00:28.733300+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TD.TO",
+        "price": 167.47,
+        "pct_5d": 3.75,
+        "pct_above_200d": 33.19,
+        "today_pct": 0.82,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
