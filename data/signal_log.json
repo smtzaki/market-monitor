@@ -149964,6 +149964,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "PANW_volume_spike_20260827141537",
+      "ticker": "PANW",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-27T14:15:37.513232+00:00",
+      "entry_price": 379.0,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.87,
+        "spy_5d_pct": 0.87,
+        "spy_20d_pct": 3.63,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7114.2,
+        "computed_at": "2026-08-27T14:15:25.638648+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "PANW",
+        "multiplier": 2.65,
+        "today_volume": 1700786,
+        "projected_volume": 14539819,
+        "avg_volume_20d": 5487640,
+        "price_change_pct": 5.67,
+        "price_threshold_used": 5.05,
+        "price": 379.0,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MDB_new_high_20260827141541",
+      "ticker": "MDB",
+      "signal_type": "new_high",
+      "fired_at": "2026-08-27T14:15:41.181484+00:00",
+      "entry_price": 438.35,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.87,
+        "spy_5d_pct": 0.87,
+        "spy_20d_pct": 3.63,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7114.2,
+        "computed_at": "2026-08-27T14:15:25.638648+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "MDB",
+        "price": 438.35,
+        "high_52w": 440.6,
+        "pct_from_high": -0.51,
+        "volume_ratio": 0.98,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
