@@ -152425,6 +152425,133 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CRWD_volume_spike_20260828140040",
+      "ticker": "CRWD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-08-28T14:00:40.651402+00:00",
+      "entry_price": 213.71,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.56,
+        "spy_5d_pct": 0.92,
+        "spy_20d_pct": 3.41,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7118.89,
+        "computed_at": "2026-08-28T14:00:29.469923+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CRWD",
+        "multiplier": 4.82,
+        "today_volume": 3309585,
+        "projected_volume": 42080200,
+        "avg_volume_20d": 8722080,
+        "price_change_pct": -6.47,
+        "price_threshold_used": 5.33,
+        "price": 213.71,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ARM_momentum_20260828140046",
+      "ticker": "ARM",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-28T14:00:46.762383+00:00",
+      "entry_price": 250.95,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.56,
+        "spy_5d_pct": 0.92,
+        "spy_20d_pct": 3.41,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7118.89,
+        "computed_at": "2026-08-28T14:00:29.469923+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ARM",
+        "price": 250.95,
+        "pct_5d": 3.14,
+        "pct_above_200d": 57.63,
+        "today_pct": 0.06,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "V_momentum_20260828140057",
+      "ticker": "V",
+      "signal_type": "momentum",
+      "fired_at": "2026-08-28T14:00:57.423478+00:00",
+      "entry_price": 382.17,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.56,
+        "spy_5d_pct": 0.92,
+        "spy_20d_pct": 3.41,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7118.89,
+        "computed_at": "2026-08-28T14:00:29.469923+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "V",
+        "price": 382.17,
+        "pct_5d": 3.0,
+        "pct_above_200d": 16.26,
+        "today_pct": 0.49,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ATD.TO_new_high_20260828140153",
+      "ticker": "ATD.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-08-28T14:01:53.285271+00:00",
+      "entry_price": 84.21,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.56,
+        "spy_5d_pct": 0.92,
+        "spy_20d_pct": 3.41,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7118.89,
+        "computed_at": "2026-08-28T14:00:29.469923+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ATD.TO",
+        "price": 84.21,
+        "high_52w": 85.03,
+        "pct_from_high": -0.96,
+        "volume_ratio": 3.26,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
