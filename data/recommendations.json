@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-08-31T19:17:13.499432+00:00",
+  "computed_at": "2026-08-31T19:29:15.372607+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 15.05,
-    "spy_5d_pct": 0.33,
-    "spy_20d_pct": 1.03,
+    "vix": 15.02,
+    "spy_5d_pct": 0.1,
+    "spy_20d_pct": 2.57,
     "spy_above_200d": true,
-    "spy_200d_ma": 7122.88,
-    "computed_at": "2026-08-31T19:15:30.821048+00:00"
+    "spy_200d_ma": 7118.57,
+    "computed_at": "2026-08-31T19:27:35.360777+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -25,8 +25,8 @@
   "active_signals_seen": 11,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 58.97,
-  "budget_remaining_cad": 61.03,
+  "budget_deployed_cad": 33.71,
+  "budget_remaining_cad": 86.29,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,39 +42,13 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 940.38,
+      "current_price": 946.51,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.281,
         "allocation_cad": 33.71,
         "sigma_60d": 5.873
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
-    {
-      "ticker": "ZEB.TO",
-      "direction": "bullish",
-      "score": 0.309,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 10,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
-      "regime": "bull",
-      "regime_fit": 0.6,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime disagrees",
-      "current_price": 73.76,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.293,
-        "allocation_cad": 25.26,
-        "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
       "target_exit_date_max": 7,
