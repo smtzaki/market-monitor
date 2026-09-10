@@ -172682,6 +172682,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NET_momentum_20260910134542",
+      "ticker": "NET",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-10T13:45:42.515750+00:00",
+      "entry_price": 316.85,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.74,
+        "spy_5d_pct": -0.91,
+        "spy_20d_pct": -1.96,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7157.31,
+        "computed_at": "2026-09-10T13:45:28.330181+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "NET",
+        "price": 316.85,
+        "pct_5d": 16.17,
+        "pct_above_200d": 53.32,
+        "today_pct": 1.12,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CP.TO_new_high_20260910134638",
+      "ticker": "CP.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-09-10T13:46:38.413365+00:00",
+      "entry_price": 125.1,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.74,
+        "spy_5d_pct": -0.91,
+        "spy_20d_pct": -1.96,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7157.31,
+        "computed_at": "2026-09-10T13:45:28.330181+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "CP.TO",
+        "price": 125.1,
+        "high_52w": 126.24,
+        "pct_from_high": -0.9,
+        "volume_ratio": 0.97,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
