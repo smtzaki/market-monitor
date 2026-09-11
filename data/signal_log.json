@@ -174666,6 +174666,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "ORCL_volume_spike_20260911143117",
+      "ticker": "ORCL",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-11T14:31:17.414115+00:00",
+      "entry_price": 154.01,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.96,
+        "spy_5d_pct": -1.02,
+        "spy_20d_pct": -1.67,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7162.61,
+        "computed_at": "2026-09-11T14:31:10.693810+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "ORCL",
+        "multiplier": 9.66,
+        "today_volume": 36324259,
+        "projected_volume": 231175140,
+        "avg_volume_20d": 23930545,
+        "price_change_pct": -6.34,
+        "price_threshold_used": 6.1,
+        "price": 154.01,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
