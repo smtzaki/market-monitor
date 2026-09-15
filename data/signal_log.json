@@ -178645,6 +178645,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TMO_new_high_20260915151627",
+      "ticker": "TMO",
+      "signal_type": "new_high",
+      "fired_at": "2026-09-15T15:16:27.955471+00:00",
+      "entry_price": 633.3,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.73,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.11,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7171.21,
+        "computed_at": "2026-09-15T15:15:33.420296+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "TMO",
+        "price": 633.3,
+        "high_52w": 638.82,
+        "pct_from_high": -0.86,
+        "volume_ratio": 1.19,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "BCE.TO_volume_spike_20260915151652",
+      "ticker": "BCE.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-15T15:16:52.084022+00:00",
+      "entry_price": 31.75,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.73,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.11,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7171.21,
+        "computed_at": "2026-09-15T15:15:33.420296+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BCE.TO",
+        "multiplier": 3.68,
+        "today_volume": 3297449,
+        "projected_volume": 12034133,
+        "avg_volume_20d": 3272755,
+        "price_change_pct": -2.16,
+        "price_threshold_used": 1.6,
+        "price": 31.75,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
