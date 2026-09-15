@@ -179147,6 +179147,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TMO_new_high_20260915193125",
+      "ticker": "TMO",
+      "signal_type": "new_high",
+      "fired_at": "2026-09-15T19:31:25.285795+00:00",
+      "entry_price": 638.85,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.45,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.12,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7171.2,
+        "computed_at": "2026-09-15T19:30:33.587687+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "TMO",
+        "price": 638.85,
+        "high_52w": 638.82,
+        "pct_from_high": 0.0,
+        "volume_ratio": 0.82,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CVX_momentum_20260915193128",
+      "ticker": "CVX",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-15T19:31:28.048260+00:00",
+      "entry_price": 216.67,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.45,
+        "spy_5d_pct": -1.2,
+        "spy_20d_pct": -2.12,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7171.2,
+        "computed_at": "2026-09-15T19:30:33.587687+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "CVX",
+        "price": 216.67,
+        "pct_5d": 3.27,
+        "pct_above_200d": 28.87,
+        "today_pct": 1.78,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
