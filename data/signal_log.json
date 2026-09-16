@@ -180613,6 +180613,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TMO_momentum_20260916134628",
+      "ticker": "TMO",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-16T13:46:28.573526+00:00",
+      "entry_price": 645.99,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.74,
+        "spy_5d_pct": -0.46,
+        "spy_20d_pct": -1.17,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7175.17,
+        "computed_at": "2026-09-16T13:45:31.600309+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TMO",
+        "price": 645.99,
+        "pct_5d": 6.74,
+        "pct_above_200d": 22.84,
+        "today_pct": 0.62,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MFC.TO_momentum_20260916134711",
+      "ticker": "MFC.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-16T13:47:11.060098+00:00",
+      "entry_price": 61.2,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.74,
+        "spy_5d_pct": -0.46,
+        "spy_20d_pct": -1.17,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7175.17,
+        "computed_at": "2026-09-16T13:45:31.600309+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "MFC.TO",
+        "price": 61.2,
+        "pct_5d": 3.13,
+        "pct_above_200d": 28.03,
+        "today_pct": 0.02,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "DOL.TO_volume_spike_20260916134715",
+      "ticker": "DOL.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-16T13:47:15.744500+00:00",
+      "entry_price": 166.81,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.74,
+        "spy_5d_pct": -0.46,
+        "spy_20d_pct": -1.17,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7175.17,
+        "computed_at": "2026-09-16T13:45:31.600309+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "DOL.TO",
+        "multiplier": 4.2,
+        "today_volume": 131956,
+        "projected_volume": 2982020,
+        "avg_volume_20d": 709780,
+        "price_change_pct": -3.14,
+        "price_threshold_used": 2.9,
+        "price": 166.81,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
