@@ -184686,6 +184686,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "PANW_volume_spike_20260918141537",
+      "ticker": "PANW",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-18T14:15:37.473342+00:00",
+      "entry_price": 356.64,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.38,
+        "spy_5d_pct": -0.45,
+        "spy_20d_pct": -0.24,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7182.91,
+        "computed_at": "2026-09-18T14:15:27.966444+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "PANW",
+        "multiplier": 2.8,
+        "today_volume": 2151563,
+        "projected_volume": 18394047,
+        "avg_volume_20d": 6577730,
+        "price_change_pct": -5.05,
+        "price_threshold_used": 5.05,
+        "price": 356.64,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
