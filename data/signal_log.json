@@ -184720,6 +184720,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COIN_volume_spike_20260918144543",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-18T14:45:43.599555+00:00",
+      "entry_price": 191.04,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.44,
+        "spy_5d_pct": -0.49,
+        "spy_20d_pct": -0.28,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7182.9,
+        "computed_at": "2026-09-18T14:45:29.506999+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 3.33,
+        "today_volume": 7005121,
+        "projected_volume": 36079590,
+        "avg_volume_20d": 10819200,
+        "price_change_pct": 7.23,
+        "price_threshold_used": 6.39,
+        "price": 191.04,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ENB.TO_momentum_20260918144621",
+      "ticker": "ENB.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-18T14:46:21.130481+00:00",
+      "entry_price": 68.31,
+      "regime": {
+        "classification": "neutral",
+        "vix": 15.44,
+        "spy_5d_pct": -0.49,
+        "spy_20d_pct": -0.28,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7182.9,
+        "computed_at": "2026-09-18T14:45:29.506999+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ENB.TO",
+        "price": 68.31,
+        "pct_5d": 3.14,
+        "pct_above_200d": 0.16,
+        "today_pct": 0.1,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
