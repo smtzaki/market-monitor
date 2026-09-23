@@ -192608,6 +192608,133 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "MCD_volume_spike_20260923134559",
+      "ticker": "MCD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-23T13:45:59.378795+00:00",
+      "entry_price": 242.89,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.28,
+        "spy_5d_pct": 2.15,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.23,
+        "computed_at": "2026-09-23T13:45:27.636863+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "MCD",
+        "multiplier": 7.16,
+        "today_volume": 1441007,
+        "projected_volume": 35155196,
+        "avg_volume_20d": 4911120,
+        "price_change_pct": -2.96,
+        "price_threshold_used": 1.8,
+        "price": 242.89,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "TMO_momentum_20260923134607",
+      "ticker": "TMO",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-23T13:46:07.412510+00:00",
+      "entry_price": 662.76,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.28,
+        "spy_5d_pct": 2.15,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.23,
+        "computed_at": "2026-09-23T13:45:27.636863+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TMO",
+        "price": 662.76,
+        "pct_5d": 3.33,
+        "pct_above_200d": 26.03,
+        "today_pct": 0.78,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XIT.TO_momentum_20260923134649",
+      "ticker": "XIT.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-23T13:46:49.183379+00:00",
+      "entry_price": 79.0,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.28,
+        "spy_5d_pct": 2.15,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.23,
+        "computed_at": "2026-09-23T13:45:27.636863+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "XIT.TO",
+        "price": 79.0,
+        "pct_5d": 7.28,
+        "pct_above_200d": 6.56,
+        "today_pct": 0.51,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "VTI_new_high_20260923134652",
+      "ticker": "VTI",
+      "signal_type": "new_high",
+      "fired_at": "2026-09-23T13:46:52.081228+00:00",
+      "entry_price": 380.13,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.28,
+        "spy_5d_pct": 2.15,
+        "spy_20d_pct": 1.26,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.23,
+        "computed_at": "2026-09-23T13:45:27.636863+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "VTI",
+        "price": 380.13,
+        "high_52w": 374.36,
+        "pct_from_high": 1.54,
+        "volume_ratio": 1.79,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
