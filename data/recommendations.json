@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-09-23T14:31:54.061397+00:00",
+  "computed_at": "2026-09-23T14:47:34.366299+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 14.68,
-    "spy_5d_pct": 1.79,
-    "spy_20d_pct": 0.9,
+    "vix": 14.72,
+    "spy_5d_pct": 1.78,
+    "spy_20d_pct": 0.89,
     "spy_above_200d": true,
     "spy_200d_ma": 7192.09,
-    "computed_at": "2026-09-23T14:30:27.895848+00:00"
+    "computed_at": "2026-09-23T14:45:28.140851+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,11 +22,11 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 35,
+  "active_signals_seen": 36,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 58.97,
-  "budget_remaining_cad": 61.03,
+  "budget_deployed_cad": 57.95,
+  "budget_remaining_cad": 62.05,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,7 +42,7 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 1074.84,
+      "current_price": 1078.86,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
@@ -55,26 +55,26 @@
       "stop_loss_pct": -2.0
     },
     {
-      "ticker": "ZEB.TO",
+      "ticker": "MU",
       "direction": "bullish",
-      "score": 0.309,
+      "score": 0.671,
       "actionable": true,
       "edge_source": "per_ticker",
-      "n": 10,
+      "n": 3,
       "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
+      "avg_return_pct": 7.656,
+      "std_pct": 1.027,
+      "confidence": "noise",
       "regime": "bull",
       "regime_fit": 0.6,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime disagrees",
-      "current_price": 75.53,
+      "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
+      "current_price": 1078.86,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
-        "allocation_pct": 0.293,
-        "allocation_cad": 25.26,
-        "sigma_60d": 1.054
+        "allocation_pct": 0.281,
+        "allocation_cad": 24.24,
+        "sigma_60d": 5.873
       },
       "target_exit_date_min": 3,
       "target_exit_date_max": 7,
