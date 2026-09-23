@@ -192735,6 +192735,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CAT_momentum_20260923141610",
+      "ticker": "CAT",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-23T14:16:10.120051+00:00",
+      "entry_price": 808.7,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.41,
+        "spy_5d_pct": 1.87,
+        "spy_20d_pct": 0.98,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.12,
+        "computed_at": "2026-09-23T14:15:32.519362+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "CAT",
+        "price": 808.7,
+        "pct_5d": 3.21,
+        "pct_above_200d": 24.21,
+        "today_pct": 0.59,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "SHOP.TO_volume_spike_20260923141619",
+      "ticker": "SHOP.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-23T14:16:19.938859+00:00",
+      "entry_price": 192.82,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.41,
+        "spy_5d_pct": 1.87,
+        "spy_20d_pct": 0.98,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7192.12,
+        "computed_at": "2026-09-23T14:15:32.519362+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "SHOP.TO",
+        "multiplier": 3.12,
+        "today_volume": 711552,
+        "projected_volume": 5990155,
+        "avg_volume_20d": 1922655,
+        "price_change_pct": -6.59,
+        "price_threshold_used": 5.9,
+        "price": 192.82,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
