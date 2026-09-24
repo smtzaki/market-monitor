@@ -195292,6 +195292,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TSM_momentum_20260924141553",
+      "ticker": "TSM",
+      "signal_type": "momentum",
+      "fired_at": "2026-09-24T14:15:53.691042+00:00",
+      "entry_price": 444.5,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.69,
+        "spy_5d_pct": 1.83,
+        "spy_20d_pct": 0.16,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7196.18,
+        "computed_at": "2026-09-24T14:15:31.069769+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TSM",
+        "price": 444.5,
+        "pct_5d": 3.31,
+        "pct_above_200d": 35.79,
+        "today_pct": 0.61,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CVX_new_high_20260924141628",
+      "ticker": "CVX",
+      "signal_type": "new_high",
+      "fired_at": "2026-09-24T14:16:28.006618+00:00",
+      "entry_price": 207.54,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.69,
+        "spy_5d_pct": 1.83,
+        "spy_20d_pct": 0.16,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7196.18,
+        "computed_at": "2026-09-24T14:15:31.069769+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "CVX",
+        "price": 207.54,
+        "high_52w": 209.23,
+        "pct_from_high": -0.81,
+        "volume_ratio": 0.98,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
