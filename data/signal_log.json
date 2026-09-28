@@ -199607,6 +199607,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "MDB_volume_spike_20260928151548",
+      "ticker": "MDB",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-09-28T15:15:48.173844+00:00",
+      "entry_price": 335.09,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.47,
+        "spy_5d_pct": -1.09,
+        "spy_20d_pct": -0.41,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7209.4,
+        "computed_at": "2026-09-28T15:15:32.498961+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "MDB",
+        "multiplier": 19.78,
+        "today_volume": 10896924,
+        "projected_volume": 40172435,
+        "avg_volume_20d": 2031095,
+        "price_change_pct": 7.66,
+        "price_threshold_used": 7.07,
+        "price": 335.09,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
