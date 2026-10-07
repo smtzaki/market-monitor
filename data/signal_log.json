@@ -213533,6 +213533,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "PFE_new_high_20261007140118",
+      "ticker": "PFE",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-07T14:01:18.046886+00:00",
+      "entry_price": 27.9,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.8,
+        "spy_5d_pct": 1.61,
+        "spy_20d_pct": 1.81,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7241.18,
+        "computed_at": "2026-10-07T14:00:33.488302+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "PFE",
+        "price": 27.9,
+        "high_52w": 28.09,
+        "pct_from_high": -0.68,
+        "volume_ratio": 1.05,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "TD.TO_volume_spike_20261007140127",
+      "ticker": "TD.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-10-07T14:01:27.964911+00:00",
+      "entry_price": 163.62,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.8,
+        "spy_5d_pct": 1.61,
+        "spy_20d_pct": 1.81,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7241.18,
+        "computed_at": "2026-10-07T14:00:33.488302+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "TD.TO",
+        "multiplier": 7.09,
+        "today_volume": 3309444,
+        "projected_volume": 41031089,
+        "avg_volume_20d": 5790280,
+        "price_change_pct": -1.77,
+        "price_threshold_used": 1.67,
+        "price": 163.62,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
