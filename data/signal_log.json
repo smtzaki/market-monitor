@@ -216208,6 +216208,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "MDB_momentum_20261008180122",
+      "ticker": "MDB",
+      "signal_type": "momentum",
+      "fired_at": "2026-10-08T18:01:22.527363+00:00",
+      "entry_price": 364.5,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.8,
+        "spy_5d_pct": 1.01,
+        "spy_20d_pct": 2.0,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7245.86,
+        "computed_at": "2026-10-08T18:01:06.290594+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "MDB",
+        "price": 364.5,
+        "pct_5d": 3.63,
+        "pct_above_200d": 10.47,
+        "today_pct": 1.28,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ZEB.TO_new_high_20261008180239",
+      "ticker": "ZEB.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-08T18:02:39.564794+00:00",
+      "entry_price": 71.32,
+      "regime": {
+        "classification": "bull",
+        "vix": 15.8,
+        "spy_5d_pct": 1.01,
+        "spy_20d_pct": 2.0,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7245.86,
+        "computed_at": "2026-10-08T18:01:06.290594+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ZEB.TO",
+        "price": 71.32,
+        "high_52w": 70.56,
+        "pct_from_high": 1.08,
+        "volume_ratio": 0.97,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
