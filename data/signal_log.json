@@ -217959,6 +217959,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "WFC_momentum_20261009170101",
+      "ticker": "WFC",
+      "signal_type": "momentum",
+      "fired_at": "2026-10-09T17:01:01.093259+00:00",
+      "entry_price": 83.5,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.85,
+        "spy_5d_pct": 1.12,
+        "spy_20d_pct": 1.99,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7250.62,
+        "computed_at": "2026-10-09T17:00:28.721405+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "WFC",
+        "price": 83.5,
+        "pct_5d": 3.8,
+        "pct_above_200d": 0.19,
+        "today_pct": 1.9,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "RCI-B.TO_volume_spike_20261009170148",
+      "ticker": "RCI-B.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-10-09T17:01:48.954102+00:00",
+      "entry_price": 42.01,
+      "regime": {
+        "classification": "bull",
+        "vix": 14.85,
+        "spy_5d_pct": 1.12,
+        "spy_20d_pct": 1.99,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7250.62,
+        "computed_at": "2026-10-09T17:00:28.721405+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "RCI-B.TO",
+        "multiplier": 2.77,
+        "today_volume": 3597400,
+        "projected_volume": 6623775,
+        "avg_volume_20d": 2393790,
+        "price_change_pct": -3.65,
+        "price_threshold_used": 3.63,
+        "price": 42.01,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
