@@ -227260,6 +227260,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "BAC_volume_spike_20261014175421",
+      "ticker": "BAC",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-10-14T17:54:21.096788+00:00",
+      "entry_price": 50.92,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.87,
+        "spy_5d_pct": -1.27,
+        "spy_20d_pct": 2.0,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7263.35,
+        "computed_at": "2026-10-14T17:53:57.722830+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BAC",
+        "multiplier": 3.07,
+        "today_volume": 79415487,
+        "projected_volume": 117165859,
+        "avg_volume_20d": 38142095,
+        "price_change_pct": 2.18,
+        "price_threshold_used": 2.01,
+        "price": 50.92,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
