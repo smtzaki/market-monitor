@@ -230175,6 +230175,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "L.TO_volume_spike_20261015141646",
+      "ticker": "L.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-10-15T14:16:46.199560+00:00",
+      "entry_price": 68.47,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.75,
+        "spy_5d_pct": -0.84,
+        "spy_20d_pct": 0.82,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7267.4,
+        "computed_at": "2026-10-15T14:15:26.556371+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "L.TO",
+        "multiplier": 2.73,
+        "today_volume": 397666,
+        "projected_volume": 3316348,
+        "avg_volume_20d": 1213095,
+        "price_change_pct": 2.79,
+        "price_threshold_used": 2.16,
+        "price": 68.47,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "L.TO_new_high_20261015141646",
+      "ticker": "L.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-15T14:16:46.814612+00:00",
+      "entry_price": 68.47,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.75,
+        "spy_5d_pct": -0.84,
+        "spy_20d_pct": 0.82,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7267.4,
+        "computed_at": "2026-10-15T14:15:26.556371+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "L.TO",
+        "price": 68.47,
+        "high_52w": 69.1,
+        "pct_from_high": -0.92,
+        "volume_ratio": 2.57,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
