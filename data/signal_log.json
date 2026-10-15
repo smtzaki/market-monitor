@@ -231511,6 +231511,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "NET_new_high_20261015194540",
+      "ticker": "NET",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-15T19:45:40.756344+00:00",
+      "entry_price": 314.37,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.49,
+        "spy_5d_pct": -0.22,
+        "spy_20d_pct": 1.45,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7267.64,
+        "computed_at": "2026-10-15T19:45:25.398542+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "NET",
+        "price": 314.37,
+        "high_52w": 272.66,
+        "pct_from_high": 15.3,
+        "volume_ratio": 0.81,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "LLY_momentum_20261015194607",
+      "ticker": "LLY",
+      "signal_type": "momentum",
+      "fired_at": "2026-10-15T19:46:07.864232+00:00",
+      "entry_price": 1256.25,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.49,
+        "spy_5d_pct": -0.22,
+        "spy_20d_pct": 1.45,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7267.64,
+        "computed_at": "2026-10-15T19:45:25.398542+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "LLY",
+        "price": 1256.25,
+        "pct_5d": 7.41,
+        "pct_above_200d": 32.33,
+        "today_pct": 1.72,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
