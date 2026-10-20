@@ -241483,6 +241483,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "LLY_momentum_20261020183121",
+      "ticker": "LLY",
+      "signal_type": "momentum",
+      "fired_at": "2026-10-20T18:31:21.841203+00:00",
+      "entry_price": 1288.02,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.3,
+        "spy_5d_pct": -1.12,
+        "spy_20d_pct": -0.6,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7279.96,
+        "computed_at": "2026-10-20T18:30:32.072999+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "LLY",
+        "price": 1288.02,
+        "pct_5d": 10.42,
+        "pct_above_200d": 35.68,
+        "today_pct": 1.94,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ATD.TO_new_high_20261020183211",
+      "ticker": "ATD.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-20T18:32:11.174050+00:00",
+      "entry_price": 85.47,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.3,
+        "spy_5d_pct": -1.12,
+        "spy_20d_pct": -0.6,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7279.96,
+        "computed_at": "2026-10-20T18:30:32.072999+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ATD.TO",
+        "price": 85.47,
+        "high_52w": 85.03,
+        "pct_from_high": 0.53,
+        "volume_ratio": 0.8,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
