@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-10-21T14:17:19.416906+00:00",
+  "computed_at": "2026-10-21T14:32:05.923063+00:00",
   "regime": {
-    "classification": "neutral",
-    "vix": 17.0,
-    "spy_5d_pct": -0.06,
-    "spy_20d_pct": 0.1,
+    "classification": "bull",
+    "vix": 17.43,
+    "spy_5d_pct": 0.01,
+    "spy_20d_pct": 0.18,
     "spy_above_200d": true,
-    "spy_200d_ma": 7283.99,
-    "computed_at": "2026-10-21T14:15:25.005940+00:00"
+    "spy_200d_ma": 7284.02,
+    "computed_at": "2026-10-21T14:30:30.046422+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,63 +22,10 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 36,
+  "active_signals_seen": 34,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 67.58,
-  "budget_remaining_cad": 52.42,
-  "recommendations": [
-    {
-      "ticker": "ZEB.TO",
-      "direction": "bullish",
-      "score": 0.566,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 10,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 74.75,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.37,
-        "allocation_cad": 44.38,
-        "sigma_60d": 1.054
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    },
-    {
-      "ticker": "TD.TO",
-      "direction": "bullish",
-      "score": 0.356,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 7,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.708,
-      "std_pct": 0.656,
-      "confidence": "weak",
-      "regime": "neutral",
-      "regime_fit": 1.1,
-      "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak \u00b7 regime confirms",
-      "current_price": 173.27,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.307,
-        "allocation_cad": 23.2,
-        "sigma_60d": 1.111
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    }
-  ]
+  "budget_deployed_cad": 0.0,
+  "budget_remaining_cad": 120.0,
+  "recommendations": []
 }
