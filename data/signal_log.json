@@ -257583,6 +257583,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "ARM_momentum_20261028190054",
+      "ticker": "ARM",
+      "signal_type": "momentum",
+      "fired_at": "2026-10-28T19:00:54.292663+00:00",
+      "entry_price": 234.63,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.2,
+        "spy_5d_pct": -0.24,
+        "spy_20d_pct": 1.14,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7302.68,
+        "computed_at": "2026-10-28T19:00:37.714416+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ARM",
+        "price": 234.63,
+        "pct_5d": 3.55,
+        "pct_above_200d": 47.38,
+        "today_pct": 1.57,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "VGRO.TO_new_high_20261028190203",
+      "ticker": "VGRO.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-10-28T19:02:03.427247+00:00",
+      "entry_price": 47.47,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.2,
+        "spy_5d_pct": -0.24,
+        "spy_20d_pct": 1.14,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7302.68,
+        "computed_at": "2026-10-28T19:00:37.714416+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "VGRO.TO",
+        "price": 47.47,
+        "high_52w": 47.44,
+        "pct_from_high": 0.06,
+        "volume_ratio": 0.83,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
