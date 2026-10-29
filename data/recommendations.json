@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-10-29T15:02:19.929326+00:00",
+  "computed_at": "2026-10-29T15:17:02.689460+00:00",
   "regime": {
     "classification": "bull",
-    "vix": 16.52,
-    "spy_5d_pct": 0.65,
-    "spy_20d_pct": 0.61,
+    "vix": 16.6,
+    "spy_5d_pct": 0.77,
+    "spy_20d_pct": 0.73,
     "spy_above_200d": true,
-    "spy_200d_ma": 7306.45,
-    "computed_at": "2026-10-29T15:00:36.198184+00:00"
+    "spy_200d_ma": 7306.5,
+    "computed_at": "2026-10-29T15:15:27.706551+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,11 +22,11 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 37,
+  "active_signals_seen": 36,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 58.97,
-  "budget_remaining_cad": 61.03,
+  "budget_deployed_cad": 76.83,
+  "budget_remaining_cad": 43.17,
   "recommendations": [
     {
       "ticker": "MU",
@@ -42,7 +42,7 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=3, hit=100%, avg=+7.66%, \u03c3=1.03 \u00b7 confidence=noise \u00b7 regime disagrees",
-      "current_price": 954.03,
+      "current_price": 952.91,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
@@ -68,12 +68,38 @@
       "regime": "bull",
       "regime_fit": 0.6,
       "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime disagrees",
-      "current_price": 77.11,
+      "current_price": 77.28,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
         "allocation_pct": 0.293,
         "allocation_cad": 25.26,
+        "sigma_60d": 1.054
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    },
+    {
+      "ticker": "ZEB.TO",
+      "direction": "bullish",
+      "score": 0.309,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 10,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.666,
+      "std_pct": 0.388,
+      "confidence": "weak",
+      "regime": "bull",
+      "regime_fit": 0.6,
+      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak \u00b7 regime disagrees",
+      "current_price": 77.28,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.293,
+        "allocation_cad": 17.86,
         "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
