@@ -267643,6 +267643,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "SHOP.TO_volume_spike_20261103154629",
+      "ticker": "SHOP.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-03T15:46:29.927926+00:00",
+      "entry_price": 204.1,
+      "regime": {
+        "classification": "neutral",
+        "vix": 20.57,
+        "spy_5d_pct": -1.96,
+        "spy_20d_pct": -3.16,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7315.9,
+        "computed_at": "2026-11-03T15:45:27.018087+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "SHOP.TO",
+        "multiplier": 4.3,
+        "today_volume": 1429114,
+        "projected_volume": 7286375,
+        "avg_volume_20d": 1695860,
+        "price_change_pct": 6.75,
+        "price_threshold_used": 5.9,
+        "price": 204.1,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CSU.TO_momentum_20261103154631",
+      "ticker": "CSU.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-03T15:46:31.691205+00:00",
+      "entry_price": 3417.65,
+      "regime": {
+        "classification": "neutral",
+        "vix": 20.57,
+        "spy_5d_pct": -1.96,
+        "spy_20d_pct": -3.16,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7315.9,
+        "computed_at": "2026-11-03T15:45:27.018087+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "CSU.TO",
+        "price": 3417.65,
+        "pct_5d": 3.45,
+        "pct_above_200d": 9.17,
+        "today_pct": 0.07,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
