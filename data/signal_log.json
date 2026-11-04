@@ -270553,6 +270553,71 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COIN_volume_spike_20261104153054",
+      "ticker": "COIN",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-04T15:30:54.239852+00:00",
+      "entry_price": 151.9,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.89,
+        "spy_5d_pct": -0.75,
+        "spy_20d_pct": -1.49,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7320.33,
+        "computed_at": "2026-11-04T15:30:36.547331+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "COIN",
+        "multiplier": 2.56,
+        "today_volume": 3431005,
+        "projected_volume": 21972866,
+        "avg_volume_20d": 8594760,
+        "price_change_pct": 6.98,
+        "price_threshold_used": 6.39,
+        "price": 151.9,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ATD.TO_new_high_20261104153206",
+      "ticker": "ATD.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-04T15:32:06.280751+00:00",
+      "entry_price": 84.34,
+      "regime": {
+        "classification": "neutral",
+        "vix": 16.89,
+        "spy_5d_pct": -0.75,
+        "spy_20d_pct": -1.49,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7320.33,
+        "computed_at": "2026-11-04T15:30:36.547331+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ATD.TO",
+        "price": 84.34,
+        "high_52w": 85.03,
+        "pct_from_high": -0.81,
+        "volume_ratio": 1.22,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
