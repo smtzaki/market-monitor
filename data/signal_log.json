@@ -270457,6 +270457,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "AXP_volume_spike_20261104150106",
+      "ticker": "AXP",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-04T15:01:06.548145+00:00",
+      "entry_price": 325.86,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.2,
+        "spy_5d_pct": -0.55,
+        "spy_20d_pct": -1.28,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7320.41,
+        "computed_at": "2026-11-04T15:00:39.162827+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "AXP",
+        "multiplier": 2.67,
+        "today_volume": 652668,
+        "projected_volume": 8183563,
+        "avg_volume_20d": 3070440,
+        "price_change_pct": -2.44,
+        "price_threshold_used": 2.27,
+        "price": 325.86,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "L.TO_momentum_20261104150157",
+      "ticker": "L.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-04T15:01:57.354231+00:00",
+      "entry_price": 70.1,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.2,
+        "spy_5d_pct": -0.55,
+        "spy_20d_pct": -1.28,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7320.41,
+        "computed_at": "2026-11-04T15:00:39.162827+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "L.TO",
+        "price": 70.1,
+        "pct_5d": 3.12,
+        "pct_above_200d": 15.57,
+        "today_pct": 0.29,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "QSR.TO_momentum_20261104150200",
+      "ticker": "QSR.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-04T15:02:00.281431+00:00",
+      "entry_price": 107.54,
+      "regime": {
+        "classification": "neutral",
+        "vix": 17.2,
+        "spy_5d_pct": -0.55,
+        "spy_20d_pct": -1.28,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7320.41,
+        "computed_at": "2026-11-04T15:00:39.162827+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "QSR.TO",
+        "price": 107.54,
+        "pct_5d": 3.19,
+        "pct_above_200d": 11.6,
+        "today_pct": 1.53,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
