@@ -276696,6 +276696,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "DSG.TO_momentum_20261105194637",
+      "ticker": "DSG.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-05T19:46:37.374278+00:00",
+      "entry_price": 132.64,
+      "regime": {
+        "classification": "correction",
+        "vix": 26.38,
+        "spy_5d_pct": -3.97,
+        "spy_20d_pct": -4.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7323.04,
+        "computed_at": "2026-11-05T19:45:29.560436+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "DSG.TO",
+        "price": 132.64,
+        "pct_5d": 3.01,
+        "pct_above_200d": 17.08,
+        "today_pct": 0.7,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "L.TO_new_high_20261105194656",
+      "ticker": "L.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-05T19:46:56.014498+00:00",
+      "entry_price": 69.07,
+      "regime": {
+        "classification": "correction",
+        "vix": 26.38,
+        "spy_5d_pct": -3.97,
+        "spy_20d_pct": -4.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7323.04,
+        "computed_at": "2026-11-05T19:45:29.560436+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "L.TO",
+        "price": 69.07,
+        "high_52w": 69.1,
+        "pct_from_high": -0.05,
+        "volume_ratio": 0.83,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "VEQT.TO_volume_spike_20261105194701",
+      "ticker": "VEQT.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-05T19:47:01.696459+00:00",
+      "entry_price": 60.09,
+      "regime": {
+        "classification": "correction",
+        "vix": 26.38,
+        "spy_5d_pct": -3.97,
+        "spy_20d_pct": -4.52,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7323.04,
+        "computed_at": "2026-11-05T19:45:29.560436+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "VEQT.TO",
+        "multiplier": 3.92,
+        "today_volume": 1640695,
+        "projected_volume": 2018387,
+        "avg_volume_20d": 514725,
+        "price_change_pct": -2.67,
+        "price_threshold_used": 1.51,
+        "price": 60.09,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
