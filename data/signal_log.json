@@ -275432,6 +275432,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "IWM_volume_spike_20261105161651",
+      "ticker": "IWM",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-05T16:16:51.097376+00:00",
+      "entry_price": 275.33,
+      "regime": {
+        "classification": "correction",
+        "vix": 25.48,
+        "spy_5d_pct": -3.31,
+        "spy_20d_pct": -3.87,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7323.29,
+        "computed_at": "2026-11-05T16:15:32.256131+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "IWM",
+        "multiplier": 2.55,
+        "today_volume": 17005387,
+        "projected_volume": 62073196,
+        "avg_volume_20d": 24307620,
+        "price_change_pct": -2.97,
+        "price_threshold_used": 2.05,
+        "price": 275.33,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
