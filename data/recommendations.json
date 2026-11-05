@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-05T20:46:47.205511+00:00",
+  "computed_at": "2026-11-05T21:00:35.916802+00:00",
   "regime": {
     "classification": "correction",
-    "vix": 26.61,
-    "spy_5d_pct": -4.59,
-    "spy_20d_pct": -5.15,
+    "vix": 26.84,
+    "spy_5d_pct": -4.73,
+    "spy_20d_pct": -5.29,
     "spy_above_200d": true,
-    "spy_200d_ma": 7322.8,
-    "computed_at": "2026-11-05T20:45:30.102348+00:00"
+    "spy_200d_ma": 7322.74,
+    "computed_at": "2026-11-05T21:00:29.933103+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,37 +22,10 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 38,
+  "active_signals_seen": 0,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 42.54,
-  "budget_remaining_cad": 77.46,
-  "recommendations": [
-    {
-      "ticker": "ZEB.TO",
-      "direction": "bullish",
-      "score": 0.515,
-      "actionable": true,
-      "edge_source": "per_ticker",
-      "n": 10,
-      "hit_rate": 1.0,
-      "avg_return_pct": 0.666,
-      "std_pct": 0.388,
-      "confidence": "weak",
-      "regime": "correction",
-      "regime_fit": 1.0,
-      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak",
-      "current_price": 75.63,
-      "price_change_pct": null,
-      "multiplier": null,
-      "allocation": {
-        "allocation_pct": 0.355,
-        "allocation_cad": 42.54,
-        "sigma_60d": 1.054
-      },
-      "target_exit_date_min": 3,
-      "target_exit_date_max": 7,
-      "stop_loss_pct": -2.0
-    }
-  ]
+  "budget_deployed_cad": 0.0,
+  "budget_remaining_cad": 120.0,
+  "recommendations": []
 }
