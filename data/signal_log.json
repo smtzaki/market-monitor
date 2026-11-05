@@ -276464,6 +276464,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "SLF.TO_volume_spike_20261105190141",
+      "ticker": "SLF.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-05T19:01:41.983397+00:00",
+      "entry_price": 103.91,
+      "regime": {
+        "classification": "correction",
+        "vix": 26.44,
+        "spy_5d_pct": -4.37,
+        "spy_20d_pct": -4.93,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7322.88,
+        "computed_at": "2026-11-05T19:00:34.296220+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "SLF.TO",
+        "multiplier": 2.8,
+        "today_volume": 2095594,
+        "projected_volume": 3008107,
+        "avg_volume_20d": 1073160,
+        "price_change_pct": -5.54,
+        "price_threshold_used": 1.76,
+        "price": 103.91,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
