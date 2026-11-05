@@ -275466,6 +275466,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "MRVL_volume_spike_20261105180105",
+      "ticker": "MRVL",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-05T18:01:05.024784+00:00",
+      "entry_price": 136.35,
+      "regime": {
+        "classification": "correction",
+        "vix": 26.09,
+        "spy_5d_pct": -4.42,
+        "spy_20d_pct": -4.97,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7322.86,
+        "computed_at": "2026-11-05T18:00:41.088383+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "MRVL",
+        "multiplier": 2.69,
+        "today_volume": 37729196,
+        "projected_volume": 69711463,
+        "avg_volume_20d": 25962835,
+        "price_change_pct": -9.95,
+        "price_threshold_used": 9.49,
+        "price": 136.35,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
