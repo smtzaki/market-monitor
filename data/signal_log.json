@@ -279951,6 +279951,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "ATD.TO_momentum_20261106193149",
+      "ticker": "ATD.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-06T19:31:49.795593+00:00",
+      "entry_price": 83.46,
+      "regime": {
+        "classification": "correction",
+        "vix": 24.45,
+        "spy_5d_pct": -2.4,
+        "spy_20d_pct": -5.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7325.16,
+        "computed_at": "2026-11-06T19:30:30.989092+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "ATD.TO",
+        "price": 83.46,
+        "pct_5d": 3.06,
+        "pct_above_200d": 10.21,
+        "today_pct": 1.25,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ZEB.TO_new_high_20261106193158",
+      "ticker": "ZEB.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-06T19:31:58.203539+00:00",
+      "entry_price": 75.61,
+      "regime": {
+        "classification": "correction",
+        "vix": 24.45,
+        "spy_5d_pct": -2.4,
+        "spy_20d_pct": -5.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7325.16,
+        "computed_at": "2026-11-06T19:30:30.989092+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ZEB.TO",
+        "price": 75.61,
+        "high_52w": 70.56,
+        "pct_from_high": 7.16,
+        "volume_ratio": 0.95,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
