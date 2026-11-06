@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-06T14:33:10.947462+00:00",
+  "computed_at": "2026-11-06T14:47:02.212913+00:00",
   "regime": {
     "classification": "correction",
-    "vix": 26.82,
-    "spy_5d_pct": -2.71,
-    "spy_20d_pct": -5.6,
+    "vix": 26.84,
+    "spy_5d_pct": -2.13,
+    "spy_20d_pct": -5.03,
     "spy_above_200d": true,
-    "spy_200d_ma": 7325.04,
-    "computed_at": "2026-11-06T14:30:29.976637+00:00"
+    "spy_200d_ma": 7325.26,
+    "computed_at": "2026-11-06T14:45:26.061557+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,31 +22,12 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 68,
+  "active_signals_seen": 43,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
   "budget_deployed_cad": 65.56,
   "budget_remaining_cad": 54.44,
   "recommendations": [
-    {
-      "ticker": "CRM",
-      "direction": "bearish",
-      "score": 0.541,
-      "actionable": false,
-      "edge_source": "per_ticker",
-      "n": 8,
-      "hit_rate": 1.0,
-      "avg_return_pct": -3.347,
-      "std_pct": 1.855,
-      "confidence": "weak",
-      "regime": "correction",
-      "regime_fit": 1.0,
-      "rationale": "per_ticker: n=8, hit=100%, avg=-3.35%, \u03c3=1.85 \u00b7 confidence=weak \u00b7 INFO ONLY \u2014 bearish signal, can't short in TFSA",
-      "current_price": 216.43,
-      "price_change_pct": -5.51,
-      "multiplier": 17.29,
-      "allocation": null
-    },
     {
       "ticker": "ZEB.TO",
       "direction": "bullish",
@@ -61,7 +42,7 @@
       "regime": "correction",
       "regime_fit": 1.0,
       "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak",
-      "current_price": 75.6,
+      "current_price": 75.54,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
@@ -87,7 +68,7 @@
       "regime": "correction",
       "regime_fit": 1.0,
       "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak",
-      "current_price": 173.01,
+      "current_price": 173.18,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
