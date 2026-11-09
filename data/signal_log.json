@@ -281872,6 +281872,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CP.TO_momentum_20261109151636",
+      "ticker": "CP.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-09T15:16:36.910965+00:00",
+      "entry_price": 131.84,
+      "regime": {
+        "classification": "neutral",
+        "vix": 21.5,
+        "spy_5d_pct": -0.38,
+        "spy_20d_pct": -3.77,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7328.04,
+        "computed_at": "2026-11-09T15:15:32.006844+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "CP.TO",
+        "price": 131.84,
+        "pct_5d": 3.08,
+        "pct_above_200d": 22.33,
+        "today_pct": 1.0,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ATD.TO_new_high_20261109151641",
+      "ticker": "ATD.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-09T15:16:41.889005+00:00",
+      "entry_price": 84.31,
+      "regime": {
+        "classification": "neutral",
+        "vix": 21.5,
+        "spy_5d_pct": -0.38,
+        "spy_20d_pct": -3.77,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7328.04,
+        "computed_at": "2026-11-09T15:15:32.006844+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ATD.TO",
+        "price": 84.31,
+        "high_52w": 85.03,
+        "pct_from_high": -0.84,
+        "volume_ratio": 0.92,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
