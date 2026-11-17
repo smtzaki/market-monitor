@@ -299533,6 +299533,102 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "DIS_volume_spike_20261117150121",
+      "ticker": "DIS",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-17T15:01:21.322670+00:00",
+      "entry_price": 122.04,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.85,
+        "spy_5d_pct": -1.51,
+        "spy_20d_pct": -3.96,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.86,
+        "computed_at": "2026-11-17T15:00:52.689773+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "DIS",
+        "multiplier": 7.2,
+        "today_volume": 4688476,
+        "projected_volume": 58328256,
+        "avg_volume_20d": 8103460,
+        "price_change_pct": 3.2,
+        "price_threshold_used": 2.53,
+        "price": 122.04,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "DIS_new_high_20261117150121",
+      "ticker": "DIS",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-17T15:01:21.979682+00:00",
+      "entry_price": 122.04,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.85,
+        "spy_5d_pct": -1.51,
+        "spy_20d_pct": -3.96,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.86,
+        "computed_at": "2026-11-17T15:00:52.689773+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "DIS",
+        "price": 122.04,
+        "high_52w": 123.18,
+        "pct_from_high": -0.93,
+        "volume_ratio": 6.37,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "XOM_momentum_20261117150131",
+      "ticker": "XOM",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-17T15:01:31.763226+00:00",
+      "entry_price": 168.75,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.85,
+        "spy_5d_pct": -1.51,
+        "spy_20d_pct": -3.96,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.86,
+        "computed_at": "2026-11-17T15:00:52.689773+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "XOM",
+        "price": 168.75,
+        "pct_5d": 3.25,
+        "pct_above_200d": 27.97,
+        "today_pct": 0.77,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
