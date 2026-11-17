@@ -299663,6 +299663,133 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CRM_volume_spike_20261117153038",
+      "ticker": "CRM",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-17T15:30:38.644120+00:00",
+      "entry_price": 197.18,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.78,
+        "spy_5d_pct": -1.85,
+        "spy_20d_pct": -4.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.73,
+        "computed_at": "2026-11-17T15:30:29.071063+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CRM",
+        "multiplier": 2.69,
+        "today_volume": 2804400,
+        "projected_volume": 18037201,
+        "avg_volume_20d": 6702615,
+        "price_change_pct": -5.66,
+        "price_threshold_used": 4.72,
+        "price": 197.18,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "EMA.TO_momentum_20261117153153",
+      "ticker": "EMA.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-17T15:31:53.552194+00:00",
+      "entry_price": 74.57,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.78,
+        "spy_5d_pct": -1.85,
+        "spy_20d_pct": -4.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.73,
+        "computed_at": "2026-11-17T15:30:29.071063+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "EMA.TO",
+        "price": 74.57,
+        "pct_5d": 3.27,
+        "pct_above_200d": 10.2,
+        "today_pct": 0.87,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "L.TO_momentum_20261117153208",
+      "ticker": "L.TO",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-17T15:32:08.439429+00:00",
+      "entry_price": 71.23,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.78,
+        "spy_5d_pct": -1.85,
+        "spy_20d_pct": -4.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.73,
+        "computed_at": "2026-11-17T15:30:29.071063+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "L.TO",
+        "price": 71.23,
+        "pct_5d": 3.25,
+        "pct_above_200d": 17.43,
+        "today_pct": 1.01,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "ATD.TO_new_high_20261117153210",
+      "ticker": "ATD.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-17T15:32:10.109988+00:00",
+      "entry_price": 84.27,
+      "regime": {
+        "classification": "neutral",
+        "vix": 22.78,
+        "spy_5d_pct": -1.85,
+        "spy_20d_pct": -4.29,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7344.73,
+        "computed_at": "2026-11-17T15:30:29.071063+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "ATD.TO",
+        "price": 84.27,
+        "high_52w": 85.03,
+        "pct_from_high": -0.89,
+        "volume_ratio": 1.47,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
