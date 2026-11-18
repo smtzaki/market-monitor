@@ -301519,6 +301519,136 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "TGT_volume_spike_20261118144614",
+      "ticker": "TGT",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-18T14:46:14.728071+00:00",
+      "entry_price": 167.46,
+      "regime": {
+        "classification": "bear",
+        "vix": 24.33,
+        "spy_5d_pct": -3.91,
+        "spy_20d_pct": -5.62,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7346.54,
+        "computed_at": "2026-11-18T14:45:29.365095+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "TGT",
+        "multiplier": 10.78,
+        "today_volume": 1763956,
+        "projected_volume": 42364490,
+        "avg_volume_20d": 3931295,
+        "price_change_pct": 4.02,
+        "price_threshold_used": 2.77,
+        "price": 167.46,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "MRK_new_high_20261118144622",
+      "ticker": "MRK",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-18T14:46:22.104045+00:00",
+      "entry_price": 141.1,
+      "regime": {
+        "classification": "bear",
+        "vix": 24.33,
+        "spy_5d_pct": -3.91,
+        "spy_20d_pct": -5.62,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7346.54,
+        "computed_at": "2026-11-18T14:45:29.365095+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "MRK",
+        "price": 141.1,
+        "high_52w": 123.18,
+        "pct_from_high": 14.55,
+        "volume_ratio": 1.9,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "CVE.TO_volume_spike_20261118144641",
+      "ticker": "CVE.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-18T14:46:41.252840+00:00",
+      "entry_price": 38.45,
+      "regime": {
+        "classification": "bear",
+        "vix": 24.33,
+        "spy_5d_pct": -3.91,
+        "spy_20d_pct": -5.62,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7346.54,
+        "computed_at": "2026-11-18T14:45:29.365095+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CVE.TO",
+        "multiplier": 2.94,
+        "today_volume": 780330,
+        "projected_volume": 18242795,
+        "avg_volume_20d": 6197610,
+        "price_change_pct": -4.09,
+        "price_threshold_used": 3.72,
+        "price": 38.45,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "WCN.TO_new_high_20261118144704",
+      "ticker": "WCN.TO",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-18T14:47:04.411983+00:00",
+      "entry_price": 259.96,
+      "regime": {
+        "classification": "bear",
+        "vix": 24.33,
+        "spy_5d_pct": -3.91,
+        "spy_20d_pct": -5.62,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7346.54,
+        "computed_at": "2026-11-18T14:45:29.365095+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "WCN.TO",
+        "price": 259.96,
+        "high_52w": 262.11,
+        "pct_from_high": -0.82,
+        "volume_ratio": 2.94,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
