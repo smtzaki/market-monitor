@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-18T14:15:42.627823+00:00",
+  "computed_at": "2026-11-18T14:32:20.034506+00:00",
   "regime": {
-    "classification": "bear",
-    "vix": 23.84,
-    "spy_5d_pct": -2.4,
-    "spy_20d_pct": -4.82,
-    "spy_above_200d": false,
-    "spy_200d_ma": 7344.53,
-    "computed_at": "2026-11-18T14:15:37.116308+00:00"
+    "classification": "correction",
+    "vix": 24.21,
+    "spy_5d_pct": -3.51,
+    "spy_20d_pct": -5.22,
+    "spy_above_200d": true,
+    "spy_200d_ma": 7346.7,
+    "computed_at": "2026-11-18T14:30:43.096574+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,10 +22,82 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 0,
+  "active_signals_seen": 36,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 0.0,
-  "budget_remaining_cad": 120.0,
-  "recommendations": []
+  "budget_deployed_cad": 65.56,
+  "budget_remaining_cad": 54.44,
+  "recommendations": [
+    {
+      "ticker": "CRM",
+      "direction": "bearish",
+      "score": 0.541,
+      "actionable": false,
+      "edge_source": "per_ticker",
+      "n": 8,
+      "hit_rate": 1.0,
+      "avg_return_pct": -3.347,
+      "std_pct": 1.855,
+      "confidence": "weak",
+      "regime": "correction",
+      "regime_fit": 1.0,
+      "rationale": "per_ticker: n=8, hit=100%, avg=-3.35%, \u03c3=1.85 \u00b7 confidence=weak \u00b7 INFO ONLY \u2014 bearish signal, can't short in TFSA",
+      "current_price": 191.82,
+      "price_change_pct": -8.22,
+      "multiplier": 16.13,
+      "allocation": null
+    },
+    {
+      "ticker": "ZEB.TO",
+      "direction": "bullish",
+      "score": 0.515,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 10,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.666,
+      "std_pct": 0.388,
+      "confidence": "weak",
+      "regime": "correction",
+      "regime_fit": 1.0,
+      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak",
+      "current_price": 73.96,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.355,
+        "allocation_cad": 42.54,
+        "sigma_60d": 1.054
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    },
+    {
+      "ticker": "TD.TO",
+      "direction": "bullish",
+      "score": 0.324,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 7,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.708,
+      "std_pct": 0.656,
+      "confidence": "weak",
+      "regime": "correction",
+      "regime_fit": 1.0,
+      "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak",
+      "current_price": 170.09,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.297,
+        "allocation_cad": 23.02,
+        "sigma_60d": 1.111
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    }
+  ]
 }
