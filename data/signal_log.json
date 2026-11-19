@@ -303356,6 +303356,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "AMD_volume_spike_20261119154532",
+      "ticker": "AMD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-19T15:45:32.100930+00:00",
+      "entry_price": 487.45,
+      "regime": {
+        "classification": "bear",
+        "vix": 24.51,
+        "spy_5d_pct": -3.93,
+        "spy_20d_pct": -4.82,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7348.61,
+        "computed_at": "2026-11-19T15:45:25.587496+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "AMD",
+        "multiplier": 2.51,
+        "today_volume": 18203376,
+        "projected_volume": 93994248,
+        "avg_volume_20d": 37377045,
+        "price_change_pct": -10.31,
+        "price_threshold_used": 7.31,
+        "price": 487.45,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
