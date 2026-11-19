@@ -303226,6 +303226,74 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "BCE.TO_volume_spike_20261119144624",
+      "ticker": "BCE.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-19T14:46:24.348202+00:00",
+      "entry_price": 29.92,
+      "regime": {
+        "classification": "correction",
+        "vix": 22.5,
+        "spy_5d_pct": -2.54,
+        "spy_20d_pct": -3.44,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7349.14,
+        "computed_at": "2026-11-19T14:45:31.427084+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "BCE.TO",
+        "multiplier": 8.71,
+        "today_volume": 2075604,
+        "projected_volume": 49362494,
+        "avg_volume_20d": 5666270,
+        "price_change_pct": -3.89,
+        "price_threshold_used": 1.6,
+        "price": 29.92,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "T.TO_volume_spike_20261119144625",
+      "ticker": "T.TO",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-19T14:46:25.573412+00:00",
+      "entry_price": 14.75,
+      "regime": {
+        "classification": "correction",
+        "vix": 22.5,
+        "spy_5d_pct": -2.54,
+        "spy_20d_pct": -3.44,
+        "spy_above_200d": true,
+        "spy_200d_ma": 7349.14,
+        "computed_at": "2026-11-19T14:45:31.427084+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "T.TO",
+        "multiplier": 12.22,
+        "today_volume": 4933150,
+        "projected_volume": 117155256,
+        "avg_volume_20d": 9587400,
+        "price_change_pct": 3.07,
+        "price_threshold_used": 1.94,
+        "price": 14.75,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
