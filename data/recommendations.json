@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-20T16:32:09.661688+00:00",
+  "computed_at": "2026-11-20T16:47:11.966811+00:00",
   "regime": {
-    "classification": "bear",
-    "vix": 29.52,
-    "spy_5d_pct": -6.53,
-    "spy_20d_pct": -7.29,
+    "classification": "crisis",
+    "vix": 30.37,
+    "spy_5d_pct": -6.9,
+    "spy_20d_pct": -7.65,
     "spy_above_200d": false,
-    "spy_200d_ma": 7349.37,
-    "computed_at": "2026-11-20T16:30:38.671080+00:00"
+    "spy_200d_ma": 7349.23,
+    "computed_at": "2026-11-20T16:45:28.578572+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,7 +22,7 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 18,
+  "active_signals_seen": 20,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
   "budget_deployed_cad": 42.54,
@@ -39,10 +39,10 @@
       "avg_return_pct": 0.666,
       "std_pct": 0.388,
       "confidence": "weak",
-      "regime": "bear",
+      "regime": "crisis",
       "regime_fit": 1.0,
       "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak",
-      "current_price": 70.44,
+      "current_price": 70.4,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
