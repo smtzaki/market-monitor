@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-20T14:32:22.235999+00:00",
+  "computed_at": "2026-11-20T14:47:00.215083+00:00",
   "regime": {
     "classification": "bear",
-    "vix": 29.7,
-    "spy_5d_pct": -5.56,
-    "spy_20d_pct": -6.32,
+    "vix": 29.46,
+    "spy_5d_pct": -5.44,
+    "spy_20d_pct": -6.21,
     "spy_above_200d": false,
-    "spy_200d_ma": 7349.74,
-    "computed_at": "2026-11-20T14:30:30.706050+00:00"
+    "spy_200d_ma": 7349.78,
+    "computed_at": "2026-11-20T14:45:28.563892+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,33 +22,33 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 39,
+  "active_signals_seen": 24,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 35.66,
-  "budget_remaining_cad": 84.34,
+  "budget_deployed_cad": 42.54,
+  "budget_remaining_cad": 77.46,
   "recommendations": [
     {
-      "ticker": "TD.TO",
+      "ticker": "ZEB.TO",
       "direction": "bullish",
-      "score": 0.324,
+      "score": 0.515,
       "actionable": true,
       "edge_source": "per_ticker",
-      "n": 7,
+      "n": 10,
       "hit_rate": 1.0,
-      "avg_return_pct": 0.708,
-      "std_pct": 0.656,
+      "avg_return_pct": 0.666,
+      "std_pct": 0.388,
       "confidence": "weak",
       "regime": "bear",
       "regime_fit": 1.0,
-      "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak",
-      "current_price": 164.52,
+      "rationale": "per_ticker: n=10, hit=100%, avg=+0.67%, \u03c3=0.39 \u00b7 confidence=weak",
+      "current_price": 71.21,
       "price_change_pct": null,
       "multiplier": null,
       "allocation": {
-        "allocation_pct": 0.297,
-        "allocation_cad": 35.66,
-        "sigma_60d": 1.111
+        "allocation_pct": 0.355,
+        "allocation_cad": 42.54,
+        "sigma_60d": 1.054
       },
       "target_exit_date_min": 3,
       "target_exit_date_max": 7,
