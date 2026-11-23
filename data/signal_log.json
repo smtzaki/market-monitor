@@ -307042,6 +307042,40 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "CRWD_volume_spike_20261123160050",
+      "ticker": "CRWD",
+      "signal_type": "volume_spike",
+      "fired_at": "2026-11-23T16:00:50.265278+00:00",
+      "entry_price": 203.44,
+      "regime": {
+        "classification": "bear",
+        "vix": 27.26,
+        "spy_5d_pct": -2.07,
+        "spy_20d_pct": -5.39,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7350.23,
+        "computed_at": "2026-11-23T16:00:38.327203+00:00"
+      },
+      "details": {
+        "signal_type": "volume_spike",
+        "ticker": "CRWD",
+        "multiplier": 8.17,
+        "today_volume": 17530447,
+        "projected_volume": 75270088,
+        "avg_volume_20d": 9210110,
+        "price_change_pct": -6.67,
+        "price_threshold_used": 5.33,
+        "price": 203.44,
+        "direction": "bearish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
