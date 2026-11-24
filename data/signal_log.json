@@ -308486,6 +308486,68 @@
         "7d": null,
         "30d": null
       }
+    },
+    {
+      "id": "COST_new_high_20261124150110",
+      "ticker": "COST",
+      "signal_type": "new_high",
+      "fired_at": "2026-11-24T15:01:10.360492+00:00",
+      "entry_price": 1085.94,
+      "regime": {
+        "classification": "bear",
+        "vix": 27.82,
+        "spy_5d_pct": -1.73,
+        "spy_20d_pct": -6.59,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7351.35,
+        "computed_at": "2026-11-24T15:00:36.668959+00:00"
+      },
+      "details": {
+        "signal_type": "new_high",
+        "ticker": "COST",
+        "price": 1085.94,
+        "high_52w": 1094.32,
+        "pct_from_high": -0.77,
+        "volume_ratio": 1.92,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
+    },
+    {
+      "id": "TGT_momentum_20261124150116",
+      "ticker": "TGT",
+      "signal_type": "momentum",
+      "fired_at": "2026-11-24T15:01:16.651011+00:00",
+      "entry_price": 174.24,
+      "regime": {
+        "classification": "bear",
+        "vix": 27.82,
+        "spy_5d_pct": -1.73,
+        "spy_20d_pct": -6.59,
+        "spy_above_200d": false,
+        "spy_200d_ma": 7351.35,
+        "computed_at": "2026-11-24T15:00:36.668959+00:00"
+      },
+      "details": {
+        "signal_type": "momentum",
+        "ticker": "TGT",
+        "price": 174.24,
+        "pct_5d": 9.22,
+        "pct_above_200d": 66.74,
+        "today_pct": 1.9,
+        "direction": "bullish"
+      },
+      "forward_returns": {
+        "1d": null,
+        "3d": null,
+        "7d": null,
+        "30d": null
+      }
     }
   ]
 }
