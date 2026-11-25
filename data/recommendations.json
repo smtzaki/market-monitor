@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-11-25T14:15:32.049299+00:00",
+  "computed_at": "2026-11-25T14:32:48.471448+00:00",
   "regime": {
     "classification": "crisis",
-    "vix": 31.54,
-    "spy_5d_pct": -1.9,
-    "spy_20d_pct": -6.75,
+    "vix": 31.62,
+    "spy_5d_pct": -3.92,
+    "spy_20d_pct": -9.13,
     "spy_above_200d": false,
-    "spy_200d_ma": 7351.29,
-    "computed_at": "2026-11-25T14:15:26.493376+00:00"
+    "spy_200d_ma": 7351.76,
+    "computed_at": "2026-11-25T14:30:30.202900+00:00"
   },
   "policy": {
     "budget_cad": 150.0,
@@ -22,10 +22,37 @@
     "min_n_per_ticker": 3,
     "min_edge_score": 0.3
   },
-  "active_signals_seen": 0,
+  "active_signals_seen": 43,
   "locked_tickers": [],
   "budget_total_cad": 150.0,
-  "budget_deployed_cad": 0.0,
-  "budget_remaining_cad": 120.0,
-  "recommendations": []
+  "budget_deployed_cad": 35.66,
+  "budget_remaining_cad": 84.34,
+  "recommendations": [
+    {
+      "ticker": "TD.TO",
+      "direction": "bullish",
+      "score": 0.324,
+      "actionable": true,
+      "edge_source": "per_ticker",
+      "n": 7,
+      "hit_rate": 1.0,
+      "avg_return_pct": 0.708,
+      "std_pct": 0.656,
+      "confidence": "weak",
+      "regime": "crisis",
+      "regime_fit": 1.0,
+      "rationale": "per_ticker: n=7, hit=100%, avg=+0.71%, \u03c3=0.66 \u00b7 confidence=weak",
+      "current_price": 161.54,
+      "price_change_pct": null,
+      "multiplier": null,
+      "allocation": {
+        "allocation_pct": 0.297,
+        "allocation_cad": 35.66,
+        "sigma_60d": 1.111
+      },
+      "target_exit_date_min": 3,
+      "target_exit_date_max": 7,
+      "stop_loss_pct": -2.0
+    }
+  ]
 }
